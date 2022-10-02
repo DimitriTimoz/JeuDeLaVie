@@ -6,5 +6,6 @@ var
     jeu: TJeu;
 
 begin
-
+    initialisation(jeu);
+    affichage(jeu);
 end.
