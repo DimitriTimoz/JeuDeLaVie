@@ -25,7 +25,7 @@ implementation
 
     function GetBit(Value: QWord; Index: Byte): Boolean;
     begin
-        Result := ((Value shr Index) and 1) = 1;
+        GetBit := ((Value shr Index) and 1) = 1;
     end;
 
 end.
