@@ -1,0 +1,43 @@
+Unit Menu;
+
+INTERFACE
+
+uses crt;
+
+procedure menuAction(var jeu : Tjeu);
+procedure afficherMenu(var jeu :Tjeu);
+procedure chargerPlateau(var plateau : Tplateau);
+procedure sauvegarderPlateau (var plateau : Tplateau);
+procedure modifierPlateau (var jeu : Tjeu); 
+
+
+IMPLEMENTATION
+
+procedure afficherMenu(var jeu:Tjeu);
+
+var i : integer;
+
+begin 
+
+ClrScr;
+
+// Pour l'instant je mets juste un clearscreen et j'écris le menu dans le terminal mais après je l'améliorerais avec les flèches, faut juste que je retrouve comment faire //
+
+writeln('Que voulez vous faire : ');
+writeln('1. Charger le plateau');
+writeln('2. Sauvegarder le plateau');
+writeln('3. Modifier le plateau');
+writeln('q. Quitter le menu');
+
+readln(i);
+
+case i of
+
+'1' : chargerPlateau(plateau);
+'2' : sauvegarderPlateau (plateau);
+'3' : modifierPlateau (jeu); 
+'q' : ClrScr;
+
+end;
+
+end;
