@@ -26,6 +26,8 @@ begin
 
     jeu.plateau.hauteur := 1;
     jeu.plateau.largeur := 1;
+
+    jeu.tour := 0;
 end;
 end.
 

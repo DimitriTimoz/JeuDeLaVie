@@ -1,7 +1,7 @@
 unit UInterface;
 
 interface
-    uses crt, structures, utils;
+    uses crt, structures, utils, sysutils;
     procedure afficher(jeu: TJeu);
 
 implementation
@@ -35,5 +35,9 @@ implementation
                     write(' ');
             end;
         end;
+
+        GotoXY(1, jeu.plateau.tailleParcelle * jeu.plateau.hauteur + 1);
+        write('Tour : ');
+        write(jeu.tour);
     end;
 end.
