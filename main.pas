@@ -7,5 +7,6 @@ var
 
 begin
     initialisation(jeu);
+    modifierPlateau(jeu);
     affichage(jeu);
 end.

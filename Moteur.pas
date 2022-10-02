@@ -4,6 +4,8 @@ interface
 uses structures, utils;
 
 procedure initialisation(var jeu: TJeu);
+procedure ajouterCellule(var plateau: TPlateau; x, y: integer);
+procedure supprimerCellule(var plateau: TPlateau; x, y: integer);
 
 implementation
 
@@ -29,5 +31,18 @@ begin
 
     jeu.tour := 0;
 end;
+
+
+procedure ajouterCellule(var plateau: TPlateau; x, y: integer);
+begin
+    SetBit(plateau.parcelles[0].lignes[y+1], x);
+end;
+
+procedure supprimerCellule(var plateau: TPlateau; x, y: integer);
+begin
+    ClearBit(plateau.parcelles[0].lignes[y+1], x);
+end;
+
+
 end.
 

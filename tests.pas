@@ -7,6 +7,6 @@ var
 
 begin
     initialisation(jeu);
-    afficher(jeu);
+    modifierPlateau(jeu);
     afficher(jeu);
 end.
