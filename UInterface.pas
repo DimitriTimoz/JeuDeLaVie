@@ -72,13 +72,14 @@ implementation
             clrScr();
             afficherPlateau(jeu.plateau);
             GotoXY(x+1, y+1);
-            write('╳');
+            write('✚');
 
             (*Debug infos*)
             GotoXY(1, jeu.plateau.tailleParcelle * jeu.plateau.hauteur + 2);
             writeln('x : ', x, ' y : ', y);
             writeln('tailleParcelle : ', jeu.plateau.tailleParcelle);
             writeln('touchepressee : ', ord(touche_pressee));
+
             (* Gestion des touches *)
             touche_pressee := readkey;
             case touche_pressee of
