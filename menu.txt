@@ -33,8 +33,8 @@ readln(i);
 
 case i of
 
-'1' : chargerPlateau(plateau);
-'2' : sauvegarderPlateau (plateau);
+'1' : writeln('');
+'2' : writeln('');
 '3' : modifierPlateau (jeu); 
 'q' : ClrScr;
 
