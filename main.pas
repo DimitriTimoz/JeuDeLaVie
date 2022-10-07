@@ -7,4 +7,8 @@ var
 
 begin
     initialisation(jeu);
+    repeat
+        simuler(jeu.plateau);
+        afficher(jeu);
+    until (False);
 end.

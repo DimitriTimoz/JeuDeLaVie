@@ -95,8 +95,8 @@ implementation
                         RIGHT: nx := x + 1;
                     end;
                 end;
-                DEL: supprimerCellule(jeu.plateau, x, y);
-                ENTR: ajouterCellule(jeu.plateau, x, y);
+                DEL: supprimerCellulePlateau(jeu.plateau, x, y);
+                ENTR: ajouterCellulePlateau(jeu.plateau, x, y);
                 ESC : break;
             end;
 
