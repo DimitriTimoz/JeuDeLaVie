@@ -9,7 +9,7 @@ interface
         RIGHT = #77;
         ENTR = #13;
         DEL = #8;
-        ESC = #81;
+        ESC = #113;
     procedure afficherPlateau(plateau: TPlateau);
     procedure afficher(jeu: TJeu);
     procedure modifierPlateau(var jeu: TJeu);

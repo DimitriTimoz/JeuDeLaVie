@@ -1,6 +1,6 @@
 program main;
 
-uses Moteur, UInterface, structures, partie;
+uses Moteur, UInterface, structures, partie, crt;
 
 var 
     jeu: TJeu;
@@ -8,7 +8,9 @@ var
 begin
     initialisation(jeu);
     repeat
+        jeu.tour := jeu.tour + 1;
         simuler(jeu.plateau);
+        Delay(100);
         afficher(jeu);
     until (False);
 end.
