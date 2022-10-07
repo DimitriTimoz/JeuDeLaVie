@@ -10,7 +10,7 @@ begin
     repeat
         jeu.tour := jeu.tour + 1;
         simuler(jeu.plateau);
-        Delay(100);
         afficher(jeu);
+        Delay(300);
     until (False);
 end.

@@ -36,9 +36,9 @@ implementation
         (* Affiche le plateau *)
         for x := 0 to plateau.tailleParcelle - 1 do
         begin
-            for y := 1 to plateau.tailleParcelle  do
+            for y := 0 to plateau.tailleParcelle - 1  do
             begin
-                GotoXY(x+1, y);
+                GotoXY(x+1, y+1);
                 if GetBit(plateau.parcelles[0].lignes[y], x) then
                     writeln('█')
                 else
@@ -57,6 +57,7 @@ implementation
         GotoXY(1, jeu.plateau.tailleParcelle * jeu.plateau.hauteur + 1);
         write('Tour : ');
         write(jeu.tour);
+        GotoXY(1, jeu.plateau.tailleParcelle * jeu.plateau.hauteur + 2);
     end;
 
 
@@ -97,7 +98,7 @@ implementation
                 end;
                 DEL: supprimerCellulePlateau(jeu.plateau, x, y);
                 ENTR: ajouterCellulePlateau(jeu.plateau, x, y);
-                ESC : break;
+                ESC: break;
             end;
 
             if (ny >= 0) and (ny < jeu.plateau.tailleParcelle) then

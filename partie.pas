@@ -19,8 +19,8 @@ implementation
         jeu.plateau.parcelles[0].py := 0;
 
         (* Initialise une parcelle vide *)
-        jeu.plateau.tailleParcelle := 16;
-        for i := 1 to jeu.plateau.tailleParcelle do
+        jeu.plateau.tailleParcelle := 32;
+        for i := 0 to jeu.plateau.tailleParcelle do
         begin
             jeu.plateau.parcelles[0].lignes[i] := 0;
         end;

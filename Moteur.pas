@@ -9,28 +9,28 @@ procedure supprimerCellule(var parcelle: TParcelle; x, y: integer);
 procedure supprimerCellulePlateau(var plateau: TPlateau; x, y: integer);
 procedure simuler(var plateau: TPlateau);
 procedure appliquerSimulation(var plateau: TPlateau);
-procedure nettoyerTemp(var plateau: TPlateau);
+procedure nettoyerParcelle(var parcelle: TParcelle; taille: integer);
 
 implementation
 
 procedure ajouterCellule(var parcelle: TParcelle; x, y: integer);
 begin
-    SetBit(parcelle.lignes[y+1], x);
+    SetBit(parcelle.lignes[y], x);
 end;
 
 procedure ajouterCellulePlateau(var plateau: TPlateau; x, y: integer);
 begin
-   ajouterCellule(plateau.parcelles[0], x,y);
+   ajouterCellule(plateau.parcelles[0], x, y);
 end;
 
 procedure supprimerCellule(var parcelle: TParcelle; x, y: integer);
 begin
-    ClearBit(parcelle.lignes[y+1], x);
+    ClearBit(parcelle.lignes[y], x);
 end;
 
 procedure supprimerCellulePlateau(var plateau: TPlateau; x, y: integer);
 begin
-   supprimerCellule(plateau.parcelles[0], x,y);
+   supprimerCellule(plateau.parcelles[0], x, y);
 end;
 
 procedure appliquerSimulation(var plateau: TPlateau);
@@ -41,18 +41,18 @@ begin
     begin
         for y := 0 to plateau.tailleParcelle - 1 do 
         begin
-            if GetBit(plateau.tmpParcelles[1].lignes[x], y) then
+            if GetBit(plateau.tmpParcelles[0].lignes[x], y) then
                 SetBit(plateau.parcelles[0].lignes[x], y);
         end;
     end;
 end;
 
-procedure nettoyerTemp(var plateau: TPlateau);
+procedure nettoyerParcelle(var parcelle: TParcelle; taille: integer);
 var
     x: integer;
 begin
-    for x := 0 to plateau.largeur - 1 do
-        plateau.tmpParcelles[1].lignes[x] := 0;
+    for x := 0 to taille - 1 do
+        parcelle.lignes[x] := 0;
 end;
 
 procedure simuler(var plateau: TPlateau);
@@ -60,28 +60,28 @@ var
     y, x, i, j, compteur: Integer;
 
 begin
-    nettoyerTemp(plateau);
-    for x:= 0 to plateau.largeur - 1 do
+    nettoyerParcelle(plateau.tmpParcelles[0], plateau.tailleParcelle);
+    for x := 0 to plateau.tailleParcelle - 1 do
     begin
-        for y := 0 to plateau.hauteur - 1 do
+        for y := 0 to plateau.tailleParcelle - 1 do
         begin
             compteur := 0;
             for i := x - 1 to x + 1 do
             begin
                 for j := y - 1 to y + 1 do
                 begin
-                    if (j > 0) or (j >= plateau.hauteur) or (i > 0) or (i >= plateau.largeur) or ((x = i) and (y = j)) then
+                    if ((x = i) and (y = j)) or (j < 0) or (j >= plateau.tailleParcelle) or (i < 0) or (i >= plateau.tailleParcelle) then
                         continue;
 
-                    if GetBit(plateau.tmpParcelles[1].lignes[i], j) then
-                        compteur := compteur + 1;
+                    if GetBit(plateau.parcelles[0].lignes[j], i) then
+                       compteur := compteur + 1;
                 end;
-
-                if (compteur = 3) then
-                    ajouterCellule(plateau.tmpParcelles[1], x, y);
             end;
+            if (compteur = 3) or ((compteur = 2) and GetBit(plateau.parcelles[0].lignes[y], x)) then
+                ajouterCellule(plateau.tmpParcelles[0], x, y);
         end;
     end;
+    nettoyerParcelle(plateau.parcelles[0], plateau.tailleParcelle);
     appliquerSimulation(plateau);
 end;
 

@@ -3,3 +3,5 @@
 tests
 main
 .vscode/launch.json
+main.exe
+tests.exe
