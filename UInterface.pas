@@ -111,30 +111,59 @@ implementation
     procedure menuAction(var jeu: TJeu);
     var 
         c : Char;
+        i : integer;
+        
     begin
-        readln(c);
-        case c of
-            '1' : writeln('');
-            '2' : writeln('');
-            '3': modifierPlateau(jeu);
-            'q' : ClrScr;
-        end;
+		i := 0;
+		repeat
+			afficherMenu(jeu);
+			GotoXY(1,i+2);
+			TextColor(4);       
+			write('ʘ');
+			TextBackground(15);
+			TextColor(0);
+			GotoXY(1,10);
+
+			c := readkey;
+			case c of
+				#0: begin
+					c := readkey;
+					case c of
+						UP: i := i - 1;
+						DOWN: i := i + 1;
+						
+					end;
+				end;
+				ENTR: break;
+				ESC : break;
+			end;
+			
+			if (i > 3) then
+				i := 3
+			else if (i <= 0) then
+				i := 0;
+				
+		until (c = ENTR);
+			
+		case i of
+			0 : writeln('');
+			1 : writeln('');
+			2 : modifierPlateau(jeu);
+			3 : ClrScr;
+		end;
+			
     end;
 
     procedure afficherMenu(var jeu: Tjeu);
-    var 
-        i : Char;
     begin 
-
         ClrScr;
 
         // Pour l'instant je mets juste un clearscreen et j'écris le menu dans le terminal mais après je l'améliorerais avec les flèches, faut juste que je retrouve comment faire //
         writeln('Que voulez vous faire : ');
-        writeln('1. Charger le plateau');
-        writeln('2. Sauvegarder le plateau');
-        writeln('3. Modifier le plateau');
-        writeln('q. Quitter le menu');
+        writeln('- Charger le plateau');
+        writeln('- Sauvegarder le plateau');
+        writeln('- Modifier le plateau');
+        writeln('- Quitter le menu');
 
-        menuAction(jeu);
     end;
 end.

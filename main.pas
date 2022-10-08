@@ -6,5 +6,5 @@ var
     jeu: TJeu;
 
 begin
-    initialisation(jeu);
+    initialisation(jeu);	
 end.
