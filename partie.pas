@@ -2,7 +2,7 @@ Unit partie;
 
 interface
 
-uses structures, Moteur, UInterface;
+uses structures, Moteur, UInterface, crt;
 
 procedure initialisation(var jeu: TJeu);
 
@@ -13,6 +13,9 @@ implementation
         i: integer;
     begin
         (* Créer une parcelle en mémoire *)
+        TextBackground(15);
+        TextColor(0);
+        cursorbig();       
         GetMem(jeu.plateau.parcelles, SizeOf(TParcelle));
 
         jeu.plateau.parcelles[0].px := 0;
@@ -30,7 +33,7 @@ implementation
 
         jeu.tour := 0;
 
-        afficherMenu(jeu);
+        menuAction(jeu);
     end;
 
 end.
