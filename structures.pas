@@ -16,11 +16,11 @@ type
     end;
     TParcelle = record
         px, py : integer;
-        lignes : array[1..64] of QWord (* 64 bits *);
+        lignes : array[0..63] of QWord (* 64 bits *);
     end; 
     TPlateau = record
         parcelles : ^TParcelle;
-        tmpParcelles : array[1..9] of TParcelle;
+        tmpParcelles : array[0..8] of TParcelle;
         cx, cy : integer;
         tailleParcelle : integer;
         largeur, hauteur : integer;

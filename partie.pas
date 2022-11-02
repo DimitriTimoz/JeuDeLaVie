@@ -13,9 +13,9 @@ implementation
         i: integer;
     begin
         (* Créer une parcelle en mémoire *)
-        TextBackground(15);
+        TextBackground(White);
         TextColor(0);
-        cursorbig();       
+
         GetMem(jeu.plateau.parcelles, SizeOf(TParcelle));
 
         jeu.plateau.parcelles[0].px := 0;
@@ -23,7 +23,7 @@ implementation
 
         (* Initialise une parcelle vide *)
         jeu.plateau.tailleParcelle := 16;
-        for i := 1 to jeu.plateau.tailleParcelle do
+        for i := 0 to jeu.plateau.tailleParcelle - 1 do
         begin
             jeu.plateau.parcelles[0].lignes[i] := 0;
         end;

@@ -9,7 +9,13 @@ interface
         RIGHT = #77;
         ENTR = #13;
         DEL = #8;
+        SAVE = #115; // 's'
+        LOAD = #108; // 'l'
+        {$IFDEF DARWIN}
+        ESC = #27;
+        {$ELSE}
         ESC = #81;
+        {$ENDIF}
     procedure afficherPlateau(plateau: TPlateau);
     procedure afficher(jeu: TJeu);
     procedure modifierPlateau(var jeu: TJeu);
@@ -36,7 +42,7 @@ implementation
         (* Affiche le plateau *)
         for x := 0 to plateau.tailleParcelle - 1 do
         begin
-            for y := 1 to plateau.tailleParcelle  do
+            for y := 0 to plateau.tailleParcelle - 1 do
             begin
                 GotoXY(x+1, y);
                 if GetBit(plateau.parcelles[0].lignes[y], x) then
@@ -97,6 +103,8 @@ implementation
                 end;
                 DEL: supprimerCellule(jeu.plateau, x, y);
                 ENTR: ajouterCellule(jeu.plateau, x, y);
+                SAVE: sauvegarder_plateau(jeu.plateau);
+                LOAD: charger_plateau(jeu.plateau);
                 ESC : break;
             end;
 
@@ -120,7 +128,7 @@ implementation
 			GotoXY(1,i+2);
 			TextColor(4);       
 			write('ʘ');
-			TextBackground(15);
+			TextBackground(White);
 			TextColor(0);
 			GotoXY(1,10);
 
