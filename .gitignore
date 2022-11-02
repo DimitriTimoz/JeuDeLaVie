@@ -1,3 +1,7 @@
+**/*.o
+**/*.ppu
+tests
 main
-*.o
-*.ppu
+.vscode/launch.json
+main.exe
+tests.exe
