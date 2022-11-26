@@ -21,12 +21,8 @@ implementation
         jeu.plateau.parcelles[0].init(0, 0, voisins);
 
         (* Initialise une parcelle vide *)
-        jeu.plateau.tailleParcelle := 64;
-        for i := 0 to jeu.plateau.tailleParcelle - 1 do
-        begin
-            jeu.plateau.parcelles[0].lignes[i] := 0;
-        end;
-
+        jeu.plateau.parcelles[0].nettoyer();
+        
         jeu.plateau.hauteur := 1;
         jeu.plateau.largeur := 1;
         

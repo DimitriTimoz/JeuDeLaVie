@@ -10,7 +10,6 @@ procedure sauvegarder_plateau(plateau: TPlateau);
 procedure charger_plateau(var plateau: TPlateau);
 procedure simuler(var plateau: TPlateau);
 procedure appliquerSimulation(var plateau: TPlateau);
-procedure nettoyerParcelle(var parcelle: TParcelle; taille: integer);
 
 implementation
 
@@ -23,8 +22,8 @@ var
 begin
     len := length(plateau.parcelles);
     // Coordonnées de la parcelle
-    ny := y - negmod(y, plateau.tailleParcelle);
-    nx := x - negmod(x, plateau.tailleParcelle);
+    ny := y - negmod(y, TAILLE_PARCELLE);
+    nx := x - negmod(x, TAILLE_PARCELLE);
     n_voisin := 0;
     for i := 0 to len - 1 do 
     begin
@@ -37,7 +36,7 @@ begin
             Exit;
         end;
         // Vérification des voisins
-        if (plateau.parcelles[i].x = nx - plateau.tailleParcelle) and (plateau.parcelles[i].y = ny) then
+        if (plateau.parcelles[i].x = nx - TAILLE_PARCELLE) and (plateau.parcelles[i].y = ny) then
         begin
         end;
     end;
@@ -46,8 +45,8 @@ begin
     setLength(plateau.parcelles, len + 1);
     plateau.parcelles[len].init(nx, ny, n_voisins);
    
-    x := negmod(x, plateau.tailleParcelle);
-    y := negmod(y, plateau.tailleParcelle);
+    x := negmod(x, TAILLE_PARCELLE);
+    y := negmod(y, TAILLE_PARCELLE);
 
     plateau.parcelles[len].definir_cellule(x, y, true);
 
@@ -61,8 +60,8 @@ begin
     len := length(plateau.parcelles);
 
     // Coordonnées de la parcelle
-    ny := y - negmod(y, plateau.tailleParcelle);
-    nx := x - negmod(x, plateau.tailleParcelle);
+    ny := y - negmod(y, TAILLE_PARCELLE);
+    nx := x - negmod(x, TAILLE_PARCELLE);
 
     for i := 0 to len do 
     begin
@@ -75,14 +74,6 @@ begin
             Exit;
         end;
     end;
-end;
-
-procedure nettoyerParcelle(var parcelle: TParcelle; taille: integer);
-var
-    x: integer;
-begin
-    for x := 0 to taille - 1 do
-        parcelle.lignes[x] := 0;
 end;
 
 procedure sauvegarder_plateau(plateau: TPlateau);
@@ -100,7 +91,7 @@ begin
     (* Entête *)
     write(f, length(plateau.parcelles)); // nombre de parcelles 
     write(f, ' ');
-    writeln(f, plateau.tailleParcelle); // taille d'une parcelle
+    writeln(f, TAILLE_PARCELLE); // taille d'une parcelle
 
     (* Parcelles *)
     for p := 0 to length(plateau.parcelles) - 1 do
@@ -108,7 +99,7 @@ begin
         write(f, plateau.parcelles[p].x);
         write(f, ' ');
         writeln(f, plateau.parcelles[p].y);
-        for i := 0 to plateau.tailleParcelle - 1 do
+        for i := 0 to TAILLE_PARCELLE - 1 do
         begin
             writeln(f, plateau.parcelles[p].lignes[i]);
         end;
@@ -134,11 +125,15 @@ begin
     reset(f);
 
     (* Entête *)
-    // Format: 'nombreParcelles tailleParcelle'
+    // Format: 'nombreParcelles TAILLE_PARCELLE'
     readln(f, ligne);
     n_parcelles := StrToInt(Copy(ligne, 1, Pos(' ', ligne) - 1));
     Delete(ligne, 1, Pos(' ', ligne));
-    plateau.tailleParcelle := StrToInt(ligne);
+    if StrToInt(ligne) <> TAILLE_PARCELLE then
+    begin
+        writeln('Erreur : taille de parcelle incorrecte');
+        Exit;
+    end;
 
     (* Parcelles *)
     setLength(plateau.parcelles, n_parcelles);
@@ -149,10 +144,10 @@ begin
         Delete(ligne, 1, Pos(' ', ligne));
         plateau.parcelles[p].y := StrToInt(ligne);
 
-        for i := 0 to plateau.tailleParcelle - 1 do
+        for i := 0 to TAILLE_PARCELLE - 1 do
         begin
             readln(f, ligne);
-            plateau.parcelles[p].lignes[i mod plateau.tailleParcelle] := StrToQWord(ligne);
+            plateau.parcelles[p].lignes[i mod TAILLE_PARCELLE] := StrToQWord(ligne);
         end;
     end;
     close(f);
@@ -162,9 +157,9 @@ procedure appliquerSimulation(var plateau: TPlateau);
 var 
     x, y : integer;
 begin
-    for x := 0 to plateau.tailleParcelle - 1 do 
+    for x := 0 to TAILLE_PARCELLE - 1 do 
     begin
-        for y := 0 to plateau.tailleParcelle - 1 do 
+        for y := 0 to TAILLE_PARCELLE - 1 do 
         begin
             if GetBit(plateau.tmpParcelles[0].lignes[x], y) then
                 SetBit(plateau.parcelles[0].lignes[x], y);
@@ -179,18 +174,18 @@ var
 begin
     for i := 0 to length(plateau.parcelles) - 1 do
     begin
-        nettoyerParcelle(plateau.tmpParcelles[i], plateau.tailleParcelle);
+        plateau.tmpParcelles[i].nettoyer();
     end;
-    for x := 0 to plateau.tailleParcelle - 1 do
+    for x := 0 to TAILLE_PARCELLE - 1 do
     begin
-        for y := 0 to plateau.tailleParcelle - 1 do
+        for y := 0 to TAILLE_PARCELLE - 1 do
         begin
             compteur := 0;
             for i := x - 1 to x + 1 do
             begin
                 for j := y - 1 to y + 1 do
                 begin
-                    if ((x = i) and (y = j)) or (j < 0) or (j >= plateau.tailleParcelle) or (i < 0) or (i >= plateau.tailleParcelle) then
+                    if ((x = i) and (y = j)) or (j < 0) or (j >= TAILLE_PARCELLE) or (i < 0) or (i >= TAILLE_PARCELLE) then
                         continue;
 
                     if GetBit(plateau.parcelles[0].lignes[j], i) then
@@ -201,7 +196,7 @@ begin
                 plateau.tmpParcelles[0].definir_cellule(x, y, true);
         end;
     end;
-    nettoyerParcelle(plateau.parcelles[0], plateau.tailleParcelle);
+    plateau.parcelles[0].nettoyer();
     appliquerSimulation(plateau);
 end;
 
