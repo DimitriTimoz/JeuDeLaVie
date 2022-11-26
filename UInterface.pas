@@ -67,6 +67,8 @@ implementation
         GotoXY(1, HAUTEUR_CAM + 9);
         writeln('debut: ', debut_x, ' ', debut_y, ' fin: ', fin_x, ' ', fin_y, ' offset: ', offset_x, ' ', offset_y);
         log('debut: ' + IntToStr(debut_x) + ' ' + IntToStr(debut_y) + ' fin: ' + IntToStr(fin_x) + ' ' + IntToStr(fin_y) + ' offset: ' + IntToStr(offset_x) + ' ' + IntToStr(offset_y));
+        TextColor(0);       
+        
         for y := debut_y to fin_y - 1 do
         begin
             for x := debut_x to fin_x - 1 do
@@ -74,15 +76,9 @@ implementation
                 GotoXY(x + 1 + offset_x, y + offset_y + 1);
                 if GetBit(parcelle.lignes[y], x) then
                 begin
-                    TextColor(0);       
                     write('#');
-
                 end
-                else
-                begin
-                    //TextColor(1);      
-                    //write('1');
-                end;
+              
             end;
         end;
 
