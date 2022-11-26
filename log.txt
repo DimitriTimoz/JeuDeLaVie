@@ -2351,3 +2351,431 @@ new frame
 debut: 0 0 fin: 18 12 offset: 14 20
 debut: 50 44 fin: 64 64 offset: -50 -44
 debut: 0 44 fin: 18 64 offset: 14 -44
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+new frame
+debut: 0 0 fin: 16 17 offset: 16 15
+debut: 48 49 fin: 64 64 offset: -48 -49
+new frame
+debut: 0 0 fin: 16 17 offset: 16 15
+debut: 48 49 fin: 64 64 offset: -48 -49
+debut: 48 0 fin: 64 17 offset: -48 15
+new frame
+debut: 0 0 fin: 16 18 offset: 16 14
+debut: 48 50 fin: 64 64 offset: -48 -50
+debut: 48 0 fin: 64 18 offset: -48 14
+new frame
+debut: 0 0 fin: 15 18 offset: 17 14
+debut: 47 50 fin: 64 64 offset: -47 -50
+debut: 47 0 fin: 64 18 offset: -47 14
+new frame
+debut: 0 0 fin: 14 18 offset: 18 14
+debut: 46 50 fin: 64 64 offset: -46 -50
+debut: 46 0 fin: 64 18 offset: -46 14
+new frame
+debut: 0 0 fin: 14 18 offset: 18 14
+debut: 46 50 fin: 64 64 offset: -46 -50
+debut: 46 0 fin: 64 18 offset: -46 14
+new frame
+debut: 0 0 fin: 13 18 offset: 19 14
+debut: 45 50 fin: 64 64 offset: -45 -50
+debut: 45 0 fin: 64 18 offset: -45 14
+new frame
+debut: 0 0 fin: 12 18 offset: 20 14
+debut: 44 50 fin: 64 64 offset: -44 -50
+debut: 44 0 fin: 64 18 offset: -44 14
+new frame
+debut: 0 0 fin: 12 18 offset: 20 14
+debut: 44 50 fin: 64 64 offset: -44 -50
+debut: 44 0 fin: 64 18 offset: -44 14
+new frame
+debut: 0 0 fin: 12 17 offset: 20 15
+debut: 44 49 fin: 64 64 offset: -44 -49
+debut: 44 0 fin: 64 17 offset: -44 15
+new frame
+debut: 0 0 fin: 12 18 offset: 20 14
+debut: 44 50 fin: 64 64 offset: -44 -50
+debut: 44 0 fin: 64 18 offset: -44 14
+new frame
+debut: 0 0 fin: 12 18 offset: 20 14
+debut: 44 50 fin: 64 64 offset: -44 -50
+debut: 44 0 fin: 64 18 offset: -44 14
+new frame
+debut: 0 0 fin: 13 18 offset: 19 14
+debut: 45 50 fin: 64 64 offset: -45 -50
+debut: 45 0 fin: 64 18 offset: -45 14
+new frame
+debut: 0 0 fin: 14 18 offset: 18 14
+debut: 46 50 fin: 64 64 offset: -46 -50
+debut: 46 0 fin: 64 18 offset: -46 14
+new frame
+debut: 0 0 fin: 14 18 offset: 18 14
+debut: 46 50 fin: 64 64 offset: -46 -50
+debut: 46 0 fin: 64 18 offset: -46 14
+new frame
+debut: 0 0 fin: 15 18 offset: 17 14
+debut: 47 50 fin: 64 64 offset: -47 -50
+debut: 47 0 fin: 64 18 offset: -47 14
+new frame
+debut: 0 0 fin: 16 18 offset: 16 14
+debut: 48 50 fin: 64 64 offset: -48 -50
+debut: 48 0 fin: 64 18 offset: -48 14
+new frame
+debut: 0 0 fin: 16 17 offset: 16 15
+debut: 48 49 fin: 64 64 offset: -48 -49
+debut: 48 0 fin: 64 17 offset: -48 15
+new frame
+debut: 0 0 fin: 16 17 offset: 16 15
+debut: 48 49 fin: 64 64 offset: -48 -49
+debut: 48 0 fin: 64 17 offset: -48 15
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 15 offset: 16 17
+debut: 48 47 fin: 64 64 offset: -48 -47
+debut: 48 0 fin: 64 15 offset: -48 17
+new frame
+debut: 0 0 fin: 16 15 offset: 16 17
+debut: 48 47 fin: 64 64 offset: -48 -47
+debut: 48 0 fin: 64 15 offset: -48 17
+new frame
+debut: 0 0 fin: 16 14 offset: 16 18
+debut: 48 46 fin: 64 64 offset: -48 -46
+debut: 48 0 fin: 64 14 offset: -48 18
+new frame
+debut: 0 0 fin: 16 13 offset: 16 19
+debut: 48 45 fin: 64 64 offset: -48 -45
+debut: 48 0 fin: 64 13 offset: -48 19
+new frame
+debut: 0 0 fin: 16 12 offset: 16 20
+debut: 48 44 fin: 64 64 offset: -48 -44
+debut: 48 0 fin: 64 12 offset: -48 20
+new frame
+debut: 0 0 fin: 16 12 offset: 16 20
+debut: 48 44 fin: 64 64 offset: -48 -44
+debut: 48 0 fin: 64 12 offset: -48 20
+new frame
+debut: 0 0 fin: 16 13 offset: 16 19
+debut: 48 45 fin: 64 64 offset: -48 -45
+debut: 48 0 fin: 64 13 offset: -48 19
+new frame
+debut: 0 0 fin: 16 14 offset: 16 18
+debut: 48 46 fin: 64 64 offset: -48 -46
+debut: 48 0 fin: 64 14 offset: -48 18
+new frame
+debut: 0 0 fin: 16 14 offset: 16 18
+debut: 48 46 fin: 64 64 offset: -48 -46
+debut: 48 0 fin: 64 14 offset: -48 18
+new frame
+debut: 0 0 fin: 16 15 offset: 16 17
+debut: 48 47 fin: 64 64 offset: -48 -47
+debut: 48 0 fin: 64 15 offset: -48 17
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+debut: 48 0 fin: 64 16 offset: -48 16

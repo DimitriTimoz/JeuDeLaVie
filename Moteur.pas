@@ -3,9 +3,9 @@ unit Moteur;
 interface
 uses structures, utils, sysutils, crt;
 
-procedure ajouterCellule(var plateau: TPlateau; x, y: integer);
+procedure ajouterCellule(var parcelle: TParcelle; x, y: integer);
 procedure ajouterCellulePlateau(var plateau: TPlateau; x, y: integer);
-procedure supprimerCellule(var plateau: TPlateau; x, y: integer);
+procedure supprimerCellule(var parcelle: TParcelle; x, y: integer);
 procedure supprimerCellulePlateau(var plateau: TPlateau; x, y: integer);
 procedure sauvegarder_plateau(plateau: TPlateau);
 procedure charger_plateau(var plateau: TPlateau);
@@ -16,11 +16,61 @@ procedure nettoyerParcelle(var parcelle: TParcelle; taille: integer);
 
 implementation
 
-procedure ajouterCellule(var plateau: TPlateau; x, y: integer);
+procedure ajouterCellule(var parcelle: TParcelle; x, y: integer);
+begin
+    SetBit(parcelle.lignes[y], x);
+end;
+
+procedure ajouterCellulePlateau(var plateau: TPlateau; x, y: integer);
 var 
     i , len: integer;
 begin
-    SetBit(plateau.parcelles[0].lignes[y+1], x);
+    len := length(plateau.parcelles);
+    for i := 0 to len do 
+    begin
+        (* Si la parcelle existe on ajoute la cellule *)
+        if ((plateau.parcelles[i].px <= x) and (x < plateau.parcelles[i].px + plateau.tailleParcelle)) and ((plateau.parcelles[i].py <= y) and (y < plateau.parcelles[i].py + plateau.tailleParcelle)) then
+        begin
+            x := x - plateau.parcelles[i].px;
+            y := y - plateau.parcelles[i].py;
+            ajouterCellule(plateau.parcelles[i], x, y);
+            Exit;
+        end;
+    end;
+
+    (* Sinon on crée une nouvelle parcelle *)
+    setLength(plateau.parcelles, len + 1);
+
+    plateau.parcelles[len].py := y - negmod(y, plateau.tailleParcelle);
+    plateau.parcelles[len].px := x - negmod(x, plateau.tailleParcelle);
+    x := negmod(x, plateau.tailleParcelle);
+    y := negmod(y, plateau.tailleParcelle);
+
+    SetBit(plateau.parcelles[len].lignes[y], x);
+
+end;
+
+procedure supprimerCellule(var parcelle: TParcelle; x, y: integer);
+begin
+    ClearBit(parcelle.lignes[y], x);
+end;
+
+procedure supprimerCellulePlateau(var plateau: TPlateau; x, y: integer);
+var 
+    i , len: integer;
+begin
+    len := length(plateau.parcelles);
+    for i := 0 to len do 
+    begin
+        (* Si la parcelle existe on supprime la cellule *)
+        if ((plateau.parcelles[i].px <= x) and (x < plateau.parcelles[i].px + plateau.tailleParcelle)) and ((plateau.parcelles[i].py <= y) and (y < plateau.parcelles[i].py + plateau.tailleParcelle)) then
+        begin
+            x := x - plateau.parcelles[i].px;
+            y := y - plateau.parcelles[i].py;
+            supprimerCellule(plateau.parcelles[i], x, y);
+            Exit;
+        end;
+    end;
 end;
 
 procedure nettoyerParcelle(var parcelle: TParcelle; taille: integer);
@@ -29,7 +79,6 @@ var
 begin
     for x := 0 to taille - 1 do
         parcelle.lignes[x] := 0;
-    ClearBit(plateau.parcelles[0].lignes[y], x);
 end;
 
 procedure sauvegarder_plateau(plateau: TPlateau);
@@ -141,8 +190,8 @@ begin
                        compteur := compteur + 1;
                 end;
             end;
-            if (compteur = 3) or ((compteur = 2) and GetBit(plateau.parcelles[0].lignes[y], x)) then
-                ajouterCellule(plateau.tmpParcelles[0], x, y);
+            //if (compteur = 3) or ((compteur = 2) and GetBit(plateau.parcelles[0].lignes[y], x)) then
+             //   ajouterCellule(plateau.tmpParcelles[0], x, y);
         end;
     end;
     nettoyerParcelle(plateau.parcelles[0], plateau.tailleParcelle);

@@ -86,7 +86,7 @@ implementation
 
     procedure afficherPlateau(plateau: TPlateau; camera: TCamera);
     var
-       cpx, cpy, x, y, i, ix, iy, prem_p_x, prem_p_y: integer;
+       i: integer;
     begin
         (* Vérifie l'existence d'un plateau *)
         if plateau.largeur * plateau.hauteur <= 0 then
@@ -152,8 +152,8 @@ implementation
                         RIGHT: jeu.camera.px := jeu.camera.px + 1;
                     end;
                 end;
-                DEL: supprimerCellule(jeu.plateau, jeu.camera.px + (LARGEUR_CAM div 2) - 1, jeu.camera.py + (HAUTEUR_CAM div 2) - 1);
-                ENTR: ajouterCellule(jeu.plateau, jeu.camera.px + (LARGEUR_CAM div 2) - 1, jeu.camera.py + (HAUTEUR_CAM div 2) - 1);
+                DEL: supprimerCellulePlateau(jeu.plateau, jeu.camera.px + (LARGEUR_CAM div 2) - 1, jeu.camera.py + (HAUTEUR_CAM div 2) - 1);
+                ENTR: ajouterCellulePlateau(jeu.plateau, jeu.camera.px + (LARGEUR_CAM div 2) - 1, jeu.camera.py + (HAUTEUR_CAM div 2) - 1);
                 SAVE: sauvegarder_plateau(jeu.plateau);
                 LOAD: charger_plateau(jeu.plateau);
                 ESC : break;
