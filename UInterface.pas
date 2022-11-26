@@ -118,6 +118,7 @@ implementation
         GotoXY(1, jeu.plateau.tailleParcelle * jeu.plateau.hauteur + 1);
         write('Tour : ');
         write(jeu.tour);
+        GotoXY(1, jeu.plateau.tailleParcelle * jeu.plateau.hauteur + 2);
     end;
 
 

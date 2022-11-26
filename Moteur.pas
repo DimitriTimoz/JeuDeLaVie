@@ -4,9 +4,15 @@ interface
 uses structures, utils, sysutils, crt;
 
 procedure ajouterCellule(var plateau: TPlateau; x, y: integer);
+procedure ajouterCellulePlateau(var plateau: TPlateau; x, y: integer);
 procedure supprimerCellule(var plateau: TPlateau; x, y: integer);
+procedure supprimerCellulePlateau(var plateau: TPlateau; x, y: integer);
 procedure sauvegarder_plateau(plateau: TPlateau);
 procedure charger_plateau(var plateau: TPlateau);
+procedure simuler(var plateau: TPlateau);
+procedure appliquerSimulation(var plateau: TPlateau);
+procedure nettoyerParcelle(var parcelle: TParcelle; taille: integer);
+
 
 implementation
 
@@ -14,33 +20,15 @@ procedure ajouterCellule(var plateau: TPlateau; x, y: integer);
 var 
     i , len: integer;
 begin
-    len := length(plateau.parcelles);
-    for i := 0 to len do 
-    begin
-        (* Si la parcelle existe on ajoute la cellule *)
-        if ((plateau.parcelles[i].px <= x) and (x < plateau.parcelles[i].px + plateau.tailleParcelle)) and ((plateau.parcelles[i].py <= y) and (y < plateau.parcelles[i].py + plateau.tailleParcelle)) then
-        begin
-            x := x - plateau.parcelles[i].px;
-            y := y - plateau.parcelles[i].py;
-            SetBit(plateau.parcelles[i].lignes[y], x);
-            Exit;
-        end;
-    end;
-    
-    (* Sinon on crée une nouvelle parcelle *)
-    setLength(plateau.parcelles, len + 1);
-   
-    plateau.parcelles[len].py := y - negmod(y, plateau.tailleParcelle);
-    plateau.parcelles[len].px := x - negmod(x, plateau.tailleParcelle);
-    x := negmod(x, plateau.tailleParcelle);
-    y := negmod(y, plateau.tailleParcelle);
-
-    SetBit(plateau.parcelles[len].lignes[y], x);
-    
+    SetBit(plateau.parcelles[0].lignes[y+1], x);
 end;
 
-procedure supprimerCellule(var plateau: TPlateau; x, y: integer);
+procedure nettoyerParcelle(var parcelle: TParcelle; taille: integer);
+var
+    x: integer;
 begin
+    for x := 0 to taille - 1 do
+        parcelle.lignes[x] := 0;
     ClearBit(plateau.parcelles[0].lignes[y], x);
 end;
 
@@ -116,5 +104,51 @@ begin
     end;
     close(f);
 end;
-end.
 
+procedure appliquerSimulation(var plateau: TPlateau);
+var 
+    x, y : integer;
+begin
+    for x := 0 to plateau.tailleParcelle - 1 do 
+    begin
+        for y := 0 to plateau.tailleParcelle - 1 do 
+        begin
+            if GetBit(plateau.tmpParcelles[0].lignes[x], y) then
+                SetBit(plateau.parcelles[0].lignes[x], y);
+        end;
+    end;
+end;
+
+procedure simuler(var plateau: TPlateau);
+var 
+    y, x, i, j, compteur: Integer;
+
+begin
+    nettoyerParcelle(plateau.tmpParcelles[0], plateau.tailleParcelle);
+    for x := 0 to plateau.tailleParcelle - 1 do
+    begin
+        for y := 0 to plateau.tailleParcelle - 1 do
+        begin
+            compteur := 0;
+            for i := x - 1 to x + 1 do
+            begin
+                for j := y - 1 to y + 1 do
+                begin
+                    if ((x = i) and (y = j)) or (j < 0) or (j >= plateau.tailleParcelle) or (i < 0) or (i >= plateau.tailleParcelle) then
+                        continue;
+
+                    if GetBit(plateau.parcelles[0].lignes[j], i) then
+                       compteur := compteur + 1;
+                end;
+            end;
+            if (compteur = 3) or ((compteur = 2) and GetBit(plateau.parcelles[0].lignes[y], x)) then
+                ajouterCellule(plateau.tmpParcelles[0], x, y);
+        end;
+    end;
+    nettoyerParcelle(plateau.parcelles[0], plateau.tailleParcelle);
+    appliquerSimulation(plateau);
+end;
+
+
+
+end.
