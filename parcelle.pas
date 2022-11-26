@@ -14,6 +14,7 @@ interface
                 procedure definir_cellule(px, py: integer; valeur: Boolean);
                 procedure nettoyer();
                 procedure afficher(camera: TCamera);
+                function simulerCellule(px, py: integer): boolean;
         end; 
 
 implementation
@@ -113,6 +114,25 @@ begin
         end;
     end;
 
+end;
+
+function TParcelle.simulerCellule(px, py: integer): boolean;
+var
+    i, j, compteur: integer;
+begin
+    compteur := 0;
+    for i := px - 1 to px + 1 do
+    begin
+        for j := py - 1 to py + 1 do
+        begin
+            if ((px = i) and (py = j)) or (j < 0) or (j >= TAILLE_PARCELLE) or (i < 0) or (i >= TAILLE_PARCELLE) then
+                continue;
+
+            if obtenir_cellule(i, j) then
+                compteur := compteur + 1;
+        end;
+    end;
+    simulerCellule := (compteur = 3) or ((compteur = 2) and obtenir_cellule(x, y));
 end;
 
 end.

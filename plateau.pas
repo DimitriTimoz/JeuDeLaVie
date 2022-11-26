@@ -169,11 +169,11 @@ begin
     begin
         for y := 0 to TAILLE_PARCELLE - 1 do 
         begin
-            if GetBit(tmpParcelles[0].lignes[x], y) then
-                SetBit(parcelles[0].lignes[x], y);
+            parcelles[0].definir_cellule(x, y, tmpParcelles[0].obtenir_cellule(x, y));
         end;
     end;
 end;
+
 
 procedure TPlateau.simuler();
 var 
@@ -188,20 +188,7 @@ begin
     begin
         for y := 0 to TAILLE_PARCELLE - 1 do
         begin
-            compteur := 0;
-            for i := x - 1 to x + 1 do
-            begin
-                for j := y - 1 to y + 1 do
-                begin
-                    if ((x = i) and (y = j)) or (j < 0) or (j >= TAILLE_PARCELLE) or (i < 0) or (i >= TAILLE_PARCELLE) then
-                        continue;
-
-                    if GetBit(parcelles[0].lignes[j], i) then
-                       compteur := compteur + 1;
-                end;
-            end;
-            if (compteur = 3) or ((compteur = 2) and GetBit(parcelles[0].lignes[y], x)) then
-                tmpParcelles[0].definir_cellule(x, y, true);
+            tmpParcelles[0].definir_cellule(x, y, parcelles[0].simulerCellule(x, y));
         end;
     end;
     parcelles[0].nettoyer();
