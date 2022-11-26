@@ -1,7 +1,7 @@
 unit Moteur;
 
 interface
-uses structures, utils, sysutils;
+uses structures, utils, sysutils, crt;
 
 procedure ajouterCellule(var plateau: TPlateau; x, y: integer);
 procedure supprimerCellule(var plateau: TPlateau; x, y: integer);
@@ -11,8 +11,32 @@ procedure charger_plateau(var plateau: TPlateau);
 implementation
 
 procedure ajouterCellule(var plateau: TPlateau; x, y: integer);
+var 
+    i , len: integer;
 begin
-    SetBit(plateau.parcelles[0].lignes[y], x);
+    len := length(plateau.parcelles);
+    for i := 0 to len do 
+    begin
+        (* Si la parcelle existe on ajoute la cellule *)
+        if ((plateau.parcelles[i].px <= x) and (x < plateau.parcelles[i].px + plateau.tailleParcelle)) and ((plateau.parcelles[i].py <= y) and (y < plateau.parcelles[i].py + plateau.tailleParcelle)) then
+        begin
+            x := x - plateau.parcelles[i].px;
+            y := y - plateau.parcelles[i].py;
+            SetBit(plateau.parcelles[i].lignes[y], x);
+            Exit;
+        end;
+    end;
+    
+    (* Sinon on crée une nouvelle parcelle *)
+    setLength(plateau.parcelles, len + 1);
+   
+    plateau.parcelles[len].py := y - negmod(y, plateau.tailleParcelle);
+    plateau.parcelles[len].px := x - negmod(x, plateau.tailleParcelle);
+    x := negmod(x, plateau.tailleParcelle);
+    y := negmod(y, plateau.tailleParcelle);
+
+    SetBit(plateau.parcelles[len].lignes[y], x);
+    
 end;
 
 procedure supprimerCellule(var plateau: TPlateau; x, y: integer);
@@ -33,22 +57,19 @@ begin
     rewrite(f);
 
     (* Entête *)
-    // 'nombre_parcelles'
-    write(f, plateau.largeur); // Largeur en nombre de parcelles
-    write(f, ' ');
-    write(f, plateau.hauteur); // Hauteur en nombre de parcelles
+    write(f, length(plateau.parcelles)); // nombre de parcelles 
     write(f, ' ');
     writeln(f, plateau.tailleParcelle); // taille d'une parcelle
 
     (* Parcelles *)
-    for p := 0 to plateau.largeur * plateau.hauteur - 1 do
+    for p := 0 to length(plateau.parcelles) - 1 do
     begin
         write(f, plateau.parcelles[p].px);
         write(f, ' ');
         writeln(f, plateau.parcelles[p].py);
         for i := 0 to plateau.tailleParcelle - 1 do
         begin
-            writeln(f, plateau.parcelles[0].lignes[i]);
+            writeln(f, plateau.parcelles[p].lignes[i]);
         end;
     end;
     close(f);
@@ -58,7 +79,7 @@ procedure charger_plateau(var plateau: TPlateau);
 var
     nom, ligne: String;
     f: Text;
-    i, p: integer;
+    i, p, n_parcelles: integer;
 begin
     
     repeat
@@ -72,17 +93,15 @@ begin
     reset(f);
 
     (* Entête *)
-    // Format: 'largeur hauteur tailleParcelle'
+    // Format: 'nombreParcelles tailleParcelle'
     readln(f, ligne);
-    plateau.largeur := StrToInt(Copy(ligne, 1, Pos(' ', ligne) - 1));
-    Delete(ligne, 1, Pos(' ', ligne));
-    plateau.hauteur := StrToInt(Copy(ligne, 1, Pos(' ', ligne) - 1));
+    n_parcelles := StrToInt(Copy(ligne, 1, Pos(' ', ligne) - 1));
     Delete(ligne, 1, Pos(' ', ligne));
     plateau.tailleParcelle := StrToInt(ligne);
 
     (* Parcelles *)
-    GetMem(plateau.parcelles, SizeOf(TParcelle)*plateau.largeur*plateau.hauteur);
-    for p := 0 to plateau.largeur * plateau.hauteur - 1 do
+    setLength(plateau.parcelles, n_parcelles);
+    for p := 0 to n_parcelles - 1 do
     begin
         readln(f, ligne);
         plateau.parcelles[p].px := StrToInt(Copy(ligne, 1, Pos(' ', ligne) - 1));

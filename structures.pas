@@ -2,6 +2,9 @@ unit structures;
 
 interface
 
+const LARGEUR_CAM = 32; // Doit être paire
+const HAUTEUR_CAM = 32; // Doit être paire
+
 type
     TCamera = record
         px, py : integer;
@@ -19,7 +22,7 @@ type
         lignes : array[0..63] of QWord (* 64 bits *);
     end; 
     TPlateau = record
-        parcelles : ^TParcelle;
+        parcelles : array of TParcelle;
         tmpParcelles : array[0..8] of TParcelle;
         cx, cy : integer;
         tailleParcelle : integer;

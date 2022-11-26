@@ -6,7 +6,5 @@ var
     jeu: TJeu;
 
 begin
-    initialisation(jeu);
-    modifierPlateau(jeu);
-    afficher(jeu);
+    writeln(-13 mod 4)
 end.
