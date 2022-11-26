@@ -2779,3 +2779,96 @@ new frame
 debut: 0 0 fin: 16 16 offset: 16 16
 debut: 48 48 fin: 64 64 offset: -48 -48
 debut: 48 0 fin: 64 16 offset: -48 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+new frame
+debut: 0 0 fin: 16 16 offset: 16 16
+debut: 48 48 fin: 64 64 offset: -48 -48
+new frame
+debut: 0 0 fin: 17 16 offset: 15 16
+debut: 49 48 fin: 64 64 offset: -49 -48
+new frame
+debut: 0 0 fin: 18 16 offset: 14 16
+debut: 50 48 fin: 64 64 offset: -50 -48
+new frame
+debut: 0 0 fin: 18 15 offset: 14 17
+debut: 50 47 fin: 64 64 offset: -50 -47
+new frame
+debut: 0 0 fin: 18 14 offset: 14 18
+debut: 50 46 fin: 64 64 offset: -50 -46
+new frame
+debut: 0 0 fin: 18 14 offset: 14 18
+debut: 50 46 fin: 64 64 offset: -50 -46
+debut: 0 46 fin: 18 64 offset: 14 -46
+new frame
+debut: 0 0 fin: 19 14 offset: 13 18
+debut: 51 46 fin: 64 64 offset: -51 -46
+debut: 0 46 fin: 19 64 offset: 13 -46
+new frame
+debut: 0 0 fin: 20 14 offset: 12 18
+debut: 52 46 fin: 64 64 offset: -52 -46
+debut: 0 46 fin: 20 64 offset: 12 -46
+new frame
+debut: 0 0 fin: 19 14 offset: 13 18
+debut: 51 46 fin: 64 64 offset: -51 -46
+debut: 0 46 fin: 19 64 offset: 13 -46
+new frame
+debut: 0 0 fin: 18 14 offset: 14 18
+debut: 50 46 fin: 64 64 offset: -50 -46
+debut: 0 46 fin: 18 64 offset: 14 -46
+new frame
+debut: 0 0 fin: 17 14 offset: 15 18
+debut: 49 46 fin: 64 64 offset: -49 -46
+debut: 0 46 fin: 17 64 offset: 15 -46
+new frame
+debut: 0 0 fin: 16 14 offset: 16 18
+debut: 48 46 fin: 64 64 offset: -48 -46
+debut: 0 46 fin: 16 64 offset: 16 -46
+new frame
+debut: 0 0 fin: 15 14 offset: 17 18
+debut: 47 46 fin: 64 64 offset: -47 -46
+debut: 0 46 fin: 15 64 offset: 17 -46
+new frame
+debut: 0 0 fin: 14 14 offset: 18 18
+debut: 46 46 fin: 64 64 offset: -46 -46
+debut: 0 46 fin: 14 64 offset: 18 -46
+new frame
+debut: 0 0 fin: 13 14 offset: 19 18
+debut: 45 46 fin: 64 64 offset: -45 -46
+debut: 0 46 fin: 13 64 offset: 19 -46
+new frame
+debut: 0 0 fin: 12 14 offset: 20 18
+debut: 44 46 fin: 64 64 offset: -44 -46
+debut: 0 46 fin: 12 64 offset: 20 -46
+new frame
+debut: 0 0 fin: 11 14 offset: 21 18
+debut: 43 46 fin: 64 64 offset: -43 -46
+debut: 0 46 fin: 11 64 offset: 21 -46
+new frame
+debut: 0 0 fin: 10 14 offset: 22 18
+debut: 42 46 fin: 64 64 offset: -42 -46
+debut: 0 46 fin: 10 64 offset: 22 -46
+new frame
+debut: 0 0 fin: 9 14 offset: 23 18
+debut: 41 46 fin: 64 64 offset: -41 -46
+debut: 0 46 fin: 9 64 offset: 23 -46
+new frame
+debut: 0 0 fin: 8 14 offset: 24 18
+debut: 40 46 fin: 64 64 offset: -40 -46
+debut: 0 46 fin: 8 64 offset: 24 -46
+new frame
+debut: 0 0 fin: 8 14 offset: 24 18
+debut: 40 46 fin: 64 64 offset: -40 -46
+debut: 0 46 fin: 8 64 offset: 24 -46
+new frame
+debut: 0 0 fin: 8 13 offset: 24 19
+debut: 40 45 fin: 64 64 offset: -40 -45
+debut: 0 45 fin: 8 64 offset: 24 -45
+new frame
+debut: 0 0 fin: 8 12 offset: 24 20
+debut: 40 44 fin: 64 64 offset: -40 -44
+debut: 0 44 fin: 8 64 offset: 24 -44
+new frame
+debut: 0 0 fin: 8 12 offset: 24 20
+debut: 40 44 fin: 64 64 offset: -40 -44
+debut: 0 44 fin: 8 64 offset: 24 -44

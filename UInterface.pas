@@ -29,8 +29,8 @@ implementation
     var 
         debut_x, debut_y, offset_x, offset_y, fin_x, fin_y, x, y: integer;
     begin
-        offset_x := parcelle.px - camera.px;
-        offset_y := parcelle.py - camera.py;
+        offset_x := parcelle.x - camera.px;
+        offset_y := parcelle.y - camera.py;
         // Vérification que la parcelle est dans la zone d'affichage
         if (offset_x + tailleParcelle < 0) or (offset_y + tailleParcelle < 0) then
             exit
@@ -110,8 +110,6 @@ implementation
 
     procedure afficher(jeu: TJeu);
     begin
-        //clrScr(); (* efface l'écran *)
-
         afficherPlateau(jeu.plateau, jeu.camera);
 
         (* affiche les informations *)

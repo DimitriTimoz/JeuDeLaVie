@@ -11,14 +11,14 @@ implementation
     procedure initialisation(var jeu: TJeu);
     var
         i: integer;
+        voisins: array[0..7] of TVoisin;
     begin
         (* Créer une parcelle en mémoire *)
         TextBackground(White);
         TextColor(0);
         setLength(jeu.plateau.parcelles, 1);
 
-        jeu.plateau.parcelles[0].px := 0;
-        jeu.plateau.parcelles[0].py := 0;
+        jeu.plateau.parcelles[0].init(0, 0, voisins);
 
         (* Initialise une parcelle vide *)
         jeu.plateau.tailleParcelle := 64;
