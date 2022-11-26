@@ -1,7 +1,23 @@
-unit UInterface;
+unit Jeu;
+
 
 interface
-    uses crt, Moteur, structures, utils, sysutils, logSys;
+uses structures, plateau, crt;
+
+type 
+    TJeu = object
+        plateau : TPlateau;
+        camera : TCamera;
+        paterne : TPaterne;
+        vitesse: integer;
+        tour : integer;
+        enCours : boolean;
+        constructor init();
+        procedure afficher();
+        procedure modifierPlateau();
+        procedure afficherMenu();
+        procedure menuAction();
+    end;
 
     CONST UP = #72;
         DOWN = #80;
@@ -16,53 +32,45 @@ interface
         {$ELSE}
         ESC = #81;
         {$ENDIF}
-    procedure afficherPlateau(plateau: TPlateau; camera: TCamera);
-    procedure afficher(jeu: TJeu);
-    procedure modifierPlateau(var jeu: TJeu);
-    procedure afficherMenu(var jeu: Tjeu);
-    procedure menuAction(var jeu: TJeu);
-
 implementation
 
-   
-
-    procedure afficherPlateau(plateau: TPlateau; camera: TCamera);
+    constructor TJeu.init();
     var
-       i: integer;
+        voisins: array[0..7] of TVoisin;
     begin
-        (* Vérifie l'existence d'un plateau *)
-        if plateau.largeur * plateau.hauteur <= 0 then
-        begin
-            writeln('Le plateau n''est pas initialisé');
-            exit;
-        end
-        else if plateau.largeur * plateau.hauteur <> 1 then
-        begin
-            writeln('Le plateau ne contient pas qu''une seule parcelle. Le support de plusieurs parcelles n''est pas encore implémenté');
-            exit;
-        end;
-        log('new frame');
-        (* Affichage du plateau *)
-        for i := 0 to length(plateau.parcelles) - 1 do
-        begin
-            plateau.parcelles[i].afficher(camera);
-        end;
-            
+        (* Créer une parcelle en mémoire *)
+        TextBackground(White);
+        TextColor(0);
+        setLength(plateau.parcelles, 1);
+
+        plateau.parcelles[0].init(0, 0, voisins);
+
+        (* Initialise une parcelle vide *)
+        plateau.parcelles[0].nettoyer();
+        
+        camera.px := -LARGEUR_CAM div 2;
+        camera.py := -HAUTEUR_CAM div 2;
+        camera.hauteur := HAUTEUR_CAM;
+        camera.largeur := LARGEUR_CAM;
+
+        tour := 0;
+
+        menuAction();
     end;
 
-    procedure afficher(jeu: TJeu);
+    procedure TJeu.afficher();
     begin
-        afficherPlateau(jeu.plateau, jeu.camera);
+        plateau.afficher(camera);
 
         (* affiche les informations *)
         GotoXY(1, HAUTEUR_CAM + 1);
         write('Tour : ');
-        write(jeu.tour);
+        write(tour);
         GotoXY(1, HAUTEUR_CAM + 2);
     end;
 
 
-    procedure modifierPlateau(var jeu: TJeu);
+    procedure TJeu.modifierPlateau();
     var
         touche_pressee : Char;
         x, y: integer;
@@ -70,13 +78,13 @@ implementation
         repeat
         begin
             clrScr();
-            afficherPlateau(jeu.plateau, jeu.camera);
+            plateau.afficher(camera);
             GotoXY(LARGEUR_CAM div 2, HAUTEUR_CAM div 2);
             write('✚');
 
             (*Debug infos*)
             GotoXY(1, HAUTEUR_CAM + 2);
-            writeln('x : ', jeu.camera.px + (LARGEUR_CAM div 2), ' y : ', jeu.camera.py + (HAUTEUR_CAM div 2));
+            writeln('x : ', camera.px + (LARGEUR_CAM div 2), ' y : ', camera.py + (HAUTEUR_CAM div 2));
             writeln('touchepressee : ', ord(touche_pressee));
 
             (* Gestion des touches *)
@@ -85,31 +93,30 @@ implementation
                 #0: begin
                     touche_pressee := readkey;
                     case touche_pressee of
-                        UP: jeu.camera.py := jeu.camera.py - 1;
-                        DOWN: jeu.camera.py := jeu.camera.py + 1;
-                        LEFT: jeu.camera.px := jeu.camera.px - 1;
-                        RIGHT: jeu.camera.px := jeu.camera.px + 1;
+                        UP: camera.py := camera.py - 1;
+                        DOWN: camera.py := camera.py + 1;
+                        LEFT: camera.px := camera.px - 1;
+                        RIGHT: camera.px := camera.px + 1;
                     end;
                 end;
-                DEL: supprimerCellulePlateau(jeu.plateau, jeu.camera.px + (LARGEUR_CAM div 2) - 1, jeu.camera.py + (HAUTEUR_CAM div 2) - 1);
-                ENTR: ajouterCellulePlateau(jeu.plateau, jeu.camera.px + (LARGEUR_CAM div 2) - 1, jeu.camera.py + (HAUTEUR_CAM div 2) - 1);
-                SAVE: sauvegarder_plateau(jeu.plateau);
-                LOAD: charger_plateau(jeu.plateau);
+                DEL: plateau.supprimerCellule(camera.px + (LARGEUR_CAM div 2) - 1, camera.py + (HAUTEUR_CAM div 2) - 1);
+                ENTR: plateau.ajouterCellule(camera.px + (LARGEUR_CAM div 2) - 1, camera.py + (HAUTEUR_CAM div 2) - 1);
+                SAVE: plateau.sauvegarder();
+                LOAD: plateau.charger();
                 ESC : break;
             end;
         end;
         until (touche_pressee = ESC);
     end;
 
-    procedure menuAction(var jeu: TJeu);
+    procedure TJeu.menuAction();
     var 
         c : Char;
         i : integer;
-        
     begin
 		i := 0;
 		repeat
-			afficherMenu(jeu);
+            afficherMenu();
 			GotoXY(1,i+2);
 			TextColor(4);       
 			write('ʘ');
@@ -141,13 +148,13 @@ implementation
 		case i of
 			0 : writeln('');
 			1 : writeln('');
-			2 : modifierPlateau(jeu);
+			2 : modifierPlateau();
 			3 : ClrScr;
 		end;
 			
     end;
 
-    procedure afficherMenu(var jeu: Tjeu);
+    procedure TJeu.afficherMenu();
     begin 
         ClrScr;
 

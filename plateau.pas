@@ -1,63 +1,71 @@
-unit Moteur;
+unit plateau;
 
 interface
-uses structures, utils, sysutils, crt;
+uses utils, sysutils, crt, parcelle, structures, logSys;
+type 
+    TPlateau = object
+        private
+            tmpParcelles : array[0..8] of TParcelle;
+            largeur, hauteur : integer;
+        public
+            parcelles : array of TParcelle;
+            procedure ajouterCellule(x, y: integer);
+            procedure supprimerCellule(x, y: integer);
+            procedure sauvegarder();
+            procedure charger();
+            procedure simuler();
+            procedure appliquerSimulation();
+            procedure afficher(camera: TCamera);
+    end;
 
-procedure ajouterCellulePlateau(var plateau: TPlateau; x, y: integer);
-procedure supprimerCellulePlateau(var plateau: TPlateau; x, y: integer);
-
-procedure sauvegarder_plateau(plateau: TPlateau);
-procedure charger_plateau(var plateau: TPlateau);
-procedure simuler(var plateau: TPlateau);
-procedure appliquerSimulation(var plateau: TPlateau);
 
 implementation
-
-procedure ajouterCellulePlateau(var plateau: TPlateau; x, y: integer);
+    
+procedure TPlateau.ajouterCellule(x, y: integer);
 var 
-    i , len: integer;
+    i, len: integer;
     nx, ny: integer;
     n_voisins: array[0..7] of TVoisin;
     n_voisin: integer;
 begin
-    len := length(plateau.parcelles);
+    len := length(parcelles);
     // Coordonnées de la parcelle
     ny := y - negmod(y, TAILLE_PARCELLE);
     nx := x - negmod(x, TAILLE_PARCELLE);
     n_voisin := 0;
-    for i := 0 to len - 1 do 
+    for i := 0 to len do 
     begin
         (* Si la parcelle existe on ajoute la cellule *)
-        if  (plateau.parcelles[i].x = nx) and (plateau.parcelles[i].y = ny) then
+        if  (parcelles[i].x = nx) and (parcelles[i].y = ny) then
         begin
-            x := x - plateau.parcelles[i].x;
-            y := y - plateau.parcelles[i].y;
-            plateau.parcelles[i].definir_cellule(x, y, true);
+            x := x - parcelles[i].x;
+            y := y - parcelles[i].y;
+            log('Ajout de la cellule en ' + inttostr(x) + ' ' + inttostr(y));
+            parcelles[i].definir_cellule(x, y, true);
             Exit;
         end;
         // Vérification des voisins
-        if (plateau.parcelles[i].x = nx - TAILLE_PARCELLE) and (plateau.parcelles[i].y = ny) then
+        if (parcelles[i].x = nx - TAILLE_PARCELLE) and (parcelles[i].y = ny) then
         begin
         end;
     end;
 
     (* Sinon on crée une nouvelle parcelle *)
-    setLength(plateau.parcelles, len + 1);
-    plateau.parcelles[len].init(nx, ny, n_voisins);
+    setLength(parcelles, len + 1);
+    parcelles[len].init(nx, ny, n_voisins);
    
     x := negmod(x, TAILLE_PARCELLE);
     y := negmod(y, TAILLE_PARCELLE);
 
-    plateau.parcelles[len].definir_cellule(x, y, true);
+    parcelles[len].definir_cellule(x, y, true);
 
 end;
 
-
-procedure supprimerCellulePlateau(var plateau: TPlateau; x, y: integer);
+procedure TPlateau.supprimerCellule(x, y: integer);
 var 
     i, len, nx, ny: integer;
 begin
-    len := length(plateau.parcelles);
+    len := length(parcelles);
 
     // Coordonnées de la parcelle
     ny := y - negmod(y, TAILLE_PARCELLE);
@@ -66,17 +74,17 @@ begin
     for i := 0 to len do 
     begin
         (* Si la parcelle existe on supprime la cellule *)
-        if (plateau.parcelles[i].x = nx) and (plateau.parcelles[i].y = ny) then
+        if (parcelles[i].x = nx) and (parcelles[i].y = ny) then
         begin
-            x := x - plateau.parcelles[i].x;
-            y := y - plateau.parcelles[i].y;
-            plateau.parcelles[i].definir_cellule(x, y, false);
+            x := x - parcelles[i].x;
+            y := y - parcelles[i].y;
+            parcelles[i].definir_cellule(x, y, false);
             Exit;
         end;
     end;
 end;
 
-procedure sauvegarder_plateau(plateau: TPlateau);
+procedure TPlateau.sauvegarder();
 var
     nom: String;
     f: Text;
@@ -89,25 +97,25 @@ begin
     rewrite(f);
 
     (* Entête *)
-    write(f, length(plateau.parcelles)); // nombre de parcelles 
+    write(f, length(parcelles)); // nombre de parcelles 
     write(f, ' ');
     writeln(f, TAILLE_PARCELLE); // taille d'une parcelle
 
     (* Parcelles *)
-    for p := 0 to length(plateau.parcelles) - 1 do
+    for p := 0 to length(parcelles) - 1 do
     begin
-        write(f, plateau.parcelles[p].x);
+        write(f, parcelles[p].x);
         write(f, ' ');
-        writeln(f, plateau.parcelles[p].y);
+        writeln(f, parcelles[p].y);
         for i := 0 to TAILLE_PARCELLE - 1 do
         begin
-            writeln(f, plateau.parcelles[p].lignes[i]);
+            writeln(f, parcelles[p].lignes[i]);
         end;
     end;
     close(f);
 end;
 
-procedure charger_plateau(var plateau: TPlateau);
+procedure TPlateau.charger();
 var
     nom, ligne: String;
     f: Text;
@@ -136,24 +144,24 @@ begin
     end;
 
     (* Parcelles *)
-    setLength(plateau.parcelles, n_parcelles);
+    setLength(parcelles, n_parcelles);
     for p := 0 to n_parcelles - 1 do
     begin
         readln(f, ligne);
-        plateau.parcelles[p].x := StrToInt(Copy(ligne, 1, Pos(' ', ligne) - 1));
+        parcelles[p].x := StrToInt(Copy(ligne, 1, Pos(' ', ligne) - 1));
         Delete(ligne, 1, Pos(' ', ligne));
-        plateau.parcelles[p].y := StrToInt(ligne);
+        parcelles[p].y := StrToInt(ligne);
 
         for i := 0 to TAILLE_PARCELLE - 1 do
         begin
             readln(f, ligne);
-            plateau.parcelles[p].lignes[i mod TAILLE_PARCELLE] := StrToQWord(ligne);
+            parcelles[p].lignes[i mod TAILLE_PARCELLE] := StrToQWord(ligne);
         end;
     end;
     close(f);
 end;
 
-procedure appliquerSimulation(var plateau: TPlateau);
+procedure TPlateau.appliquerSimulation();
 var 
     x, y : integer;
 begin
@@ -161,20 +169,20 @@ begin
     begin
         for y := 0 to TAILLE_PARCELLE - 1 do 
         begin
-            if GetBit(plateau.tmpParcelles[0].lignes[x], y) then
-                SetBit(plateau.parcelles[0].lignes[x], y);
+            if GetBit(tmpParcelles[0].lignes[x], y) then
+                SetBit(parcelles[0].lignes[x], y);
         end;
     end;
 end;
 
-procedure simuler(var plateau: TPlateau);
+procedure TPlateau.simuler();
 var 
     y, x, i, j, compteur: Integer;
 
 begin
-    for i := 0 to length(plateau.parcelles) - 1 do
+    for i := 0 to length(parcelles) - 1 do
     begin
-        plateau.tmpParcelles[i].nettoyer();
+        tmpParcelles[i].nettoyer();
     end;
     for x := 0 to TAILLE_PARCELLE - 1 do
     begin
@@ -188,18 +196,29 @@ begin
                     if ((x = i) and (y = j)) or (j < 0) or (j >= TAILLE_PARCELLE) or (i < 0) or (i >= TAILLE_PARCELLE) then
                         continue;
 
-                    if GetBit(plateau.parcelles[0].lignes[j], i) then
+                    if GetBit(parcelles[0].lignes[j], i) then
                        compteur := compteur + 1;
                 end;
             end;
-            if (compteur = 3) or ((compteur = 2) and GetBit(plateau.parcelles[0].lignes[y], x)) then
-                plateau.tmpParcelles[0].definir_cellule(x, y, true);
+            if (compteur = 3) or ((compteur = 2) and GetBit(parcelles[0].lignes[y], x)) then
+                tmpParcelles[0].definir_cellule(x, y, true);
         end;
     end;
-    plateau.parcelles[0].nettoyer();
-    appliquerSimulation(plateau);
+    parcelles[0].nettoyer();
+    appliquerSimulation();
 end;
 
-
+procedure TPlateau.afficher(camera: TCamera);
+    var
+       i: integer;
+    begin
+        log('new frame');
+        (* Affichage du plateau *)
+        for i := 0 to length(parcelles) - 1 do
+        begin
+            parcelles[i].afficher(camera);
+        end;
+            
+    end;
 
 end.

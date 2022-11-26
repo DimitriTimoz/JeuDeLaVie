@@ -1,16 +1,16 @@
 program main;
 
-uses Moteur, UInterface, structures, partie, crt;
+uses structures, crt, jeu;
 
 var 
-    jeu: TJeu;
+    partie: TJeu;
 
 begin
-    initialisation(jeu);
+    partie.init();
     repeat
-        jeu.tour := jeu.tour + 1;
-        simuler(jeu.plateau);
-        afficher(jeu);
+        partie.tour := partie.tour + 1;
+        partie.plateau.simuler();
+        partie.afficher();
         Delay(300);
-    until (False);
+    until (partie.tour > 5);
 end.
