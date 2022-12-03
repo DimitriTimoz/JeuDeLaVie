@@ -2,21 +2,25 @@ unit Jeu;
 
 
 interface
-uses structures, plateau, crt;
+uses structures, plateau, crt, sysutils, dateutils, math;
 
 type 
     TJeu = object
-        plateau : TPlateau;
-        camera : TCamera;
-        paterne : TPaterne;
-        vitesse: integer;
-        tour : integer;
-        enCours : boolean;
-        constructor init();
-        procedure afficher();
-        procedure modifierPlateau();
-        procedure afficherMenu();
-        procedure menuAction();
+        private
+            plateau : TPlateau;
+            camera : TCamera;
+            paterne : TPaterne;
+            vitesse: integer;
+            lastTime: TDateTime;
+        public
+            enCours : boolean;  
+            tour : integer;
+            constructor init();
+            procedure miseAJour();
+            procedure afficher();
+            procedure modifierPlateau();
+            procedure afficherMenu();
+            procedure menuAction();
     end;
 
     CONST UP = #72;
@@ -27,39 +31,39 @@ type
         DEL = #8;
         SAVE = #115; // 's'
         LOAD = #108; // 'l'
-        {$IFDEF DARWIN}
         ESC = #27;
-        {$ELSE}
-        ESC = #81;
-        {$ENDIF}
+
 implementation
 
     constructor TJeu.init();
     var
-        voisins: array[0..7] of TVoisin;
+        voisins: TVoisins;
     begin
         (* Créer une parcelle en mémoire *)
         TextBackground(White);
         TextColor(0);
-        setLength(plateau.parcelles, 1);
+        setLength(self.plateau.parcelles, 1);
 
-        plateau.parcelles[0].init(0, 0, voisins);
+        voisins.init(0, 0);
+        self.plateau.parcelles[0].init(0, 0, voisins);
 
         (* Initialise une parcelle vide *)
-        plateau.parcelles[0].nettoyer();
+        self.plateau.parcelles[0].nettoyer();
         
-        camera.px := -LARGEUR_CAM div 2;
-        camera.py := -HAUTEUR_CAM div 2;
-        camera.hauteur := HAUTEUR_CAM;
-        camera.largeur := LARGEUR_CAM;
+        self.camera.px := -LARGEUR_CAM div 2;
+        self.camera.py := -HAUTEUR_CAM div 2;
+        self.camera.hauteur := HAUTEUR_CAM;
+        self.camera.largeur := LARGEUR_CAM;
 
-        tour := 0;
+        self.vitesse := 500;
+        self.tour := 0;
 
         menuAction();
     end;
 
     procedure TJeu.afficher();
     begin
+        clrScr();
         plateau.afficher(camera);
 
         (* affiche les informations *)
@@ -73,7 +77,6 @@ implementation
     procedure TJeu.modifierPlateau();
     var
         touche_pressee : Char;
-        x, y: integer;
     begin
         repeat
         begin
@@ -131,7 +134,6 @@ implementation
 					case c of
 						UP: i := i - 1;
 						DOWN: i := i + 1;
-						
 					end;
 				end;
 				ENTR: break;
@@ -165,5 +167,38 @@ implementation
         writeln('- Modifier le plateau');
         writeln('- Quitter le menu');
 
+    end;
+
+    procedure TJeu.miseAJour();
+    var 
+        touche_pressee : Char;
+    begin
+        if (1000 - min(1000, vitesse) <= MilliSecondsBetween(Now, self.lastTime)) then
+        begin
+            self.lastTime := Now;
+            self.tour := self.tour + 1;
+            self.plateau.simuler();
+            self.afficher();
+        end;
+
+        if (keypressed()) then
+        begin
+            touche_pressee := readkey();
+            case touche_pressee of
+                #0: begin
+                    touche_pressee := readkey();
+                    case touche_pressee of
+                        UP: self.camera.py := self.camera.py - 1;
+                        DOWN: self.camera.py := self.camera.py + 1;
+                        LEFT: self.camera.px := self.camera.px - 1;
+                        RIGHT: self.camera.px := self.camera.px + 1;
+                    end;
+                end;
+            end;
+
+            // On vide le buffer de clavier
+            while (keypressed()) do
+                readkey();
+        end;
     end;
 end.

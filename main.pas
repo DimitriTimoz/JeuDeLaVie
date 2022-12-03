@@ -8,9 +8,7 @@ var
 begin
     partie.init();
     repeat
-        partie.tour := partie.tour + 1;
-        partie.plateau.simuler();
-        partie.afficher();
-        Delay(300);
-    until (partie.tour > 5);
+        partie.miseAJour();
+        //delay(50);
+    until (partie.tour > 20);
 end.

@@ -4,35 +4,34 @@ interface
     uses structures, utils, crt, sysutils, logSys;
     type 
         TParcelle = object
-            private
-                voisins : array[0..7] of TVoisin;
             public
+                voisins : TVoisins;
                 x, y : integer;
                 lignes : array[0..63] of QWord (* 64 bits *);
-                constructor init(nx, ny: integer; n_voisins: array of TVoisin);
+                constructor init(nx, ny: integer; n_voisins: TVoisins);
                 function obtenir_cellule(px, py: integer): Boolean;
                 procedure definir_cellule(px, py: integer; valeur: Boolean);
                 procedure nettoyer();
                 procedure afficher(camera: TCamera);
                 function simulerCellule(px, py: integer): boolean;
+                function estVide(): boolean;
         end; 
 
 implementation
 
-constructor TParcelle.init(nx, ny: integer; n_voisins: array of TVoisin);
+constructor TParcelle.init(nx, ny: integer; n_voisins: TVoisins);
 var
     i : integer;
 begin
     // Initialisation des coordonnées
-    x := nx;
-    y := ny;
+    self.x := nx;
+    self.y := ny;
     // Initialisation des cases
     for i := 0 to TAILLE_PARCELLE - 1 do
-        lignes[i] := 0;
+        self.lignes[i] := 0;
 
     // Initialisation des voisins
-    for i := 0 to 7 do
-        voisins[i] := n_voisins[i];
+    self.voisins := n_voisins;
 
 end;
 
@@ -98,7 +97,7 @@ begin
     // Affichage de la parcelle
     GotoXY(1, HAUTEUR_CAM + 9);
     writeln('debut: ', debut_x, ' ', debut_y, ' fin: ', fin_x, ' ', fin_y, ' offset: ', offset_x, ' ', offset_y);
-    log('debut: ' + IntToStr(debut_x) + ' ' + IntToStr(debut_y) + ' fin: ' + IntToStr(fin_x) + ' ' + IntToStr(fin_y) + ' offset: ' + IntToStr(offset_x) + ' ' + IntToStr(offset_y));
+
     TextColor(0);       
     
     for py := debut_y to fin_y - 1 do
@@ -132,7 +131,23 @@ begin
                 compteur := compteur + 1;
         end;
     end;
-    simulerCellule := (compteur = 3) or ((compteur = 2) and obtenir_cellule(x, y));
+    simulerCellule := (compteur = 3) or ((compteur = 2) and obtenir_cellule(px, py));
+end;
+
+
+function TParcelle.estVide(): boolean;
+var
+    i : integer;
+begin
+    estVide := true;
+    for i := 0 to TAILLE_PARCELLE - 1 do
+    begin
+        if lignes[i] <> 0 then
+        begin
+            estVide := false;
+            break;
+        end;
+    end;
 end;
 
 end.
