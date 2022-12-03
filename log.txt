@@ -1,3 +1,162 @@
-Application des changements :2
+Création d'une nouvelle parcelle
+Simulation
 Parcelle 0
+Voisins : 0 0 0 0
+Voisins : 0 0 0 0
 Parcelle 1
+Voisins : 63 63 63 63
+Voisins : 0 0 0 0
+Simulation
+Parcelle 0
+Voisins : 32540 32540 32540 32540
+Voisins : -1 -1 0 -1
+h
+Création d'une nouvelle parcelle
+Création d'une nouvelle parcelle
+Simulation
+Parcelle 0
+Voisins : 0 0 0 0
+Voisins : 0 0 0 0
+Parcelle 1
+Voisins : 63 63 63 63
+Voisins : 0 0 0 0
+Parcelle 2
+Voisins : 6 6 6 6
+Voisins : 0 0 0 0
+Simulation
+Parcelle 0
+Voisins : 5 5 5 5
+Voisins : -1 -1 0 -1
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+Simulation
+Parcelle 0
+Voisins : 4 4 4 4
+Voisins : -1 -1 0 -1
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+Simulation
+Parcelle 0
+Voisins : 32602 32602 32602 32602
+Voisins : -1 -1 0 -1
+h

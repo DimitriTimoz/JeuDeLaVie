@@ -22,7 +22,9 @@ var
     i, len: integer;
     nx, ny: Int32;
     n_voisins: TVoisins;
+    trouve: boolean;
 begin
+    trouve := false;
     len := length(parcelles);
     // Coordonnées de la parcelle
     ny := y - negmod(y, TAILLE_PARCELLE);
@@ -37,28 +39,33 @@ begin
             x := x - parcelles[i].x;
             y := y - parcelles[i].y;
             parcelles[i].definir_cellule(x, y, true);
-            Exit;
+            trouve := true;
         end;
         // Vérification des voisins
-        if intpower(parcelles[i].x - nx, 2) + intpower(parcelles[i].x - ny, 2) <= intpower(TAILLE_PARCELLE, 2) then
+        if estVoisin(parcelles[i].x, nx, parcelles[i].y, ny) then
+        begin
             n_voisins.ajouter(parcelles[i].x, parcelles[i].y, i);
+            parcelles[i].voisins.ajouter(nx, ny, len);
+        end;
     end;
 
     (* Sinon on crée une nouvelle parcelle *)
-    setLength(parcelles, len + 1);
-    parcelles[len].init(nx, ny, n_voisins);
-   
-    x := negmod(x, TAILLE_PARCELLE);
-    y := negmod(y, TAILLE_PARCELLE);
+    if not trouve then
+    begin
+        setLength(parcelles, len + 1);
+        parcelles[len].init(nx, ny, n_voisins);
+    
+        x := negmod(x, TAILLE_PARCELLE);
+        y := negmod(y, TAILLE_PARCELLE);
 
-    parcelles[len].definir_cellule(x, y, true);
-
+        parcelles[len].definir_cellule(x, y, true);
+    end;
 
 end;
 
 procedure TPlateau.supprimerCellule(x, y: integer);
 var 
-    i, len, nx, ny: integer;
+    i, len, nx, ny: Int32;
 begin
     len := length(parcelles);
 
@@ -114,7 +121,7 @@ procedure TPlateau.charger();
 var
     nom, ligne: String;
     f: Text;
-    i, p, n_parcelles: integer;
+    i, p, n_parcelles: Int32;
 begin
     
     repeat
@@ -160,18 +167,19 @@ end;
 
 procedure TPlateau.simuler();
 var 
-    y, x, i, j, h_i, b_i, g_i, d_i : Integer;
+    y, x, i, j, h_i, b_i, g_i, d_i : Int32;
     h, b, g, d, vide: Boolean;
     nouvelles_parcelles: array of TParcelle;
-    n_npar: integer;
+    n_npar: Int32;
     zone: TZone;
     nouveau_voisins: TVoisins;
 begin
     n_npar := 0;
     vide := false;
-
+    log('Simulation');
     for i := 0 to length(parcelles) - 1 do
     begin
+        log('Parcelle ' + IntToStr(i));
         // On créé la nouvelle parcelle
         if not(vide) then
         begin
@@ -203,7 +211,8 @@ begin
         b_i := self.parcelles[i].voisins.indexVoisin(b, 0, -1);
         g_i := self.parcelles[i].voisins.indexVoisin(g, -1, 0);
         d_i := self.parcelles[i].voisins.indexVoisin(d, 1, 0);
-
+        log('Voisins : ' + IntToStr(h_i) + ' ' + IntToStr(b_i) + ' ' + IntToStr(g_i) + ' ' + IntToStr(d_i));
+        log('Voisins : ' + BoolToStr(h) + ' ' + BoolToStr(b) + ' ' + BoolToStr(g) + ' ' + BoolToStr(d));
         // On simule les bords haut et bas
         for x := 1 to TAILLE_PARCELLE - 2 do
         begin
@@ -211,6 +220,7 @@ begin
             // Récupération de la zone
             if h then 
             begin
+                log('h');
                 zone[0][0] := self.parcelles[i].obtenir_cellule(x - 1, 1); zone[0][1] := self.parcelles[i].obtenir_cellule(x, 1); zone[0][2] := self.parcelles[i].obtenir_cellule(x + 1, 1);
                 zone[1][0] := self.parcelles[i].obtenir_cellule(x - 1, 0); zone[1][1] := self.parcelles[i].obtenir_cellule(x, 0); zone[1][2] := self.parcelles[i].obtenir_cellule(x + 1, 0);
                 zone[2][0] := self.parcelles[h_i].obtenir_cellule(x - 1, TAILLE_PARCELLE - 1); zone[2][1] := self.parcelles[h_i].obtenir_cellule(x, TAILLE_PARCELLE - 1); zone[2][2] := self.parcelles[h_i].obtenir_cellule(x + 1, TAILLE_PARCELLE - 1);
@@ -276,15 +286,6 @@ begin
         end
     end;
     self.parcelles := nouvelles_parcelles;
-    setLength(self.parcelles, 0);
-    setLength(self.parcelles, length(nouvelles_parcelles));
-    // Application des changements
-    log('Application des changements :' + IntToStr(length(nouvelles_parcelles)));
-    for i := 0 to length(nouvelles_parcelles) - 1 do
-    begin
-        self.parcelles[i] := nouvelles_parcelles[i];
-        log('Parcelle ' + IntToStr(i));
-    end; 
 
 end;
 
