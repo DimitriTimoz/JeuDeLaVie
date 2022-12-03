@@ -1,5 +1,5 @@
-**/*.o
-**/*.ppu
+*.o
+*.ppu
 tests
 main
 .vscode/launch.json
