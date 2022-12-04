@@ -33,11 +33,13 @@ type
             procedure init(px, py : integer);
             procedure ajouter(px, py, ind : integer);
             procedure supprimer(px, py : integer);
-            function indexVoisin(var existe: boolean; px, py : integer) : integer;
+            function indexVoisin(var voisinExiste: boolean; px, py : integer) : integer;
+            procedure logVoisins();
     end;
 
-        function estVoisin(px, py, p2x, p2y : integer) : boolean;
-    
+    function estVoisin(px, py, p2x, p2y : integer) : boolean;
+    procedure nettoieLigne(var zone : TZone; ligne : integer; horizontale : boolean);
+
     
 implementation
 
@@ -55,21 +57,15 @@ implementation
     end;
 
     procedure TVoisins.init(px, py : integer);
-    var
-        x, y, i: integer;
     begin
-        i := 0;
-        for x := px - 1 to px + 1 do
-        begin
-            for y := py - 1 to py + 1 do
-                if (x = px) and (y = py) then
-                    continue
-                else
-                begin
-                    self.voisins[i].init(x, y, 0);
-                    i := i + 1;
-                end;
-        end;
+        self.voisins[0].init(px - TAILLE_PARCELLE, py - TAILLE_PARCELLE, 0);
+        self.voisins[1].init(px, py - TAILLE_PARCELLE, 0);
+        self.voisins[2].init(px + TAILLE_PARCELLE, py - TAILLE_PARCELLE, 0);
+        self.voisins[3].init(px - TAILLE_PARCELLE, py, 0);
+        self.voisins[4].init(px + TAILLE_PARCELLE, py, 0);
+        self.voisins[5].init(px - TAILLE_PARCELLE, py + TAILLE_PARCELLE, 0);
+        self.voisins[6].init(px, py + TAILLE_PARCELLE, 0);
+        self.voisins[7].init(px + TAILLE_PARCELLE, py + TAILLE_PARCELLE, 0);
     end;
 
     procedure TVoisins.ajouter(px, py, ind : integer);
@@ -101,22 +97,54 @@ implementation
         end;
     end;
 
-    function TVoisins.indexVoisin(var existe: boolean; px, py : integer) : integer;
+    function TVoisins.indexVoisin(var voisinExiste: boolean; px, py : integer) : integer;
     var 
         i : integer;
         refx, refy : integer;
     begin
+        px := px * TAILLE_PARCELLE;
+        py := py * TAILLE_PARCELLE;
         // Coordonnées du voisin souhaité
-        refx := (self.voisins[0].x + self.voisins[7].x) + px;
-        refy := (self.voisins[0].y + self.voisins[7].y) + py;
+        refx := ((self.voisins[0].x + self.voisins[7].x) div 2 ) + px;
+        refy := ((self.voisins[0].y + self.voisins[7].y) div 2 ) + py;
+
         // Recherche du voisin
         for i := 0 to 7 do
         begin
             if (self.voisins[i].x = refx) and (self.voisins[i].y = refy) then
             begin
                 indexVoisin := self.voisins[i].index;
-                existe := self.voisins[i].existe;
-                break;
+                voisinExiste := self.voisins[i].existe;
+                exit;
+            end;
+        end;
+
+        voisinExiste := false;
+    end;
+
+    procedure TVoisins.logVoisins();
+    var 
+        i : integer;
+    begin
+        for i := 0 to 7 do
+        begin
+            log('Voisin ' + inttostr(i) + ' : ' + inttostr(self.voisins[i].x) + ' ' + inttostr(self.voisins[i].y) + ' ' + inttostr(self.voisins[i].index) + ' existe: ' + booltostr(self.voisins[i].existe));
+        end;
+    end;
+
+    procedure nettoieLigne(var zone : TZone; ligne : integer; horizontale : boolean);
+    var 
+        i: integer;
+    begin
+        for i := 0 to 2 do
+        begin
+            if horizontale then
+            begin
+                zone[ligne][i] := false;
+            end
+            else
+            begin
+                zone[i][ligne] := false;
             end;
         end;
     end;

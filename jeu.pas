@@ -2,7 +2,7 @@ unit Jeu;
 
 
 interface
-uses structures, plateau, crt, sysutils, dateutils, math;
+uses structures, plateau, crt, logSys, sysutils, dateutils, math;
 
 type 
     TJeu = object
@@ -40,6 +40,7 @@ implementation
         voisins: TVoisins;
     begin
         (* Créer une parcelle en mémoire *)
+        clearLog();
         TextBackground(White);
         TextColor(0);
         setLength(self.plateau.parcelles, 1);
@@ -55,8 +56,8 @@ implementation
         self.camera.hauteur := HAUTEUR_CAM;
         self.camera.largeur := LARGEUR_CAM;
 
-        self.vitesse := 500;
-        self.tour := 0;
+        self.vitesse := 800;
+        self.tour := -20;
 
         menuAction();
     end;
@@ -64,7 +65,7 @@ implementation
     procedure TJeu.afficher();
     begin
         clrScr();
-        plateau.afficher(camera);
+        self.plateau.afficher(self.camera);
 
         (* affiche les informations *)
         GotoXY(1, HAUTEUR_CAM + 1);
@@ -81,7 +82,7 @@ implementation
         repeat
         begin
             clrScr();
-            plateau.afficher(camera);
+            self.plateau.afficher(camera);
             GotoXY(LARGEUR_CAM div 2, HAUTEUR_CAM div 2);
             write('✚');
 

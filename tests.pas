@@ -1,10 +1,14 @@
 program tests;
 
-uses Moteur, UInterface, structures;
 
 var 
-    jeu: TJeu;
-
+    i: integer;
+    n : integer;
 begin
-    writeln(-13 mod 4)
+    n := 10;
+    for i := 1 to n do
+    begin
+        n := n + 1;
+        writeln(n);
+    end;
 end.

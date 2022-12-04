@@ -1,162 +1,144 @@
-Création d'une nouvelle parcelle
-Simulation
-Parcelle 0
-Voisins : 0 0 0 0
-Voisins : 0 0 0 0
-Parcelle 1
-Voisins : 63 63 63 63
-Voisins : 0 0 0 0
-Simulation
-Parcelle 0
-Voisins : 32540 32540 32540 32540
-Voisins : -1 -1 0 -1
-h
-Création d'une nouvelle parcelle
-Création d'une nouvelle parcelle
-Simulation
-Parcelle 0
-Voisins : 0 0 0 0
-Voisins : 0 0 0 0
-Parcelle 1
-Voisins : 63 63 63 63
-Voisins : 0 0 0 0
-Parcelle 2
-Voisins : 6 6 6 6
-Voisins : 0 0 0 0
-Simulation
-Parcelle 0
-Voisins : 5 5 5 5
-Voisins : -1 -1 0 -1
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-Simulation
-Parcelle 0
-Voisins : 4 4 4 4
-Voisins : -1 -1 0 -1
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-h
-Simulation
-Parcelle 0
-Voisins : 32602 32602 32602 32602
-Voisins : -1 -1 0 -1
-h
+--------- Simulation de  2 parcelles ---------
+## Parcelle 0 : 0 0
+0 0 0
+-1 # 0
+0 0 0
+-----
+0 0 0
+1 # 0
+0 0 0
+Voisin 0 : -64 -64 0 existe: 0
+Voisin 1 : 0 -64 0 existe: 0
+Voisin 2 : 64 -64 0 existe: 0
+Voisin 3 : -64 0 1 existe: -1
+Voisin 4 : 64 0 0 existe: 0
+Voisin 5 : -64 64 0 existe: 0
+Voisin 6 : 0 64 0 existe: 0
+Voisin 7 : 64 64 0 existe: 0
+## Parcelle 1 : -64 0
+0 0 0
+0 # -1
+0 0 0
+-----
+0 0 0
+0 # 0
+0 0 0
+Voisin 0 : -128 -64 0 existe: 0
+Voisin 1 : -64 -64 0 existe: 0
+Voisin 2 : 0 -64 0 existe: 0
+Voisin 3 : -128 0 0 existe: 0
+Voisin 4 : 0 0 0 existe: -1
+Voisin 5 : -128 64 0 existe: 0
+Voisin 6 : -64 64 0 existe: 0
+Voisin 7 : 0 64 0 existe: 0
+--------- Simulation de  1 parcelles ---------
+## Parcelle 0 : -64 0
+0 0 0
+0 # 0
+0 0 0
+-----
+0 0 0
+0 # 0
+0 0 0
+Voisin 0 : -128 -64 0 existe: 0
+Voisin 1 : -64 -64 0 existe: 0
+Voisin 2 : 0 -64 0 existe: 0
+Voisin 3 : -128 0 0 existe: 0
+Voisin 4 : 0 0 0 existe: 0
+Voisin 5 : -128 64 0 existe: 0
+Voisin 6 : -64 64 0 existe: 0
+Voisin 7 : 0 64 0 existe: 0
+Ajout d'une nouvelle parcelle 
+Ajout du voisin x = 0 y = 0 à la parcelle x = -64 y = 0
+Ajout du voisin x = -64 y = 0 à la parcelle x = 0 y = 0
+--------- Simulation de  2 parcelles ---------
+## Parcelle 0 : -64 0
+0 0 0
+0 # -1
+0 0 0
+-----
+0 0 0
+0 # 1
+0 0 0
+Voisin 0 : -128 -64 0 existe: 0
+Voisin 1 : -64 -64 0 existe: 0
+Voisin 2 : 0 -64 0 existe: 0
+Voisin 3 : -128 0 0 existe: 0
+Voisin 4 : 0 0 1 existe: -1
+Voisin 5 : -128 64 0 existe: 0
+Voisin 6 : -64 64 0 existe: 0
+Voisin 7 : 0 64 0 existe: 0
+## Parcelle 1 : 0 0
+0 0 0
+-1 # 0
+0 0 0
+-----
+0 0 0
+0 # 0
+0 0 0
+Voisin 0 : -64 -64 0 existe: 0
+Voisin 1 : 0 -64 0 existe: 0
+Voisin 2 : 64 -64 0 existe: 0
+Voisin 3 : -64 0 0 existe: -1
+Voisin 4 : 64 0 0 existe: 0
+Voisin 5 : -64 64 0 existe: 0
+Voisin 6 : 0 64 0 existe: 0
+Voisin 7 : 64 64 0 existe: 0
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
+--------- Simulation de  0 parcelles ---------
