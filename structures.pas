@@ -4,8 +4,8 @@ interface
 
 uses utils, logSys, crt, sysutils, math;
 
-const LARGEUR_CAM = 32; // Doit être paire
-const HAUTEUR_CAM = 32; // Doit être paire
+const LARGEUR_CAM = 54; // Doit être paire
+const HAUTEUR_CAM = 42; // Doit être paire
 const TAILLE_PARCELLE = 64; // Doit <= 64
 type
     TZone = array[0..2] of array[0..2] of boolean;

@@ -7,8 +7,9 @@ interface
             public
                 voisins : TVoisins;
                 x, y : integer;
-                lignes : array[0..63] of QWord (* 64 bits *);
+                lignes : array[0..63] of Int64 (* 64 bits *);
                 constructor init(nx, ny: integer; n_voisins: TVoisins);
+                constructor aleatoire(nx, ny: integer; n_voisins: TVoisins);
                 function obtenir_cellule(px, py: integer): Boolean;
                 procedure definir_cellule(px, py: integer; valeur: Boolean);
                 procedure nettoyer();
@@ -33,6 +34,23 @@ begin
     // Initialisation des voisins
     self.voisins := n_voisins;
 
+end;
+
+constructor TParcelle.aleatoire(nx, ny: integer; n_voisins: TVoisins);
+var
+    i: integer;
+begin
+    // Initialisation des coordonnées
+    self.x := nx;
+    self.y := ny;
+    // Initialisation des cases
+    // Initialisation des cases
+    Randomize;
+    for i := 0 to TAILLE_PARCELLE - 1 do
+        self.lignes[i] := (random(9223372036854775807));
+
+    // Initialisation des voisins
+    self.voisins := n_voisins;
 end;
 
 function TParcelle.obtenir_cellule(px, py: integer): Boolean;

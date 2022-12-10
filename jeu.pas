@@ -52,7 +52,7 @@ implementation
         self.camera.hauteur := HAUTEUR_CAM;
         self.camera.largeur := LARGEUR_CAM;
 
-        self.vitesse := 750;
+        self.vitesse := 900;
         self.tour := 0;
         self.enCours := true;
 
@@ -115,6 +115,7 @@ implementation
     var 
         c : Char;
         i : integer;
+        n_voisins : TVoisins;
     begin
 		i := 0;
 		repeat
@@ -139,7 +140,7 @@ implementation
 				ESC : halt;
 			end;
 			
-			if (i > 4) then
+			if (i > 5) then
 				i := 4
 			else if (i <= 0) then
 				i := 0;
@@ -149,9 +150,14 @@ implementation
 		case i of
             0 : self.enCours := true;
 			1 : self.plateau.charger();
-			2 : self.plateau.sauvegarder();
-			3 : self.modifierPlateau();
-			4 : halt;
+            2 : begin
+                setLength(self.plateau.parcelles, 1);
+                n_voisins.init(0, 0);
+                self.plateau.parcelles[0].aleatoire(0, 0, n_voisins);
+            end;  
+			3 : self.plateau.sauvegarder();
+			4 : self.modifierPlateau();
+			5 : halt;
 		end;
 			
     end;
@@ -164,6 +170,7 @@ implementation
         writeln('Que voulez vous faire : ');
         writeln('- Reprendre la simulation');
         writeln('- Charger le plateau');
+        writeln('- Carte aléatoire');
         writeln('- Sauvegarder le plateau');
         writeln('- Modifier le plateau');
         writeln('- Quitter le jeu');
@@ -195,11 +202,10 @@ implementation
                         RIGHT: self.camera.px := self.camera.px + 1;
                     end;
                 end;
-                P : begin 
+                P, ESC: begin 
                     self.enCours := false;
                     self.menuAction();
                 end;
-                ESC: halt;
             end;
 
             // On vide le buffer de clavier
