@@ -224,6 +224,7 @@ begin
         bd_i := self.parcelles[i].voisins.indexVoisin(bd, 1, 1);
 
         // On simule les bords inexistant
+        // Haut et bas
         n1 := -1; n2 := -1;
         if not h or not b then
         begin
@@ -238,7 +239,7 @@ begin
                     begin
                         if n1 = -1 then
                         begin
-                            log('Ajout d''une nouvelle parcelle ');
+                            log('Ajout d''une nouvelle parcelle d');
                             n1 := length(nouvelles_parcelles);
                             ajouterNouvelleParcelle(nouvelles_parcelles, self.parcelles[i].x, self.parcelles[i].y - TAILLE_PARCELLE);
                         end;
@@ -254,7 +255,7 @@ begin
                     begin
                         if n2 = -1 then
                         begin
-                            log('Ajout d''une nouvelle parcelle ');
+                            log('Ajout d''une nouvelle parcelle b');
                             n2 := length(nouvelles_parcelles);
                             ajouterNouvelleParcelle(nouvelles_parcelles, self.parcelles[i].x, self.parcelles[i].y + TAILLE_PARCELLE);
                         end;
@@ -264,8 +265,9 @@ begin
             end;
         end;
 
+        // Gauche et droite
         n1 := -1; n2 := -1;
-        if not h or not b then
+        if not g or not d then
         begin
             for y := 1 to TAILLE_PARCELLE - 2 do
             begin
@@ -278,7 +280,7 @@ begin
                     begin
                         if n1 = -1 then
                         begin
-                            log('Ajout d''une nouvelle parcelle ');
+                            log('Ajout d''une nouvelle parcelle g');
                             n1 := length(nouvelles_parcelles);
                             ajouterNouvelleParcelle(nouvelles_parcelles, self.parcelles[i].x - TAILLE_PARCELLE, self.parcelles[i].y);
                         end;
@@ -289,12 +291,12 @@ begin
                 begin
                     nettoieLigne(zone, 0, true);
                     nettoieLigne(zone, 1, true);
-                    zone[2, 0] := self.parcelles[i].obtenir_cellule(TAILLE_PARCELLE - 1, y - 1); zone[2, 1] := self.parcelles[i].obtenir_cellule(TAILLE_PARCELLE - 1, y); zone[2, 2] := self.parcelles[i].obtenir_cellule(TAILLE_PARCELLE - 1, y + 1);
+                    zone[2, 0] := self.parcelles[i].obtenir_cellule(TAILLE_PARCELLE - 1, y - 1); zone[2, 1] := self.parcelles[i].obtenir_cellule(TAILLE_PARCELLE - 1, y ); zone[2, 2] := self.parcelles[i].obtenir_cellule(TAILLE_PARCELLE - 1, y + 1);
                     if simulerZone(zone) then
                     begin
                         if n2 = -1 then
                         begin
-                            log('Ajout d''une nouvelle parcelle ');
+                            log('Ajout d''une nouvelle parcelle d');
                             n2 := length(nouvelles_parcelles);
                             ajouterNouvelleParcelle(nouvelles_parcelles, self.parcelles[i].x + TAILLE_PARCELLE, self.parcelles[i].y);
                         end;
@@ -303,7 +305,6 @@ begin
                 end;
             end;
         end;
-
         // On simule les coins
         // Une cellule nait si
 
@@ -371,7 +372,6 @@ begin
         log(inttostr(hg_i) + ' ' + inttostr(h_i) + ' ' + inttostr(hd_i));
         log(inttostr(g_i) + ' # ' + inttostr(d_i));
         log(inttostr(bg_i) + ' ' + inttostr(b_i) + ' ' + inttostr(bd_i));
-        self.parcelles[i].voisins.logVoisins();
 
         // On simule les bords haut et bas
         for x := 1 to TAILLE_PARCELLE - 2 do
@@ -420,7 +420,7 @@ begin
             end
             else 
             begin
-                nettoieLigne(zone, 0, false);
+                nettoieLigne(zone, 0, true);
             end;
             nouvelles_parcelles[n_npar - 1].definir_cellule(0, y, simulerZone(zone));
            
@@ -434,7 +434,7 @@ begin
             end
             else
             begin
-                nettoieLigne(zone, 2, false);
+                nettoieLigne(zone, 2, true);
             end;
             nouvelles_parcelles[n_npar - 1].definir_cellule(TAILLE_PARCELLE - 1, y, simulerZone(zone));
         end;

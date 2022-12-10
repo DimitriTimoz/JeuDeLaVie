@@ -43,21 +43,16 @@ implementation
         clearLog();
         TextBackground(White);
         TextColor(0);
-        setLength(self.plateau.parcelles, 1);
+        setLength(self.plateau.parcelles, 0);
 
-        voisins.init(0, 0);
-        self.plateau.parcelles[0].init(0, 0, voisins);
-
-        (* Initialise une parcelle vide *)
-        self.plateau.parcelles[0].nettoyer();
         
         self.camera.px := -LARGEUR_CAM div 2;
         self.camera.py := -HAUTEUR_CAM div 2;
         self.camera.hauteur := HAUTEUR_CAM;
         self.camera.largeur := LARGEUR_CAM;
 
-        self.vitesse := 800;
-        self.tour := -20;
+        self.vitesse := 750;
+        self.tour := 0;
 
         menuAction();
     end;
@@ -83,7 +78,7 @@ implementation
         begin
             clrScr();
             self.plateau.afficher(camera);
-            GotoXY(LARGEUR_CAM div 2, HAUTEUR_CAM div 2);
+            GotoXY(LARGEUR_CAM div 2 + 1, HAUTEUR_CAM div 2 + 1);
             write('✚');
 
             (*Debug infos*)
@@ -103,8 +98,8 @@ implementation
                         RIGHT: camera.px := camera.px + 1;
                     end;
                 end;
-                DEL: plateau.supprimerCellule(camera.px + (LARGEUR_CAM div 2) - 1, camera.py + (HAUTEUR_CAM div 2) - 1);
-                ENTR: plateau.ajouterCellule(camera.px + (LARGEUR_CAM div 2) - 1, camera.py + (HAUTEUR_CAM div 2) - 1);
+                DEL: plateau.supprimerCellule(camera.px + (LARGEUR_CAM div 2), camera.py + (HAUTEUR_CAM div 2));
+                ENTR: plateau.ajouterCellule(camera.px + (LARGEUR_CAM div 2), camera.py + (HAUTEUR_CAM div 2));
                 SAVE: plateau.sauvegarder();
                 LOAD: plateau.charger();
                 ESC : break;
