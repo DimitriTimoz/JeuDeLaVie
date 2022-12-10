@@ -32,6 +32,7 @@ type
         SAVE = #115; // 's'
         LOAD = #108; // 'l'
         ESC = #27;
+        P = #112; // 'p'
 
 implementation
 
@@ -53,6 +54,7 @@ implementation
 
         self.vitesse := 750;
         self.tour := 0;
+        self.enCours := true;
 
         menuAction();
     end;
@@ -169,7 +171,7 @@ implementation
     var 
         touche_pressee : Char;
     begin
-        if (1000 - min(1000, vitesse) <= MilliSecondsBetween(Now, self.lastTime)) then
+        if (1000 - min(1000, vitesse) <= MilliSecondsBetween(Now, self.lastTime)) and self.enCours then
         begin
             self.lastTime := Now;
             self.tour := self.tour + 1;
@@ -190,6 +192,8 @@ implementation
                         RIGHT: self.camera.px := self.camera.px + 1;
                     end;
                 end;
+                P : self.enCours := not self.enCours;
+                ESC: halt;
             end;
 
             // On vide le buffer de clavier
