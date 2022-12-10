@@ -47,8 +47,8 @@ implementation
         setLength(self.plateau.parcelles, 0);
 
         
-        self.camera.px := -LARGEUR_CAM div 2;
-        self.camera.py := -HAUTEUR_CAM div 2;
+        self.camera.px := 0;
+        self.camera.py := 0;
         self.camera.hauteur := HAUTEUR_CAM;
         self.camera.largeur := LARGEUR_CAM;
 
