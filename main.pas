@@ -10,5 +10,5 @@ begin
     repeat
         partie.miseAJour();
         delay(50);
-    until (partie.tour > 20);
+    until not (partie.enCours);
 end.

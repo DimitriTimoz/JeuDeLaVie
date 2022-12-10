@@ -104,10 +104,11 @@ implementation
                 ENTR: plateau.ajouterCellule(camera.px + (LARGEUR_CAM div 2), camera.py + (HAUTEUR_CAM div 2));
                 SAVE: plateau.sauvegarder();
                 LOAD: plateau.charger();
-                ESC : break;
+                ESC : self.menuAction();
             end;
         end;
         until (touche_pressee = ESC);
+        self.enCours := true;
     end;
 
     procedure TJeu.menuAction();
@@ -135,21 +136,22 @@ implementation
 					end;
 				end;
 				ENTR: break;
-				ESC : break;
+				ESC : halt;
 			end;
 			
-			if (i > 3) then
-				i := 3
+			if (i > 4) then
+				i := 4
 			else if (i <= 0) then
 				i := 0;
 				
 		until (c = ENTR);
 			
 		case i of
-			0 : writeln('');
-			1 : writeln('');
-			2 : modifierPlateau();
-			3 : ClrScr;
+            0 : self.enCours := true;
+			1 : self.plateau.charger();
+			2 : self.plateau.sauvegarder();
+			3 : self.modifierPlateau();
+			4 : halt;
 		end;
 			
     end;
@@ -160,10 +162,11 @@ implementation
 
         // Pour l'instant je mets juste un clearscreen et j'écris le menu dans le terminal mais après je l'améliorerais avec les flèches, faut juste que je retrouve comment faire //
         writeln('Que voulez vous faire : ');
+        writeln('- Reprendre la simulation');
         writeln('- Charger le plateau');
         writeln('- Sauvegarder le plateau');
         writeln('- Modifier le plateau');
-        writeln('- Quitter le menu');
+        writeln('- Quitter le jeu');
 
     end;
 
@@ -192,7 +195,10 @@ implementation
                         RIGHT: self.camera.px := self.camera.px + 1;
                     end;
                 end;
-                P : self.enCours := not self.enCours;
+                P : begin 
+                    self.enCours := false;
+                    self.menuAction();
+                end;
                 ESC: halt;
             end;
 
