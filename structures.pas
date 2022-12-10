@@ -10,7 +10,7 @@ const TAILLE_PARCELLE = 64; // Doit <= 64
 type
     TZone = array[0..2] of array[0..2] of boolean;
     TCamera = record
-        px, py : integer;
+        px, py : Int32;
         hauteur, largeur : integer;
     end;
     PQword = ^Qword;
@@ -22,7 +22,7 @@ type
     end;
     TVoisin = object
         public
-            x, y : integer;
+            x, y : Int32;
             index : integer;
             existe : boolean;
             constructor init(px, py, ind : integer);
