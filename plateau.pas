@@ -108,7 +108,7 @@ begin
     writeln('Sauvegarde du plateau');
     write('Nom du fichier : ');
     readln(nom);
-    assign(f, nom + '.save');
+    assign(f, './paternes' + nom + '.save');
     rewrite(f);
 
     (* Entête *)
@@ -141,7 +141,7 @@ begin
         writeln('Charger un plateau');
         write('Nom du fichier : ');
         readln(nom);
-        nom := nom + '.save';
+        nom := './paternes' + nom + '.save';
     until FileExists(nom);
     
     assign(f, nom);
