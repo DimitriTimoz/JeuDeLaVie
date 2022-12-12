@@ -45,7 +45,6 @@ implementation
         TextColor(0);
         setLength(self.plateau.parcelles, 0);
 
-        
         self.camera.px := 0;
         self.camera.py := 0;
         self.camera.hauteur := HAUTEUR_CAM;
@@ -140,7 +139,7 @@ implementation
 			end;
 			
 			if (i > 5) then
-				i := 4
+				i := 5
 			else if (i <= 0) then
 				i := 0;
 				
@@ -180,11 +179,13 @@ implementation
     var 
         touche_pressee : Char;
     begin
+    
         if (1000 - min(1000, vitesse) <= MilliSecondsBetween(Now, self.lastTime)) and self.enCours then
         begin
             self.lastTime := Now;
             self.tour := self.tour + 1;
             self.plateau.simuler();
+            log(IntToStr(self.plateau.scanPaternes('./paternes/repetive.save')));
             self.afficher();
         end;
 

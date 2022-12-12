@@ -181,7 +181,6 @@ implementation
             for y := 0 to self.ty - 1 do
             begin
                 readln(f, ligne);
-                log(ligne);
                 self.tableau[p][y] := 0;
                 for x := 0 to self.tx - 1 do
                 begin
@@ -190,6 +189,9 @@ implementation
                 end;
             end;
         end;
+
+        self.n := n_frames;
+
 
         close(f);
     end;

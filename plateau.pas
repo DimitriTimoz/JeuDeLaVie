@@ -141,7 +141,7 @@ begin
         writeln('Charger un plateau');
         write('Nom du fichier : ');
         readln(nom);
-        nom := './paternes' + nom + '.save';
+        nom := './saves' + nom + '.save';
     until FileExists(nom);
     
     assign(f, nom);
@@ -594,7 +594,6 @@ function TPlateau.scanPaternes(name: string): Int32;
 var
     paterne : TPaterne;
     compteur, x, y, xp, yp, i, f, coY, coX, p: Int32;
-    voisin: TVoisin;
     existe: boolean;
 
 label
@@ -603,6 +602,7 @@ label
 begin
     scanPaternes := 0;
     paterne.charger(name);
+    log('Scan du paterne ' + IntToStr(paterne.n) + '');
     compteur := 0;
     // Scan du plateau
     for i := 0 to length(parcelles) - 1 do
@@ -623,21 +623,22 @@ begin
                     for yp := 0 to paterne.ty - 1 do
                     begin
                         p := i;
-                        if yp + y = TAILLE_PARCELLE then
+                        coY := yp + y;
+                        if yp + y >= TAILLE_PARCELLE then
                         begin
                             // On continue sur la voisine
                             // On récupère la voisine du bas
                             p := self.parcelles[i].voisins.indexVoisin(existe, 0, 1);
                             if not(existe) then
                             begin
-                                p := i;
                                 break;
                             end;
-                            p := voisin.index;
+                            coY := yp + y - TAILLE_PARCELLE;
                         end;
-
+                        
                         for xp := 0 to paterne.tx - 1 do
                         begin
+                            coX := xp + x;
                             if xp + x >= TAILLE_PARCELLE then
                             begin
                                 // On continue sur la voisine
@@ -645,16 +646,17 @@ begin
                                 p := self.parcelles[p].voisins.indexVoisin(existe, 1, 0);
                                 if not(existe) then
                                 begin
-                                    p := i;
                                     goto matchPas;
                                 end;
+                                coX := xp + x - TAILLE_PARCELLE;
                             end;
 
-                            if not((self.parcelles[p].obtenir_cellule(x + xp, y)) and (paterne.obtenir_cellule(f, x, y))) then
+                            if ((self.parcelles[p].obtenir_cellule(coX, coY)) <> (paterne.obtenir_cellule(f, xp, yp))) then
                                 goto matchPas;
 
                         end;
                     end;
+                    log('Match trouvé en (' + IntToStr(x) + ', ' + IntToStr(y) + ')');
                     compteur := compteur + 1;
                     matchPas:
                 end;

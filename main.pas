@@ -7,7 +7,6 @@ var
     paterne: TPaterne;
 begin
     clearLog();
-    paterne.charger('paternes/repetive.save');
     partie.init();
     repeat
         partie.miseAJour();
