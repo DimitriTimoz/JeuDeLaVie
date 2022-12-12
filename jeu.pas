@@ -41,7 +41,6 @@ implementation
         voisins: TVoisins;
     begin
         (* Créer une parcelle en mémoire *)
-        clearLog();
         TextBackground(White);
         TextColor(0);
         setLength(self.plateau.parcelles, 0);

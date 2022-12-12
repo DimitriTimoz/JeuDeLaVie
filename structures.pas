@@ -13,12 +13,16 @@ type
         px, py : Int32;
         hauteur, largeur : integer;
     end;
-    PQword = ^Qword;
-    PPQword =^PQword;
-    TPaterne = record
-        tx, ty : integer;
-        tableau : PPQword;
-        n : integer;
+    PInt64 = ^Int64;
+    PPInt64 =^PInt64;
+    TPaterne = object
+        public
+            tx, ty : integer;
+            tableau : PPInt64;
+            n : integer;
+            constructor charger(nom : string);
+            destructor Destroy;
+            function obtenir_cellule(i, x, y : integer) : boolean;
     end;
     TVoisin = object
         public
@@ -148,4 +152,62 @@ implementation
             end;
         end;
     end;
+
+    constructor TPaterne.charger(nom : string);
+    var
+        f : text;
+        ligne : string;
+        x, y, p, n_frames : integer;
+    begin
+        assign(f, nom);
+        reset(f);
+
+        (* Entête *)
+        // Format: 'nombreFrames tailleX tailleY'
+        if eof(f) then
+            exit;
+        readln(f, ligne);
+        n_frames := StrToInt(Copy(ligne, 1, Pos(' ', ligne) - 1));
+        Delete(ligne, 1, Pos(' ', ligne));
+        self.tx := StrToInt(Copy(ligne, 1, Pos(' ', ligne) - 1));
+        Delete(ligne, 1, Pos(' ', ligne));
+        self.ty := StrToInt(ligne);
+
+        // On crée les frames
+        self.tableau := GetMem(n_frames * SizeOf(PPInt64));
+        for p := 0 to n_frames - 1 do
+        begin
+            self.tableau[p] := GetMem(self.ty * SizeOf(PInt64));
+            for y := 0 to self.ty - 1 do
+            begin
+                readln(f, ligne);
+                log(ligne);
+                self.tableau[p][y] := 0;
+                for x := 0 to self.tx - 1 do
+                begin
+                    if '1' = ligne[x + 1] then
+                        SetBit(self.tableau[p][y], x);
+                end;
+            end;
+        end;
+
+        close(f);
+    end;
+
+    destructor TPaterne.Destroy();
+    var
+        p : integer;
+    begin
+        for p := 0 to self.n - 1 do
+        begin
+            FreeMem(self.tableau[p]);
+        end;
+        FreeMem(self.tableau);
+    end;
+
+    function TPaterne.obtenir_cellule(i, x, y : integer) : boolean;
+    begin
+        obtenir_cellule := GetBit(self.tableau[i][y], x);
+    end;
+
 end.

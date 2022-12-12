@@ -14,6 +14,7 @@ type
             procedure simuler();
             procedure afficher(camera: TCamera);
             procedure simuleBordInexistant(var nouvelles_parcelles: TParcelles);
+            function scanPaternes(name: String): Int32;
     end;
 
     function simulerZone(zone: TZone): boolean;
@@ -136,7 +137,6 @@ var
     f: Text;
     i, p, n_parcelles: Int32;
 begin
-    
     repeat
         writeln('Charger un plateau');
         write('Nom du fichier : ');
@@ -531,8 +531,6 @@ begin
         // Simulation
         nouvelles_parcelles[n_npar - 1].definir_cellule(TAILLE_PARCELLE - 1, 0, simulerZone(zone));
         
-        
-       
         vide := nouvelles_parcelles[n_npar - 1].estVide();
     end;
 
@@ -554,9 +552,7 @@ begin
             if estVoisin(nouvelles_parcelles[i].x, nouvelles_parcelles[i].y, nouvelles_parcelles[j].x, nouvelles_parcelles[j].y) then
             begin
                 // On ajoute les voisins
-                log('Ajout du voisin x = ' + IntToStr(nouvelles_parcelles[j].x) + ' y = ' + IntToStr(nouvelles_parcelles[j].y) + ' à la parcelle x = ' + IntToStr(nouvelles_parcelles[i].x) + ' y = ' + IntToStr(nouvelles_parcelles[i].y));
                 nouvelles_parcelles[i].voisins.ajouter(nouvelles_parcelles[j].x, nouvelles_parcelles[j].y, j);
-                log('Ajout du voisin x = ' + IntToStr(nouvelles_parcelles[i].x) + ' y = ' + IntToStr(nouvelles_parcelles[i].y) + ' à la parcelle x = ' + IntToStr(nouvelles_parcelles[j].x) + ' y = ' + IntToStr(nouvelles_parcelles[j].y));
                 nouvelles_parcelles[j].voisins.ajouter(nouvelles_parcelles[i].x, nouvelles_parcelles[i].y, i);
             end;
         end;
@@ -593,5 +589,80 @@ begin
 
     simulerZone := (compteur = 3) or ((compteur = 2) and (zone[1][1]));
 end;
+
+function TPlateau.scanPaternes(name: string): Int32;
+var
+    paterne : TPaterne;
+    compteur, x, y, xp, yp, i, f, coY, coX, p: Int32;
+    voisin: TVoisin;
+    existe: boolean;
+
+label
+    matchPas;
+
+begin
+    scanPaternes := 0;
+    paterne.charger(name);
+    compteur := 0;
+    // Scan du plateau
+    for i := 0 to length(parcelles) - 1 do
+    begin
+        // On scan la frame f
+        for f := 0 to paterne.n - 1 do
+        begin
+            // On scan la parcelle
+            for y := 0 to TAILLE_PARCELLE - 1 do
+            begin
+                // On vérifie si la ligne est vide
+                if self.parcelles[i].lignes[y] = 0 then
+                    continue;
+                // On scan la ligne
+                for x := 0 to TAILLE_PARCELLE - 1 do
+                begin
+                    // On vérifie que le paterne match à partir de la cellule (x, y)
+                    for yp := 0 to paterne.ty - 1 do
+                    begin
+                        p := i;
+                        if yp + y = TAILLE_PARCELLE then
+                        begin
+                            // On continue sur la voisine
+                            // On récupère la voisine du bas
+                            p := self.parcelles[i].voisins.indexVoisin(existe, 0, 1);
+                            if not(existe) then
+                            begin
+                                p := i;
+                                break;
+                            end;
+                            p := voisin.index;
+                        end;
+
+                        for xp := 0 to paterne.tx - 1 do
+                        begin
+                            if xp + x >= TAILLE_PARCELLE then
+                            begin
+                                // On continue sur la voisine
+                                // On récupère la voisine de droite
+                                p := self.parcelles[p].voisins.indexVoisin(existe, 1, 0);
+                                if not(existe) then
+                                begin
+                                    p := i;
+                                    goto matchPas;
+                                end;
+                            end;
+
+                            if not((self.parcelles[p].obtenir_cellule(x + xp, y)) and (paterne.obtenir_cellule(f, x, y))) then
+                                goto matchPas;
+
+                        end;
+                    end;
+                    compteur := compteur + 1;
+                    matchPas:
+                end;
+            end;
+        end;
+    end;
+    scanPaternes := compteur;
+end;
+
 
 end.
