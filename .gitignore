@@ -5,5 +5,4 @@ main
 .vscode/launch.json
 main.exe
 tests.exe
-*.save
 log.txt
