@@ -178,12 +178,11 @@ implementation
         writeln('Guide d''utilisation :' + LineEnding  
         + 'Sauvegarde de la partie en cours depuis le menu puis entrer le nom de la sauvegarde (ex partie1)"' + LineEnding
         + 'Chargement d''une partie depuis le menu  puis entrer le nom du de la partie souhaitée' + LineEnding
-        + 'Ajout de cellule vivante : touche ENTREE' + LineEnding
-        + 'Suppression de cellule vivante : touche RETOUR' + LineEnding
+        + 'Ajout de cellule vivante : touche ENTREE');
+        writeln('Suppression de cellule vivante : touche RETOUR' + LineEnding
         + 'Déplacement dans le menu : flèches haut/bas'  + LineEnding
         + 'Déplacement de la caméra pour la partie en cours : flèches' + LineEnding
-        + 'Mise en pause de la partie en cours ''P'' ou ENTREE' + LineEnding
-        + 'lancer la partie :');
+        + 'Mise en pause de la partie en cours ''P'' ou ENTREE' + LineEnding);
     end;
 
 
