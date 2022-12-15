@@ -6,9 +6,9 @@ var
     partie: TJeu;
     paterne: TPaterne;
 begin
-    clearLog();
+    clearLog(); // On vide le fichier de log
     partie.init();
     repeat
         partie.miseAJour();
-    until False;
+    until False; // On boucle infiniment mais des 'Halt' sont placés dans le code pour arrêter le programme
 end.

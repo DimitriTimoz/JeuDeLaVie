@@ -39,20 +39,23 @@ implementation
     var
         voisins: TVoisins;
     begin
-        (* Créer une parcelle en mémoire *)
         TextBackground(White);
         TextColor(0);
+
+        // Initialisation du tableau de parcelles
         setLength(self.plateau.parcelles, 0);
 
+        // Initialisation de la caméra
         self.camera.px := 0;
         self.camera.py := 0;
         self.camera.hauteur := HAUTEUR_CAM;
         self.camera.largeur := LARGEUR_CAM;
 
-        self.vitesse := 900;
+        // Initialisation des paramètres
+        self.vitesse := 800;
         self.tour := 0;
         self.enCours := false;
-
+        
         menuAction();
     end;
 
@@ -61,11 +64,10 @@ implementation
         clrScr();
         self.plateau.afficher(self.camera);
 
-        (* affiche les informations *)
+        // Affiche les informations
         GotoXY(1, HAUTEUR_CAM + 1);
         write('Tour : ');
         write(tour);
-        GotoXY(1, HAUTEUR_CAM + 2);
     end;
 
 
@@ -76,15 +78,17 @@ implementation
         repeat
             clrScr();
             self.plateau.afficher(camera);
+
+            // Affiche le curseur
             GotoXY(LARGEUR_CAM div 2 + 1, HAUTEUR_CAM div 2 + 1);
             write('✚');
 
-            (*Debug infos*)
+            // Informations diverses
             GotoXY(1, HAUTEUR_CAM + 2);
             writeln('x : ', camera.px + (LARGEUR_CAM div 2), ' y : ', camera.py + (HAUTEUR_CAM div 2));
             writeln('touchepressee : ', ord(touche_pressee));
 
-            (* Gestion des touches *)
+            // Gestion des touches
             touche_pressee := readkey;
             case touche_pressee of
                 #0: begin
@@ -113,6 +117,8 @@ implementation
 		i := 0;
 		repeat
             afficherMenu();
+
+            // Affiche le curseur
 			GotoXY(1,i+2);
 			TextColor(4);       
 			write('ʘ');
@@ -120,6 +126,7 @@ implementation
 			TextColor(0);
 			GotoXY(1,10);
 
+            // Gestion des touches
 			c := readkey;
 			case c of
 				#0: begin
@@ -132,27 +139,31 @@ implementation
 				ENTR: break;
 				ESC : halt;
 			end;
-			
+
+            // Gestion des erreurs de curseur
 			if (i > 7) then
 				i := 0
 			else if (i < 0) then
 				i := 7;
 				
 		until (c = ENTR);
-			
+
+        // Gestion des actions
 		case i of
-            0 : self.enCours := true;
-            1 : self.modifierPlateau();
-			2 : self.plateau.charger();
-			3 : self.plateau.sauvegarder();
-            4 : self.scanPaternes();
-            5 : begin
+            0 : self.enCours := true; // Lancer la simulation
+            1 : self.modifierPlateau(); // Modifier la simulation
+			2 : self.plateau.charger(); // Charger une simulation
+			3 : self.plateau.sauvegarder(); // Sauvegarder la simulation
+            4 : self.scanPaternes(); // Scan le nombre de paternes
+            5 : begin 
+                // Créé une parcelle aléatoire
                 setLength(self.plateau.parcelles, 1);
                 n_voisins.init(0, 0);
                 self.plateau.parcelles[0].aleatoire(0, 0, n_voisins);
                 self.enCours := true;
             end;
             6 : begin
+                // Modifier la vitesse
                 ClrScr;
                 write('Vitesse : ');
                 readln(self.vitesse);
@@ -179,13 +190,13 @@ implementation
 
         writeln(LineEnding);
         writeln('Guide d''utilisation :' + LineEnding  
-        + 'sauvegarde de la partie en cours depuis l''interface de jeu : touche "s" puis entrer le nom de la sauvegarde (ex : "partie 1.txt")' + LineEnding
-        + 'chargement d''une partie depuis l''interface de jeu :touche "l" puis entrer le nom du de la partie souhaitée' + LineEnding
-        + 'ajout de cellule vivante : touche "entrée"' + LineEnding
-        + 'suppression de cellule vivante : touche "retour"' + LineEnding
-        + 'déplacement dans le menu : flèches haut/bas'  + LineEnding
-        + 'déplacement de la caméra pour la partie en cours :' + LineEnding
-        + 'mise en pause de la partie en cours :' + LineEnding
+        + 'Sauvegarde de la partie en cours depuis le menu puis entrer le nom de la sauvegarde (ex partie1)")' + LineEnding
+        + 'Chargement d''une partie depuis le menu  puis entrer le nom du de la partie souhaitée' + LineEnding
+        + 'Ajout de cellule vivante : touche ENTREE' + LineEnding
+        + 'Suppression de cellule vivante : touche RETOUR' + LineEnding
+        + 'Déplacement dans le menu : flèches haut/bas'  + LineEnding
+        + 'Déplacement de la caméra pour la partie en cours : flèches' + LineEnding
+        + 'Mise en pause de la partie en cours ''P'' ou ENTREE' + LineEnding
         + 'lancer la partie :');
     end;
 
@@ -193,19 +204,24 @@ implementation
     var 
         touche_pressee : Char;
     begin
-    
+
+        // Calcul du temps écoulé depuis la dernière mise à jour pour ne pas bloquer la pile d'exécution
         if (1000 - min(1000, vitesse) <= MilliSecondsBetween(Now, self.lastTime)) and self.enCours then
         begin
             self.lastTime := Now;
+
+            // Nouveau tour
             self.tour := self.tour + 1;
             self.plateau.simuler();
             self.afficher();
         end;
 
+        // Hors simulation
         if not self.enCours then
             self.menuAction();
 
-        if (keypressed()) then
+        // Déplacement de la caméra en jeu
+        if keypressed() and self.enCours then
         begin
             touche_pressee := readkey();
             case touche_pressee of

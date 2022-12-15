@@ -44,10 +44,9 @@ begin
     self.x := nx;
     self.y := ny;
     // Initialisation des cases
-    // Initialisation des cases
     Randomize;
     for i := 0 to TAILLE_PARCELLE - 1 do
-        self.lignes[i] := (random(9223372036854775807));
+        self.lignes[i] := random(9223372036854775807); // On génère un nombre aléatoire sur 64 bits pour générer 64 bits différents
 
     // Initialisation des voisins
     self.voisins := n_voisins;
@@ -78,8 +77,10 @@ procedure TParcelle.afficher(camera: TCamera);
 var 
     debut_x, debut_y, offset_x, offset_y, fin_x, fin_y, px, py: Int32;
 begin
-    offset_x := x - camera.px;
-    offset_y := y - camera.py;
+    // On place les coordonnées de la parcelle par rapport à la caméra
+    offset_x := self.x - camera.px;
+    offset_y := self.y - camera.py;
+
     // Vérification que la parcelle est dans la zone d'affichage
     if (offset_x + TAILLE_PARCELLE < 0) or (offset_y + TAILLE_PARCELLE < 0) then
         exit
@@ -114,7 +115,6 @@ begin
 
     // Affichage de la parcelle
     GotoXY(1, HAUTEUR_CAM + 9);
-
     TextColor(0);       
     
     for py := debut_y to fin_y - 1 do
@@ -141,6 +141,7 @@ begin
     begin
         for j := py - 1 to py + 1 do
         begin
+            // On vérifie que la cellule n'est pas hors de la parcelle
             if ((px = i) and (py = j)) or (j < 0) or (j >= TAILLE_PARCELLE) or (i < 0) or (i >= TAILLE_PARCELLE) then
                 continue;
 
@@ -148,6 +149,7 @@ begin
                 compteur := compteur + 1;
         end;
     end;
+    // Règles du jeu de la vie
     simulerCellule := (compteur = 3) or ((compteur = 2) and obtenir_cellule(px, py));
 end;
 

@@ -62,6 +62,7 @@ implementation
 
     procedure TVoisins.init(px, py : Int32);
     begin
+        // On initialise les voisins avec les coordonnées des parcelles voisines
         self.voisins[0].init(px - TAILLE_PARCELLE, py - TAILLE_PARCELLE, 0);
         self.voisins[1].init(px, py - TAILLE_PARCELLE, 0);
         self.voisins[2].init(px + TAILLE_PARCELLE, py - TAILLE_PARCELLE, 0);
@@ -76,6 +77,7 @@ implementation
     var 
         i : Int32;
     begin
+        // On ajoute un index
         for i := 0 to 7 do
         begin
             if (self.voisins[i].x = px) and (self.voisins[i].y = py) then
@@ -91,6 +93,7 @@ implementation
     var 
         i : Int32;
     begin
+        // On supprime un index
         for i := 0 to 7 do
         begin
             if (self.voisins[i].x = px) and (self.voisins[i].y = py) then
@@ -109,6 +112,7 @@ implementation
         px := px * TAILLE_PARCELLE;
         py := py * TAILLE_PARCELLE;
         // Coordonnées du voisin souhaité
+        // On prend le voisin en haut à gauche et en bas à droite en faisant la moyenne on obtient le centre du repère auquel on ajoute un décalage
         refx := ((self.voisins[0].x + self.voisins[7].x) div 2 ) + px;
         refy := ((self.voisins[0].y + self.voisins[7].y) div 2 ) + py;
 
@@ -151,31 +155,39 @@ implementation
     var
         f : text;
         ligne : string;
-        x, y, p, n_frames : Int32;
+        x, y, p : Int32;
     begin
         assign(f, nom);
         reset(f);
 
-        (* Entête *)
+        // Entête 
         // Format: 'nombreFrames tailleX tailleY'
         if eof(f) then
-            exit;
+            log('Erreur: fichier ' + nom + ' vide');
+        // On part du principe que le fichier est correct 
         readln(f, ligne);
-        n_frames := StrToInt(Copy(ligne, 1, Pos(' ', ligne) - 1));
+        self.n := StrToInt(Copy(ligne, 1, Pos(' ', ligne) - 1));
         Delete(ligne, 1, Pos(' ', ligne));
         self.tx := StrToInt(Copy(ligne, 1, Pos(' ', ligne) - 1));
         Delete(ligne, 1, Pos(' ', ligne));
         self.ty := StrToInt(ligne);
 
         // On crée les frames
-        self.tableau := GetMem(n_frames * SizeOf(PPInt64));
-        for p := 0 to n_frames - 1 do
+        self.tableau := GetMem(self.n * SizeOf(PPInt64));
+        for p := 0 to self.n - 1 do
         begin
+            // On crée les lignes
             self.tableau[p] := GetMem(self.ty * SizeOf(PInt64));
             for y := 0 to self.ty - 1 do
             begin
                 readln(f, ligne); // Ligne vide
                 readln(f, ligne);
+                if length(ligne) <> self.tx then
+                begin
+                    log('Erreur: ligne ' + inttostr(y) + ' de la frame ' + inttostr(p) + ' du fichier ' + nom + ' incorrecte');
+                    Exit;
+                end;
+                // On créé les colonnes vides pour définir seulement les bits à 1
                 self.tableau[p][y] := 0;
                 for x := 0 to self.tx - 1 do
                 begin
@@ -185,8 +197,6 @@ implementation
             end;
         end;
 
-        self.n := n_frames;
-
         close(f);
     end;
 
@@ -194,6 +204,7 @@ implementation
     var
         p : Int32;
     begin
+        // On libère la mémoire
         for p := 0 to self.n - 1 do
         begin
             FreeMem(self.tableau[p]);
