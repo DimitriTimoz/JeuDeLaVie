@@ -187,11 +187,11 @@ implementation
         self.tableau := GetMem(self.n * SizeOf(PPInt64));
         for p := 0 to self.n - 1 do
         begin
+            readln(f, ligne); // Ligne vide
             // On crée les lignes
             self.tableau[p] := GetMem(self.ty * SizeOf(PInt64));
             for y := 0 to self.ty - 1 do
             begin
-                readln(f, ligne); // Ligne vide
                 readln(f, ligne);
                 if length(ligne) <> self.tx then
                 begin
