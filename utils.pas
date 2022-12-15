@@ -5,7 +5,7 @@ interface
     procedure SetBit(var Value: Int64; Index: Byte);
     procedure PutBit(var Value: Int64; Index: Byte; State: Boolean);
     function GetBit(Value: Int64; Index: Byte): Boolean;
-    function negmod(x, m: Integer): Integer;
+    function negmod(x, m: Int32): Int32;
 implementation
 
     procedure ClearBit(var Value: Int64; Index: Byte);
@@ -28,7 +28,7 @@ implementation
         GetBit := ((Value shr Index) and 1) = 1;
     end;
 
-    function negmod(x, m: Integer): Integer;
+    function negmod(x, m: Int32): Int32;
     begin
         if x < 0 then
             negmod := x mod m + m

@@ -6,23 +6,23 @@ interface
         TParcelle = object
             public
                 voisins : TVoisins;
-                x, y : integer;
+                x, y : Int32;
                 lignes : array[0..63] of Int64 (* 64 bits *);
-                constructor init(nx, ny: integer; n_voisins: TVoisins);
-                constructor aleatoire(nx, ny: integer; n_voisins: TVoisins);
-                function obtenir_cellule(px, py: integer): Boolean;
-                procedure definir_cellule(px, py: integer; valeur: Boolean);
+                constructor init(nx, ny: Int32; n_voisins: TVoisins);
+                constructor aleatoire(nx, ny: Int32; n_voisins: TVoisins);
+                function obtenir_cellule(px, py: Int32): Boolean;
+                procedure definir_cellule(px, py: Int32; valeur: Boolean);
                 procedure nettoyer();
                 procedure afficher(camera: TCamera);
-                function simulerCellule(px, py: integer): boolean;
+                function simulerCellule(px, py: Int32): boolean;
                 function estVide(): boolean;
         end; 
 
 implementation
 
-constructor TParcelle.init(nx, ny: integer; n_voisins: TVoisins);
+constructor TParcelle.init(nx, ny: Int32; n_voisins: TVoisins);
 var
-    i : integer;
+    i : Int32;
 begin
     // Initialisation des coordonnées
     self.x := nx;
@@ -36,9 +36,9 @@ begin
 
 end;
 
-constructor TParcelle.aleatoire(nx, ny: integer; n_voisins: TVoisins);
+constructor TParcelle.aleatoire(nx, ny: Int32; n_voisins: TVoisins);
 var
-    i: integer;
+    i: Int32;
 begin
     // Initialisation des coordonnées
     self.x := nx;
@@ -53,12 +53,12 @@ begin
     self.voisins := n_voisins;
 end;
 
-function TParcelle.obtenir_cellule(px, py: integer): Boolean;
+function TParcelle.obtenir_cellule(px, py: Int32): Boolean;
 begin
     obtenir_cellule := GetBit(lignes[py], px)
 end;
 
-procedure TParcelle.definir_cellule(px, py: integer; valeur: Boolean);
+procedure TParcelle.definir_cellule(px, py: Int32; valeur: Boolean);
 begin
     if valeur then
         SetBit(lignes[py], px)
@@ -68,7 +68,7 @@ end;
 
 procedure TParcelle.nettoyer();
 var
-    i : integer;
+    i : Int32;
 begin
     for i := 0 to TAILLE_PARCELLE - 1 do
         lignes[i] := 0;
@@ -76,7 +76,7 @@ end;
 
 procedure TParcelle.afficher(camera: TCamera);
 var 
-    debut_x, debut_y, offset_x, offset_y, fin_x, fin_y, px, py: integer;
+    debut_x, debut_y, offset_x, offset_y, fin_x, fin_y, px, py: Int32;
 begin
     offset_x := x - camera.px;
     offset_y := y - camera.py;
@@ -114,7 +114,6 @@ begin
 
     // Affichage de la parcelle
     GotoXY(1, HAUTEUR_CAM + 9);
-    writeln('debut: ', debut_x, ' ', debut_y, ' fin: ', fin_x, ' ', fin_y, ' offset: ', offset_x, ' ', offset_y);
 
     TextColor(0);       
     
@@ -133,9 +132,9 @@ begin
 
 end;
 
-function TParcelle.simulerCellule(px, py: integer): boolean;
+function TParcelle.simulerCellule(px, py: Int32): boolean;
 var
-    i, j, compteur: integer;
+    i, j, compteur: Int32;
 begin
     compteur := 0;
     for i := px - 1 to px + 1 do
@@ -155,7 +154,7 @@ end;
 
 function TParcelle.estVide(): boolean;
 var
-    i : integer;
+    i : Int32;
 begin
     estVide := true;
     for i := 0 to TAILLE_PARCELLE - 1 do

@@ -1,14 +1,16 @@
 program tests;
 
+uses FileUtil;
 
 var 
-    i: integer;
-    n : integer;
+ PascalFiles: TStringList;
+
 begin
-    n := 10;
-    for i := 1 to n do
-    begin
-        n := n + 1;
-        writeln(n);
-    end;
+  //No need to create the stringlist; the function does that for you
+  PascalFiles := FindAllFiles(LazarusDirectory, '*.save', true); 
+  try
+    ShowMessage(Format('Found %d Pascal source files', [PascalFiles.Count]));
+  finally
+    PascalFiles.Free;
+  
 end.

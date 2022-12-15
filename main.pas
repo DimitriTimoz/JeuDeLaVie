@@ -10,5 +10,5 @@ begin
     partie.init();
     repeat
         partie.miseAJour();
-    until not (partie.enCours);
+    until False;
 end.

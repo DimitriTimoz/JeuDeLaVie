@@ -11,43 +11,43 @@ type
     TZone = array[0..2] of array[0..2] of boolean;
     TCamera = record
         px, py : Int32;
-        hauteur, largeur : integer;
+        hauteur, largeur : Int32;
     end;
     PInt64 = ^Int64;
     PPInt64 =^PInt64;
     TPaterne = object
         public
-            tx, ty : integer;
+            tx, ty : Int32;
             tableau : PPInt64;
-            n : integer;
+            n : Int32;
             constructor charger(nom : string);
             destructor Destroy;
-            function obtenir_cellule(i, x, y : integer) : boolean;
+            function obtenir_cellule(i, x, y : Int32) : boolean;
     end;
     TVoisin = object
         public
             x, y : Int32;
-            index : integer;
+            index : Int32;
             existe : boolean;
-            constructor init(px, py, ind : integer);
+            constructor init(px, py, ind : Int32);
     end;
     TVoisins = object
         public
             voisins : array[0..7] of TVoisin;
-            procedure init(px, py : integer);
-            procedure ajouter(px, py, ind : integer);
-            procedure supprimer(px, py : integer);
-            function indexVoisin(var voisinExiste: boolean; px, py : integer) : integer;
+            procedure init(px, py : Int32);
+            procedure ajouter(px, py, ind : Int32);
+            procedure supprimer(px, py : Int32);
+            function indexVoisin(var voisinExiste: boolean; px, py : Int32) : Int32;
             procedure logVoisins();
     end;
 
-    function estVoisin(px, py, p2x, p2y : integer) : boolean;
-    procedure nettoieLigne(var zone : TZone; ligne : integer; horizontale : boolean);
+    function estVoisin(px, py, p2x, p2y : Int32) : boolean;
+    procedure nettoieLigne(var zone : TZone; ligne : Int32; horizontale : boolean);
 
     
 implementation
 
-    constructor TVoisin.init(px, py, ind : integer);
+    constructor TVoisin.init(px, py, ind : Int32);
     begin
         self.x := px;
         self.y := py;
@@ -55,12 +55,12 @@ implementation
         self.existe := false;
     end;
 
-    function estVoisin(px, py, p2x, p2y : integer) : boolean;
+    function estVoisin(px, py, p2x, p2y : Int32) : boolean;
     begin
         estVoisin := intpower(px - p2x, 2) + intpower(py - p2y, 2) <= intpower(TAILLE_PARCELLE, 2);
     end;
 
-    procedure TVoisins.init(px, py : integer);
+    procedure TVoisins.init(px, py : Int32);
     begin
         self.voisins[0].init(px - TAILLE_PARCELLE, py - TAILLE_PARCELLE, 0);
         self.voisins[1].init(px, py - TAILLE_PARCELLE, 0);
@@ -72,9 +72,9 @@ implementation
         self.voisins[7].init(px + TAILLE_PARCELLE, py + TAILLE_PARCELLE, 0);
     end;
 
-    procedure TVoisins.ajouter(px, py, ind : integer);
+    procedure TVoisins.ajouter(px, py, ind : Int32);
     var 
-        i : integer;
+        i : Int32;
     begin
         for i := 0 to 7 do
         begin
@@ -87,9 +87,9 @@ implementation
         end;
     end;
 
-    procedure TVoisins.supprimer(px, py : integer);
+    procedure TVoisins.supprimer(px, py : Int32);
     var 
-        i : integer;
+        i : Int32;
     begin
         for i := 0 to 7 do
         begin
@@ -101,10 +101,10 @@ implementation
         end;
     end;
 
-    function TVoisins.indexVoisin(var voisinExiste: boolean; px, py : integer) : integer;
+    function TVoisins.indexVoisin(var voisinExiste: boolean; px, py : Int32) : Int32;
     var 
-        i : integer;
-        refx, refy : integer;
+        i : Int32;
+        refx, refy : Int32;
     begin
         px := px * TAILLE_PARCELLE;
         py := py * TAILLE_PARCELLE;
@@ -128,28 +128,22 @@ implementation
 
     procedure TVoisins.logVoisins();
     var 
-        i : integer;
+        i : Int32;
     begin
         for i := 0 to 7 do
-        begin
             log('Voisin ' + inttostr(i) + ' : ' + inttostr(self.voisins[i].x) + ' ' + inttostr(self.voisins[i].y) + ' ' + inttostr(self.voisins[i].index) + ' existe: ' + booltostr(self.voisins[i].existe));
-        end;
     end;
 
-    procedure nettoieLigne(var zone : TZone; ligne : integer; horizontale : boolean);
+    procedure nettoieLigne(var zone : TZone; ligne : Int32; horizontale : boolean);
     var 
-        i: integer;
+        i: Int32;
     begin
         for i := 0 to 2 do
         begin
             if horizontale then
-            begin
-                zone[ligne][i] := false;
-            end
+                zone[ligne][i] := false
             else
-            begin
                 zone[i][ligne] := false;
-            end;
         end;
     end;
 
@@ -157,7 +151,7 @@ implementation
     var
         f : text;
         ligne : string;
-        x, y, p, n_frames : integer;
+        x, y, p, n_frames : Int32;
     begin
         assign(f, nom);
         reset(f);
@@ -180,6 +174,7 @@ implementation
             self.tableau[p] := GetMem(self.ty * SizeOf(PInt64));
             for y := 0 to self.ty - 1 do
             begin
+                readln(f, ligne); // Ligne vide
                 readln(f, ligne);
                 self.tableau[p][y] := 0;
                 for x := 0 to self.tx - 1 do
@@ -192,13 +187,12 @@ implementation
 
         self.n := n_frames;
 
-
         close(f);
     end;
 
     destructor TPaterne.Destroy();
     var
-        p : integer;
+        p : Int32;
     begin
         for p := 0 to self.n - 1 do
         begin
@@ -207,7 +201,7 @@ implementation
         FreeMem(self.tableau);
     end;
 
-    function TPaterne.obtenir_cellule(i, x, y : integer) : boolean;
+    function TPaterne.obtenir_cellule(i, x, y : Int32) : boolean;
     begin
         obtenir_cellule := GetBit(self.tableau[i][y], x);
     end;

@@ -7,8 +7,8 @@ type
     TPlateau = object
         public
             parcelles : array of TParcelle;
-            procedure ajouterCellule(x, y: integer);
-            procedure supprimerCellule(x, y: integer);
+            procedure ajouterCellule(x, y: Int32);
+            procedure supprimerCellule(x, y: Int32);
             procedure sauvegarder();
             procedure charger();
             procedure simuler();
@@ -22,9 +22,9 @@ type
 
 implementation
     
-procedure TPlateau.ajouterCellule(x, y: integer);
+procedure TPlateau.ajouterCellule(x, y: Int32);
 var 
-    i, len: integer;
+    i, len: Int32;
     nx, ny, ni: Int32;
     n_voisins: TVoisins;
     trouve: boolean;
@@ -77,7 +77,7 @@ begin
     end;
 end;
 
-procedure TPlateau.supprimerCellule(x, y: integer);
+procedure TPlateau.supprimerCellule(x, y: Int32);
 var 
     i, len, nx, ny: Int32;
 begin
@@ -104,12 +104,12 @@ procedure TPlateau.sauvegarder();
 var
     nom: String;
     f: Text;
-    i, p: integer;
+    i, p: Int32;
 begin
     writeln('Sauvegarde du plateau');
     write('Nom du fichier : ');
     readln(nom);
-    assign(f, './paternes' + nom + '.save');
+    assign(f, './saves/' + nom + '.save');
     rewrite(f);
 
     (* Entête *)
@@ -139,9 +139,11 @@ var
 begin
     repeat
         writeln('Charger un plateau');
-        write('Nom du fichier : ');
+        write('Nom du fichier : (''q'' pour quitter): ');
         readln(nom);
-        nom := './saves' + nom + '.save';
+        if nom = 'q' then
+            Exit;
+        nom := './saves/' + nom + '.save';
     until FileExists(nom);
     
     assign(f, nom);
@@ -239,7 +241,6 @@ begin
                     begin
                         if n1 = -1 then
                         begin
-                            log('Ajout d''une nouvelle parcelle d');
                             n1 := length(nouvelles_parcelles);
                             ajouterNouvelleParcelle(nouvelles_parcelles, self.parcelles[i].x, self.parcelles[i].y - TAILLE_PARCELLE);
                         end;
@@ -255,7 +256,6 @@ begin
                     begin
                         if n2 = -1 then
                         begin
-                            log('Ajout d''une nouvelle parcelle b');
                             n2 := length(nouvelles_parcelles);
                             ajouterNouvelleParcelle(nouvelles_parcelles, self.parcelles[i].x, self.parcelles[i].y + TAILLE_PARCELLE);
                         end;
@@ -280,7 +280,6 @@ begin
                     begin
                         if n3 = -1 then
                         begin
-                            log('Ajout d''une nouvelle parcelle g');
                             n3 := length(nouvelles_parcelles);
                             ajouterNouvelleParcelle(nouvelles_parcelles, self.parcelles[i].x - TAILLE_PARCELLE, self.parcelles[i].y);
                         end;
@@ -296,7 +295,6 @@ begin
                     begin
                         if n4 = -1 then
                         begin
-                            log('Ajout d''une nouvelle parcelle d');
                             n4 := length(nouvelles_parcelles);
                             ajouterNouvelleParcelle(nouvelles_parcelles, self.parcelles[i].x + TAILLE_PARCELLE, self.parcelles[i].y);
                         end;
@@ -563,7 +561,7 @@ end;
 
 procedure TPlateau.afficher(camera: TCamera);
 var
-    i: integer;
+    i: Int32;
 begin
     (* Affichage du plateau *)
     for i := 0 to length(parcelles) - 1 do
@@ -575,7 +573,7 @@ end;
 
 function simulerZone(zone: TZone): boolean;
 var
-    i, j, compteur: integer;
+    i, j, compteur: Int32;
 begin
     compteur := 0;
     for i := 0 to 2 do
@@ -597,12 +595,11 @@ var
     existe: boolean;
 
 label
-    matchPas;
+    matchPas, XSuivant, YSuivant;
 
 begin
     scanPaternes := 0;
     paterne.charger(name);
-    log('Scan du paterne ' + IntToStr(paterne.n) + '');
     compteur := 0;
     // Scan du plateau
     for i := 0 to length(parcelles) - 1 do
@@ -613,9 +610,6 @@ begin
             // On scan la parcelle
             for y := 0 to TAILLE_PARCELLE - 1 do
             begin
-                // On vérifie si la ligne est vide
-                if self.parcelles[i].lignes[y] = 0 then
-                    continue;
                 // On scan la ligne
                 for x := 0 to TAILLE_PARCELLE - 1 do
                 begin
@@ -624,47 +618,39 @@ begin
                     begin
                         p := i;
                         coY := yp + y;
-                        if yp + y >= TAILLE_PARCELLE then
+                        existe := true;
+                        if coY >= TAILLE_PARCELLE then
                         begin
                             // On continue sur la voisine
                             // On récupère la voisine du bas
                             p := self.parcelles[i].voisins.indexVoisin(existe, 0, 1);
-                            if not(existe) then
-                            begin
-                                break;
-                            end;
-                            coY := yp + y - TAILLE_PARCELLE;
+                            coY := coY - TAILLE_PARCELLE;
                         end;
-                        
+            
                         for xp := 0 to paterne.tx - 1 do
                         begin
                             coX := xp + x;
-                            if xp + x >= TAILLE_PARCELLE then
+                            if coX >= TAILLE_PARCELLE then
                             begin
                                 // On continue sur la voisine
                                 // On récupère la voisine de droite
                                 p := self.parcelles[p].voisins.indexVoisin(existe, 1, 0);
-                                if not(existe) then
-                                begin
-                                    goto matchPas;
-                                end;
-                                coX := xp + x - TAILLE_PARCELLE;
+                                coX := coX - TAILLE_PARCELLE;
                             end;
-
-                            if ((self.parcelles[p].obtenir_cellule(coX, coY)) <> (paterne.obtenir_cellule(f, xp, yp))) then
-                                goto matchPas;
+                            // Les cases sont différentes ou la case du paterne est vivante mais la case n'existe pas
+                            if ((self.parcelles[p].obtenir_cellule(coX, coY)) xor (paterne.obtenir_cellule(f, xp, yp))) or (not(existe) and (paterne.obtenir_cellule(f, xp, yp))) then
+                                goto XSuivant;
 
                         end;
                     end;
-                    log('Match trouvé en (' + IntToStr(x) + ', ' + IntToStr(y) + ')');
                     compteur := compteur + 1;
-                    matchPas:
+                    XSuivant:
                 end;
+                YSuivant:
             end;
         end;
     end;
     scanPaternes := compteur;
 end;
-
 
 end.

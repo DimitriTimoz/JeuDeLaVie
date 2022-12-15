@@ -1,44 +1,38 @@
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  1 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
------
-0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
 0 0 0
-0 # -1
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  4 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # 0
+0 -1 0
+-----
+0 2 0
+3 # 0
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -46,30 +40,32 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -77,123 +73,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -201,123 +196,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -325,123 +319,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -449,123 +442,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -573,123 +565,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -697,123 +688,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -821,123 +811,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -945,123 +934,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  4 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # 0
+0 -1 0
+-----
+0 2 0
+3 # 0
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -1069,30 +1057,32 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  4 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # 0
+0 -1 0
+-----
+0 2 0
+3 # 0
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -1100,30 +1090,32 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  4 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # 0
+0 -1 0
+-----
+0 2 0
+3 # 0
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -1131,30 +1123,32 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  4 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # 0
+0 -1 0
+-----
+0 2 0
+3 # 0
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -1162,30 +1156,32 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -1193,123 +1189,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -1317,123 +1312,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -1441,92 +1435,81 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
-0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
-0 0 0
-0 # -1
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -1534,123 +1517,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -1658,123 +1640,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -1782,123 +1763,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -1906,123 +1886,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -2030,123 +2009,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -2154,123 +2132,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 2 : 0 -64
 0 0 0
-0 # -1
-0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
 0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -2278,123 +2255,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
 0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -2402,123 +2378,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
 0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -2526,123 +2501,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
 0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -2650,123 +2624,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
 0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -2774,123 +2747,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
 0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -2898,309 +2870,310 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
-0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
-0 0 0
-0 # -1
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  6 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 -1 # 0
-0 0 0
+0 -1 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+5 # 0
 0 0 0
+## Parcelle 3 : -64 0
+0 -1 0
 0 # -1
 0 0 0
 -----
-0 0 0
+0 5 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 5 : -64 -64
 0 0 0
--1 # 0
+0 # -1
+0 -1 0
+-----
 0 0 0
+0 # 2
+0 3 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+-1 # 0
+0 -1 0
 -----
-0 0 0
-0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+5 # 0
 0 0 0
-0 # 0
+## Parcelle 3 : -64 0
+0 -1 0
+0 # -1
 0 0 0
 -----
-0 0 0
+0 5 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 5 : -64 -64
 0 0 0
 0 # -1
-0 0 0
+0 -1 0
 -----
-0 0 0
-0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+0 # 2
+0 3 0
+--------- Simulation de  6 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 -1 # 0
-0 0 0
+0 -1 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+5 # 0
 0 0 0
+## Parcelle 3 : -64 0
+0 -1 0
 0 # -1
 0 0 0
 -----
-0 0 0
+0 5 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 5 : -64 -64
 0 0 0
--1 # 0
+0 # -1
+0 -1 0
+-----
 0 0 0
+0 # 2
+0 3 0
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
 0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -3208,123 +3181,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
 0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -3332,123 +3304,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
 0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -3456,123 +3427,122 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
 0 0 0
 -----
 0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+--------- Simulation de  5 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -3580,30 +3550,40 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
--1 # 0
+-----
+0 0 0
+0 # 0
 0 0 0
+## Parcelle 2 : 0 -64
+0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -3611,92 +3591,81 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
-0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
-0 0 0
-0 # -1
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -3704,92 +3673,81 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
-0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
-0 0 0
-0 # -1
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -3797,123 +3755,138 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # 0
+-1 # 0
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  6 parcelles ---------
 ## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
 0 0 0
-1 # 0
+-----
 0 0 0
-## Parcelle 1 : -64 0
+0 # 5
 0 0 0
-0 # -1
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
-0 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+-----
+0 4 0
+1 # 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # -1
 0 0 0
 -----
 0 0 0
-0 # 0
+0 # 5
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
 0 0 0
-0 # 0
+-----
+0 4 0
+1 # 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
 0 0 0
-0 # 0
+-----
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+0 # 5
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -3921,92 +3894,97 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
-0 # 0
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
 -1 # 0
 0 0 0
 -----
-0 0 0
+0 4 0
 1 # 0
-0 0 0
-## Parcelle 1 : -64 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # -1
 0 0 0
 -----
 0 0 0
-0 # 0
+0 # 5
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
 0 0 0
-0 # 0
+-----
+0 4 0
+1 # 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
 0 0 0
-0 # 0
+-----
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+0 # 5
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -4014,92 +3992,97 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
-0 # 0
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
 -1 # 0
 0 0 0
 -----
-0 0 0
+0 4 0
 1 # 0
-0 0 0
-## Parcelle 1 : -64 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # -1
 0 0 0
 -----
 0 0 0
-0 # 0
+0 # 5
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
 0 0 0
-0 # 0
+-----
+0 4 0
+1 # 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
 0 0 0
-0 # 0
+-----
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+0 # 5
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -4107,92 +4090,97 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
-0 # 0
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
 -1 # 0
 0 0 0
 -----
-0 0 0
+0 4 0
 1 # 0
-0 0 0
-## Parcelle 1 : -64 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # -1
 0 0 0
 -----
 0 0 0
-0 # 0
+0 # 5
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
 0 0 0
-0 # 0
+-----
+0 4 0
+1 # 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
 0 0 0
-0 # 0
+-----
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+0 # 5
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -4200,154 +4188,244 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
-0 # 0
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
 -1 # 0
 0 0 0
 -----
-0 0 0
+0 4 0
 1 # 0
-0 0 0
-## Parcelle 1 : -64 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # -1
 0 0 0
 -----
 0 0 0
-0 # 0
+0 # 5
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 4 : 64 0
 0 0 0
-0 # -1
-0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+-----
+0 4 0
+1 # 0
+0 0 0
+--------- Simulation de  6 parcelles ---------
 ## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
+0 0 0
+-----
+0 0 0
+0 # 5
+0 0 0
+## Parcelle 2 : 0 -64
+0 0 0
+0 # 0
+0 -1 0
+-----
 0 0 0
 0 # 0
 0 0 0
+## Parcelle 3 : -64 0
+0 0 0
+0 # -1
+0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+-----
+0 4 0
+1 # 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # -1
 0 0 0
 -----
 0 0 0
-0 # 0
+0 # 5
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
+0 0 0
+0 # 0
+0 -1 0
+-----
 0 0 0
 0 # 0
 0 0 0
+## Parcelle 3 : -64 0
+0 0 0
+0 # -1
+0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+-----
+0 4 0
+1 # 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # -1
 0 0 0
 -----
 0 0 0
+0 # 5
+0 0 0
+## Parcelle 2 : 0 -64
+0 0 0
 0 # 0
+0 -1 0
+-----
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+0 # 0
+0 0 0
+## Parcelle 3 : -64 0
+0 0 0
+0 # -1
+0 0 0
+-----
 0 0 0
 0 # 0
 0 0 0
+## Parcelle 4 : 64 0
+0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
+0 0 0
+-----
+0 4 0
+1 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  6 parcelles ---------
 ## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
 0 0 0
--1 # 0
+-----
+0 0 0
+0 # 5
+0 0 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -4355,61 +4433,146 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+## Parcelle 4 : 64 0
+0 0 0
+-1 # 0
+0 -1 0
+-----
+0 0 0
+0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
+0 0 0
+-----
+0 4 0
+1 # 0
+0 0 0
+--------- Simulation de  6 parcelles ---------
 ## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
+0 0 0
+-----
 0 0 0
+0 # 5
+0 0 0
+## Parcelle 2 : 0 -64
+0 0 0
+0 # 0
+0 -1 0
+-----
+0 0 0
 0 # 0
+0 0 0
+## Parcelle 3 : -64 0
 0 0 0
+0 # -1
+0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+-----
+0 4 0
+1 # 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # -1
 0 0 0
 -----
 0 0 0
+0 # 5
+0 0 0
+## Parcelle 2 : 0 -64
+0 0 0
 0 # 0
+0 -1 0
+-----
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+0 # 0
 0 0 0
+## Parcelle 3 : -64 0
+0 0 0
+0 # -1
+0 0 0
+-----
+0 0 0
 0 # 0
+0 0 0
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
+0 0 0
+-----
+0 4 0
+1 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  6 parcelles ---------
 ## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
 0 0 0
--1 # 0
+-----
 0 0 0
+0 # 5
+0 0 0
+## Parcelle 2 : 0 -64
+0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -4417,61 +4580,146 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+## Parcelle 4 : 64 0
+0 0 0
+-1 # 0
+0 -1 0
+-----
+0 0 0
+0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
+0 0 0
+-----
+0 4 0
+1 # 0
+0 0 0
+--------- Simulation de  6 parcelles ---------
 ## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
+0 0 0
+-----
 0 0 0
+0 # 5
+0 0 0
+## Parcelle 2 : 0 -64
+0 0 0
+0 # 0
+0 -1 0
+-----
+0 0 0
 0 # 0
+0 0 0
+## Parcelle 3 : -64 0
 0 0 0
+0 # -1
+0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+-----
+0 4 0
+1 # 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # -1
+0 0 0
+-----
+0 0 0
+0 # 5
+0 0 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
+0 # -1
+0 0 0
+-----
+0 0 0
 0 # 0
 0 0 0
+## Parcelle 4 : 64 0
+0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
+0 0 0
+-----
+0 4 0
+1 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  6 parcelles ---------
 ## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
 0 0 0
--1 # 0
+-----
+0 0 0
+0 # 5
 0 0 0
+## Parcelle 2 : 0 -64
+0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -4479,61 +4727,146 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+## Parcelle 4 : 64 0
+0 0 0
+-1 # 0
+0 -1 0
+-----
+0 0 0
+0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
+0 0 0
+-----
+0 4 0
+1 # 0
+0 0 0
+--------- Simulation de  6 parcelles ---------
 ## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
+0 0 0
+-----
+0 0 0
+0 # 5
 0 0 0
+## Parcelle 2 : 0 -64
+0 0 0
+0 # 0
+0 -1 0
+-----
+0 0 0
 0 # 0
+0 0 0
+## Parcelle 3 : -64 0
+0 0 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+-----
+0 4 0
+1 # 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # -1
+0 0 0
+-----
 0 0 0
+0 # 5
+0 0 0
+## Parcelle 2 : 0 -64
+0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
+0 0 0
+0 # -1
+0 0 0
+-----
 0 0 0
 0 # 0
 0 0 0
+## Parcelle 4 : 64 0
+0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+-----
+0 4 0
+1 # 0
+0 0 0
+--------- Simulation de  6 parcelles ---------
 ## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
 0 0 0
--1 # 0
+-----
+0 0 0
+0 # 5
 0 0 0
+## Parcelle 2 : 0 -64
+0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -4541,61 +4874,146 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+## Parcelle 4 : 64 0
+0 0 0
+-1 # 0
+0 -1 0
+-----
+0 0 0
+0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
+0 0 0
+-----
+0 4 0
+1 # 0
+0 0 0
+--------- Simulation de  6 parcelles ---------
 ## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
+0 0 0
+-----
+0 0 0
+0 # 5
+0 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
+0 -1 0
+-----
+0 0 0
+0 # 0
+0 0 0
+## Parcelle 3 : -64 0
+0 0 0
+0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+-----
+0 4 0
+1 # 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # -1
+0 0 0
+-----
+0 0 0
+0 # 5
 0 0 0
+## Parcelle 2 : 0 -64
+0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
+0 0 0
+0 # -1
+0 0 0
+-----
 0 0 0
 0 # 0
 0 0 0
+## Parcelle 4 : 64 0
+0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+-----
+0 4 0
+1 # 0
+0 0 0
+--------- Simulation de  6 parcelles ---------
 ## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
 0 0 0
--1 # 0
+-----
+0 0 0
+0 # 5
+0 0 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -4603,61 +5021,146 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
+## Parcelle 4 : 64 0
+0 0 0
+-1 # 0
+0 -1 0
+-----
+0 0 0
+0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
+0 0 0
+-----
+0 4 0
+1 # 0
+0 0 0
+--------- Simulation de  6 parcelles ---------
 ## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
+0 0 0
+-----
+0 0 0
+0 # 5
+0 0 0
+## Parcelle 2 : 0 -64
+0 0 0
+0 # 0
+0 -1 0
+-----
 0 0 0
 0 # 0
+0 0 0
+## Parcelle 3 : -64 0
 0 0 0
+0 # -1
+0 0 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
 0 0 0
 -1 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+-----
+0 4 0
+1 # 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # -1
+0 0 0
+-----
+0 0 0
+0 # 5
 0 0 0
+## Parcelle 2 : 0 -64
+0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
+0 0 0
+0 # -1
 0 0 0
+-----
+0 0 0
 0 # 0
+0 0 0
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
+0 0 0
+-----
+0 4 0
+1 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
+--------- Simulation de  6 parcelles ---------
 ## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
 0 0 0
--1 # 0
+-----
 0 0 0
+0 # 5
+0 0 0
+## Parcelle 2 : 0 -64
+0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
@@ -4665,625 +5168,656 @@ Scan du paterne 2
 0 0 0
 0 # 0
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 4 : 64 0
+0 0 0
+-1 # 0
+0 -1 0
+-----
 0 0 0
 0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
+0 0 0
+-----
+0 4 0
+1 # 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
 0 0 0
-0 # 0
+-----
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+0 # 5
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
-0 # 0
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
 -1 # 0
 0 0 0
 -----
-0 0 0
+0 4 0
 1 # 0
 0 0 0
-## Parcelle 1 : -64 0
-0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # -1
 0 0 0
 -----
 0 0 0
-0 # 0
+0 # 5
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
--1 # 0
-0 0 0
------
-0 0 0
-1 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
-0 # 0
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
 -1 # 0
 0 0 0
 -----
-0 0 0
+0 4 0
 1 # 0
 0 0 0
-## Parcelle 1 : -64 0
-0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # -1
 0 0 0
 -----
 0 0 0
-0 # 0
+0 # 5
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
 0 0 0
-0 # 0
+-----
+0 4 0
+1 # 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
 0 0 0
-0 # 0
+-----
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+0 # 5
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
-0 # 0
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
 -1 # 0
 0 0 0
 -----
-0 0 0
+0 4 0
 1 # 0
 0 0 0
-## Parcelle 1 : -64 0
-0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # -1
 0 0 0
 -----
 0 0 0
-0 # 0
+0 # 5
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
 0 0 0
-0 # 0
+-----
+0 4 0
+1 # 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
 0 0 0
-0 # 0
+-----
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+0 # 5
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
-0 # 0
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
 -1 # 0
 0 0 0
 -----
-0 0 0
+0 4 0
 1 # 0
 0 0 0
-## Parcelle 1 : -64 0
-0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # -1
 0 0 0
 -----
 0 0 0
-0 # 0
+0 # 5
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
 0 0 0
-0 # 0
+-----
+0 4 0
+1 # 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
 0 0 0
-0 # 0
+-----
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+0 # 5
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
-0 # 0
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
 -1 # 0
 0 0 0
 -----
-0 0 0
+0 4 0
 1 # 0
 0 0 0
-## Parcelle 1 : -64 0
-0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # -1
 0 0 0
 -----
 0 0 0
-0 # 0
+0 # 5
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
 0 0 0
-0 # 0
+-----
+0 4 0
+1 # 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
 0 0 0
-0 # 0
+-----
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+0 # 5
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
-0 # 0
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
 -1 # 0
 0 0 0
 -----
-0 0 0
+0 4 0
 1 # 0
 0 0 0
-## Parcelle 1 : -64 0
-0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # -1
 0 0 0
 -----
 0 0 0
-0 # 0
+0 # 5
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
 0 0 0
-0 # 0
+-----
+0 4 0
+1 # 0
 0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
 -----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
+0 # -1
 0 0 0
-0 # 0
+-----
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+0 # 5
 0 0 0
--1 # 0
+## Parcelle 2 : 0 -64
 0 0 0
+0 # 0
+0 -1 0
 -----
 0 0 0
-1 # 0
+0 # 0
 0 0 0
-## Parcelle 1 : -64 0
+## Parcelle 3 : -64 0
 0 0 0
 0 # -1
 0 0 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
 0 0 0
-0 # 0
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
-0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
 -1 # 0
 0 0 0
 -----
-0 0 0
+0 4 0
 1 # 0
 0 0 0
-## Parcelle 1 : -64 0
-0 0 0
+--------- Simulation de  6 parcelles ---------
+## Parcelle 0 : 0 0
+0 -1 0
+-1 # -1
+0 -1 0
+-----
+0 2 0
+3 # 4
+0 1 0
+## Parcelle 1 : 0 64
+0 -1 0
 0 # -1
 0 0 0
 -----
 0 0 0
-0 # 0
+0 # 5
 0 0 0
-Scan du paterne 2
-0
---------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 2 : 0 -64
 0 0 0
 0 # 0
-0 0 0
+0 -1 0
 -----
 0 0 0
 0 # 0
 0 0 0
-Ajout d'une nouvelle parcelle g
-Scan du paterne 2
-0
---------- Simulation de  2 parcelles ---------
-## Parcelle 0 : 0 0
+## Parcelle 3 : -64 0
 0 0 0
--1 # 0
+0 # -1
 0 0 0
 -----
 0 0 0
-1 # 0
-0 0 0
-## Parcelle 1 : -64 0
+0 # 0
 0 0 0
-0 # -1
+## Parcelle 4 : 64 0
 0 0 0
+-1 # 0
+0 -1 0
 -----
 0 0 0
 0 # 0
+0 5 0
+## Parcelle 5 : 64 64
+0 -1 0
+-1 # 0
+0 0 0
+-----
+0 4 0
+1 # 0
 0 0 0
-Scan du paterne 2
-0

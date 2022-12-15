@@ -10,17 +10,18 @@ type
             plateau : TPlateau;
             camera : TCamera;
             paterne : TPaterne;
-            vitesse: integer;
+            vitesse: Int32;
             lastTime: TDateTime;
         public
             enCours : boolean;  
-            tour : integer;
+            tour : Int32;
             constructor init();
             procedure miseAJour();
             procedure afficher();
             procedure modifierPlateau();
             procedure afficherMenu();
             procedure menuAction();
+            procedure scanPaternes();
     end;
 
     CONST UP = #72;
@@ -29,8 +30,6 @@ type
         RIGHT = #77;
         ENTR = #13;
         DEL = #8;
-        SAVE = #115; // 's'
-        LOAD = #108; // 'l'
         ESC = #27;
         P = #112; // 'p'
 
@@ -52,7 +51,7 @@ implementation
 
         self.vitesse := 900;
         self.tour := 0;
-        self.enCours := true;
+        self.enCours := false;
 
         menuAction();
     end;
@@ -75,7 +74,6 @@ implementation
         touche_pressee : Char;
     begin
         repeat
-        begin
             clrScr();
             self.plateau.afficher(camera);
             GotoXY(LARGEUR_CAM div 2 + 1, HAUTEUR_CAM div 2 + 1);
@@ -100,11 +98,8 @@ implementation
                 end;
                 DEL: plateau.supprimerCellule(camera.px + (LARGEUR_CAM div 2), camera.py + (HAUTEUR_CAM div 2));
                 ENTR: plateau.ajouterCellule(camera.px + (LARGEUR_CAM div 2), camera.py + (HAUTEUR_CAM div 2));
-                SAVE: plateau.sauvegarder();
-                LOAD: plateau.charger();
                 ESC : self.menuAction();
             end;
-        end;
         until (touche_pressee = ESC);
         self.enCours := true;
     end;
@@ -112,7 +107,7 @@ implementation
     procedure TJeu.menuAction();
     var 
         c : Char;
-        i : integer;
+        i : Int32;
         n_voisins : TVoisins;
     begin
 		i := 0;
@@ -138,24 +133,32 @@ implementation
 				ESC : halt;
 			end;
 			
-			if (i > 5) then
-				i := 5
-			else if (i <= 0) then
-				i := 0;
+			if (i > 7) then
+				i := 0
+			else if (i < 0) then
+				i := 7;
 				
 		until (c = ENTR);
 			
 		case i of
             0 : self.enCours := true;
-			1 : self.plateau.charger();
-            2 : begin
+            1 : self.modifierPlateau();
+			2 : self.plateau.charger();
+			3 : self.plateau.sauvegarder();
+            4 : self.scanPaternes();
+            5 : begin
                 setLength(self.plateau.parcelles, 1);
                 n_voisins.init(0, 0);
                 self.plateau.parcelles[0].aleatoire(0, 0, n_voisins);
+                self.enCours := true;
+            end;
+            6 : begin
+                ClrScr;
+                write('Vitesse : ');
+                readln(self.vitesse);
+                self.vitesse := max(1, min(self.vitesse, 1000));
             end;  
-			3 : self.plateau.sauvegarder();
-			4 : self.modifierPlateau();
-			5 : halt;
+			7 : halt;
 		end;
 			
     end;
@@ -163,16 +166,27 @@ implementation
     procedure TJeu.afficherMenu();
     begin 
         ClrScr;
-
         // Pour l'instant je mets juste un clearscreen et j'écris le menu dans le terminal mais après je l'améliorerais avec les flèches, faut juste que je retrouve comment faire //
         writeln('Que voulez vous faire : ');
         writeln('- Reprendre la simulation');
-        writeln('- Charger le plateau');
-        writeln('- Carte aléatoire');
-        writeln('- Sauvegarder le plateau');
         writeln('- Modifier le plateau');
+        writeln('- Charger le plateau');
+        writeln('- Sauvegarder le plateau');
+        writeln('- Scanner un paterne');
+        writeln('- Carte aléatoire');
+        writeln('- Vitesse de la simulation ( v = ' + IntToStr(self.vitesse) + ' / 1000)');
         writeln('- Quitter le jeu');
 
+        writeln(LineEnding);
+        writeln('Guide d''utilisation :' + LineEnding  
+        + 'sauvegarde de la partie en cours depuis l''interface de jeu : touche "s" puis entrer le nom de la sauvegarde (ex : "partie 1.txt")' + LineEnding
+        + 'chargement d''une partie depuis l''interface de jeu :touche "l" puis entrer le nom du de la partie souhaitée' + LineEnding
+        + 'ajout de cellule vivante : touche "entrée"' + LineEnding
+        + 'suppression de cellule vivante : touche "retour"' + LineEnding
+        + 'déplacement dans le menu : flèches haut/bas'  + LineEnding
+        + 'déplacement de la caméra pour la partie en cours :' + LineEnding
+        + 'mise en pause de la partie en cours :' + LineEnding
+        + 'lancer la partie :');
     end;
 
     procedure TJeu.miseAJour();
@@ -185,9 +199,11 @@ implementation
             self.lastTime := Now;
             self.tour := self.tour + 1;
             self.plateau.simuler();
-            log(IntToStr(self.plateau.scanPaternes('./paternes/repetive.save')));
             self.afficher();
         end;
+
+        if not self.enCours then
+            self.menuAction();
 
         if (keypressed()) then
         begin
@@ -202,15 +218,34 @@ implementation
                         RIGHT: self.camera.px := self.camera.px + 1;
                     end;
                 end;
-                P, ESC: begin 
-                    self.enCours := false;
-                    self.menuAction();
-                end;
+                P, ESC: self.enCours := false;
             end;
 
             // On vide le buffer de clavier
             while (keypressed()) do
                 readkey();
         end;
+    end;
+
+    procedure TJeu.scanPaternes();
+    var 
+        nom : String;
+    begin
+        ClrScr;
+        nom := '';
+        repeat
+            if (nom <> '') then
+                writeln('Le paterne n''existe pas.');
+
+            writeln('Nom du paterne (''q'' pour quitter)');
+            if (nom = 'q') then
+                exit;
+
+            readln(nom);
+        until (FileExists('./paternes/' + nom + '.save'));
+        writeln('Scan en cours...');
+        writeln(self.plateau.scanPaternes('./paternes/' + nom + '.save'), ' résultat(s) trouvé(s) pour le paterne: ' + nom  + '.');
+        writeln('Appuyez sur ENTRER pour continuer...');
+        readln();
     end;
 end.
