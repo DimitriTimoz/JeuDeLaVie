@@ -6,3 +6,4 @@ main
 main.exe
 tests.exe
 *.save
+log.txt
