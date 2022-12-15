@@ -31,6 +31,7 @@ var
 begin
     trouve := false;
     len := length(parcelles);
+    
     // Coordonnées de la parcelle
     ny := y - negmod(y, TAILLE_PARCELLE);
     nx := x - negmod(x, TAILLE_PARCELLE);
@@ -51,10 +52,16 @@ begin
         end;
     end;
 
-    (* Sinon on crée une nouvelle parcelle *)
-    if not trouve then
+    if trouve then
     begin
-        setLength(parcelles, len + 1);
+        // On passe les coordonnées relatives à la parcelle
+        x := x - parcelles[ni].x;
+        y := y - parcelles[ni].y;
+        parcelles[ni].definir_cellule(x, y, true);
+    end
+    else
+    begin
+         setLength(parcelles, len + 1);
         parcelles[len].init(nx, ny, n_voisins);
     
         x := negmod(x, TAILLE_PARCELLE);
@@ -68,12 +75,6 @@ begin
             if n_voisins.voisins[i].existe then
                 parcelles[n_voisins.voisins[i].index].voisins.ajouter(parcelles[len].x, parcelles[len].y, len);
         end;
-    end
-    else
-    begin
-        x := x - parcelles[ni].x;
-        y := y - parcelles[ni].y;
-        parcelles[ni].definir_cellule(x, y, true);
     end;
 end;
 
@@ -206,6 +207,10 @@ begin
 end;
 
 procedure TPlateau.simuleBordInexistant(var nouvelles_parcelles: TParcelles);
+// Dans cette partie h = haut, b = bas, g = gauche, d = droite
+// hd = haut droite, hg = haut gauche, bd = bas droite, bg = bas gauche
+// le suffixe _i signifie index
+// On simule les bords inexistant en créant des parcelles fictives
 var 
     x, y, i, g_i, d_i, h_i, b_i, hg_i, hd_i, bd_i, bg_i, n1, n2, n3, n4: Int32;
     h, b, g, d, hg, hd, bg, bd: Boolean;
@@ -227,16 +232,19 @@ begin
 
         // On simule les bords inexistant
         // Haut et bas
-        n1 := -1; n2 := -1;
+        n1 := -1; n2 := -1; // On initialise les index des nouvelles parcelles à -1 car elles n'existent pas encore
         if not h or not b then
         begin
             for x := 1 to TAILLE_PARCELLE - 2 do
             begin
+                // On simule le haut
                 if not h then
                 begin
+                    // On récupère la zone à simuler
                     nettoieLigne(zone, 0, true);
                     nettoieLigne(zone, 1, true);
                     zone[2, 0] := self.parcelles[i].obtenir_cellule(x - 1, 0); zone[2, 1] := self.parcelles[i].obtenir_cellule(x, 0); zone[2, 2] := self.parcelles[i].obtenir_cellule(x + 1, 0);
+                    // On crée la nouvelle parcelle si elle n'existe pas
                     if simulerZone(zone) then
                     begin
                         if n1 = -1 then
@@ -247,8 +255,10 @@ begin
                         nouvelles_parcelles[n1].definir_cellule(x, TAILLE_PARCELLE - 1, true);
                     end;
                 end;
+                // On simule le bas
                 if not b then
                 begin
+                    // Même chose que pour le haut
                     nettoieLigne(zone, 0, true);
                     nettoieLigne(zone, 1, true);
                     zone[2, 0] := self.parcelles[i].obtenir_cellule(x - 1, TAILLE_PARCELLE - 1); zone[2, 1] := self.parcelles[i].obtenir_cellule(x, TAILLE_PARCELLE - 1); zone[2, 2] := self.parcelles[i].obtenir_cellule(x + 1, TAILLE_PARCELLE - 1);
@@ -266,11 +276,13 @@ begin
         end;
 
         // Gauche et droite
+        // On applique la même méthode que pour le haut et le bas
         n3 := -1; n4 := -1;
         if not g or not d then
         begin
             for y := 1 to TAILLE_PARCELLE - 2 do
             begin
+                // Gauche
                 if not g then
                 begin
                     nettoieLigne(zone, 0, true);
@@ -286,6 +298,7 @@ begin
                         nouvelles_parcelles[n3].definir_cellule(TAILLE_PARCELLE - 1, y, true);
                     end;
                 end;
+                // Droite
                 if not d then
                 begin
                     nettoieLigne(zone, 0, true);
@@ -303,14 +316,13 @@ begin
                 end;
             end;
         end;
+
         // On simule les coins
         // Haut
         if not h then
         begin
             // Gauche
-            nettoieLigne(zone, 0, true);
-            nettoieLigne(zone, 1, true);
-            nettoieLigne(zone, 2, true);
+            nettoieZone(zone);
             if hg then 
             begin
                 zone[0, 0] := self.parcelles[hg_i].obtenir_cellule(TAILLE_PARCELLE - 1, TAILLE_PARCELLE - 2);
@@ -334,9 +346,7 @@ begin
         if not g then
         begin
             // Haut
-            nettoieLigne(zone, 0, true);
-            nettoieLigne(zone, 1, true);
-            nettoieLigne(zone, 2, true);
+            nettoieZone(zone);
             if hg then 
             begin
                 zone[0, 0] := self.parcelles[hg_i].obtenir_cellule(TAILLE_PARCELLE - 2, TAILLE_PARCELLE - 1);
@@ -354,9 +364,7 @@ begin
         
         if not hg then
         begin
-            nettoieLigne(zone, 0, true);
-            nettoieLigne(zone, 1, true);
-            nettoieLigne(zone, 2, true);
+            nettoieZone(zone);
             if h then 
             begin
                 zone[0, 2] := self.parcelles[h_i].obtenir_cellule(0, TAILLE_PARCELLE - 2);
@@ -383,6 +391,9 @@ begin
 end;
 
 procedure TPlateau.simuler();
+// Dans cette partie h = haut, b = bas, g = gauche, d = droite
+// hd = haut droite, hg = haut gauche, bd = bas droite, bg = bas gauche
+// le suffixe _i signifie index
 var 
     y, x, i, j, h_i, b_i, g_i, d_i, hg_i, hd_i, bg_i, bd_i: Int32;
     h, b, g, d, hg, hd, bg, bd, vide, cree1, cree2: Boolean;
@@ -510,26 +521,47 @@ begin
 
         // On simule les coins
         // Haut gauche
-        if hg then zone[0][0] := self.parcelles[hg_i].obtenir_cellule(TAILLE_PARCELLE - 1, TAILLE_PARCELLE - 1) else zone[0][0] := false;
-        if h then begin zone[0][1] := self.parcelles[h_i].obtenir_cellule(0, TAILLE_PARCELLE - 1); zone[0][2] := self.parcelles[h_i].obtenir_cellule(1, TAILLE_PARCELLE - 1); end else begin zone[0][1] := false; zone[0][2] := false; end;
-        if g then zone[1][0] := self.parcelles[g_i].obtenir_cellule(TAILLE_PARCELLE - 1, 0) else zone[1][0] := false;
+        nettoieZone(zone);
+        if hg then zone[0][0] := self.parcelles[hg_i].obtenir_cellule(TAILLE_PARCELLE - 1, TAILLE_PARCELLE - 1);
+        if h then begin zone[0][1] := self.parcelles[h_i].obtenir_cellule(0, TAILLE_PARCELLE - 1); zone[0][2] := self.parcelles[h_i].obtenir_cellule(1, TAILLE_PARCELLE - 1); end;
+        if g then zone[1][0] := self.parcelles[g_i].obtenir_cellule(TAILLE_PARCELLE - 1, 0);
         zone[1][1] := self.parcelles[i].obtenir_cellule(0, 0); zone[1][2] := self.parcelles[i].obtenir_cellule(1, 0);
-        if g then zone[2][0] := self.parcelles[g_i].obtenir_cellule(TAILLE_PARCELLE - 1, 1) else zone[2][0] := false;
+        if g then zone[2][0] := self.parcelles[g_i].obtenir_cellule(TAILLE_PARCELLE - 1, 1);
         zone[2][1] := self.parcelles[i].obtenir_cellule(0, 1); zone[2][2] := self.parcelles[i].obtenir_cellule(1, 1);
         // Simulation
         nouvelles_parcelles[n_npar - 1].definir_cellule(0, 0, simulerZone(zone));
 
         // Haut droit
-        if hd then zone[0][2] := self.parcelles[hd_i].obtenir_cellule(0, TAILLE_PARCELLE - 1) else zone[0][0] := false;
-        if h then begin zone[0][0] := self.parcelles[h_i].obtenir_cellule(TAILLE_PARCELLE - 2, TAILLE_PARCELLE - 1); zone[0][1] := self.parcelles[h_i].obtenir_cellule(TAILLE_PARCELLE - 1, TAILLE_PARCELLE - 1); end else begin zone[0][0] := false; zone[0][1] := false; end;
-        if d then zone[1][2] := self.parcelles[d_i].obtenir_cellule(0, 0) else zone[1][2] := false;
+        nettoieZone(zone);
+        if hd then zone[0][2] := self.parcelles[hd_i].obtenir_cellule(0, TAILLE_PARCELLE - 1);
+        if h then begin zone[0][0] := self.parcelles[h_i].obtenir_cellule(TAILLE_PARCELLE - 2, TAILLE_PARCELLE - 1); zone[0][1] := self.parcelles[h_i].obtenir_cellule(TAILLE_PARCELLE - 1, TAILLE_PARCELLE - 1); end;
+        if d then zone[1][2] := self.parcelles[d_i].obtenir_cellule(0, 0);
         zone[1][0] := self.parcelles[i].obtenir_cellule(TAILLE_PARCELLE - 2, 0); zone[1][1] := self.parcelles[i].obtenir_cellule(TAILLE_PARCELLE - 1, 0);
-        if d then zone[2][2] := self.parcelles[d_i].obtenir_cellule(0, 1) else zone[2][2] := false;
+        if d then zone[2][2] := self.parcelles[d_i].obtenir_cellule(0, 1);
         zone[2][0] := self.parcelles[i].obtenir_cellule(TAILLE_PARCELLE - 2, 1); zone[2][1] := self.parcelles[i].obtenir_cellule(TAILLE_PARCELLE - 1, 1);
         // Simulation
         nouvelles_parcelles[n_npar - 1].definir_cellule(TAILLE_PARCELLE - 1, 0, simulerZone(zone));
         
+        // Bas gauche
+        nettoieZone(zone);
+        if g then begin zone[0][0] := self.parcelles[g_i].obtenir_cellule(TAILLE_PARCELLE - 1, TAILLE_PARCELLE - 2) end;
+        zone[0][1] := self.parcelles[i].obtenir_cellule(0, TAILLE_PARCELLE - 2); zone[0][2] := self.parcelles[i].obtenir_cellule(1, TAILLE_PARCELLE - 2);
+        zone[1][1] := self.parcelles[i].obtenir_cellule(0, TAILLE_PARCELLE - 1); zone[1][2] := self.parcelles[i].obtenir_cellule(1, TAILLE_PARCELLE - 1);
+        if bg then zone[2][0] := self.parcelles[bg_i].obtenir_cellule(TAILLE_PARCELLE - 1, 0);
+        if b then begin zone[2][1] := self.parcelles[b_i].obtenir_cellule(0, 0); zone[2][2] := self.parcelles[b_i].obtenir_cellule(1, 0); end;
         vide := nouvelles_parcelles[n_npar - 1].estVide();
+        // Simulation
+        nouvelles_parcelles[n_npar - 1].definir_cellule(0, TAILLE_PARCELLE - 1, simulerZone(zone));
+        
+        // Bas droit
+        nettoieZone(zone);
+        zone[0][0] := self.parcelles[i].obtenir_cellule(TAILLE_PARCELLE - 2, TAILLE_PARCELLE - 2); zone[0][1] := self.parcelles[i].obtenir_cellule(TAILLE_PARCELLE - 1, TAILLE_PARCELLE - 2);
+        zone[1][0] := self.parcelles[i].obtenir_cellule(TAILLE_PARCELLE - 2, TAILLE_PARCELLE - 1); zone[1][1] := self.parcelles[i].obtenir_cellule(TAILLE_PARCELLE - 1, TAILLE_PARCELLE - 1);
+        if d then begin zone[0][2] := self.parcelles[d_i].obtenir_cellule(0, TAILLE_PARCELLE - 2); zone[1][2] := self.parcelles[d_i].obtenir_cellule(0, TAILLE_PARCELLE - 1); end;
+        if b then begin zone[2][0] := self.parcelles[b_i].obtenir_cellule(TAILLE_PARCELLE - 2, 0); zone[2][1] := self.parcelles[b_i].obtenir_cellule(TAILLE_PARCELLE - 1, 0); end;
+        if bd then zone[2][2] := self.parcelles[bd_i].obtenir_cellule(0, 0);
+        // Simulation
+        nouvelles_parcelles[n_npar - 1].definir_cellule(TAILLE_PARCELLE - 1, TAILLE_PARCELLE - 1, simulerZone(zone));
     end;
 
     if vide then

@@ -6,6 +6,7 @@ interface
     procedure PutBit(var Value: Int64; Index: Byte; State: Boolean);
     function GetBit(Value: Int64; Index: Byte): Boolean;
     function negmod(x, m: Int32): Int32;
+    function estNombre(entree: String): Boolean;
 implementation
 
     procedure ClearBit(var Value: Int64; Index: Byte);
@@ -36,4 +37,16 @@ implementation
             negmod := x mod m;
     end;
 
+    function estNombre(entree: String): Boolean;
+    var
+        i: Integer;
+    begin
+        estNombre := True;
+        for i := 1 to Length(entree) do
+            if not (entree[i] in ['0'..'9']) then
+            begin
+                estNombre := False;
+                break;
+            end;
+    end;
 end.

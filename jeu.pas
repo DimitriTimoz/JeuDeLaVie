@@ -2,7 +2,7 @@ unit Jeu;
 
 
 interface
-uses structures, plateau, crt, logSys, sysutils, dateutils, math;
+uses structures, plateau, crt, logSys, sysutils, dateutils, math, utils;
 
 type 
     TJeu = object
@@ -112,6 +112,7 @@ implementation
     var 
         c : Char;
         i : Int32;
+        saisie : String;
         n_voisins : TVoisins;
     begin
 		i := 0;
@@ -165,9 +166,16 @@ implementation
             6 : begin
                 // Modifier la vitesse
                 ClrScr;
-                write('Vitesse : ');
-                readln(self.vitesse);
-                self.vitesse := max(1, min(self.vitesse, 1000));
+                repeat
+                    write('Vitesse (entre 1 et 1000): ');
+                    readln(saisie);
+                until estNombre(saisie);
+
+                if (saisie <> '') then
+                begin
+                    self.vitesse := StrToInt(saisie);
+                    self.vitesse := max(1, min(self.vitesse, 1000));
+                end;
             end;  
 			7 : halt;
 		end;

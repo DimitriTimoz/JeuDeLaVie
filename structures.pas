@@ -43,6 +43,7 @@ type
 
     function estVoisin(px, py, p2x, p2y : Int32) : boolean;
     procedure nettoieLigne(var zone : TZone; ligne : Int32; horizontale : boolean);
+    procedure nettoieZone(var zone : TZone);
 
     
 implementation
@@ -140,7 +141,7 @@ implementation
 
     procedure nettoieLigne(var zone : TZone; ligne : Int32; horizontale : boolean);
     var 
-        i: Int32;
+        i: integer;
     begin
         for i := 0 to 2 do
         begin
@@ -149,6 +150,16 @@ implementation
             else
                 zone[i][ligne] := false;
         end;
+    end;
+
+    procedure nettoieZone(var zone : TZone);
+    var 
+        i, j: Int32;
+    begin
+        // On initialise la zone à false
+        for i := 0 to 2 do
+            for j := 0 to 2 do
+                zone[i][j] := false;
     end;
 
     constructor TPaterne.charger(nom : string);
