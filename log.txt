@@ -1,124 +1,18 @@
+Tour 0
 --------- Simulation de  1 parcelles ---------
-## Parcelle 0 : 0 0
-0 0 0
-0 # 0
-0 0 0
------
-0 0 0
-0 # 0
-0 0 0
---------- Simulation de  4 parcelles ---------
-## Parcelle 0 : 0 0
-0 -1 0
--1 # 0
-0 -1 0
------
-0 2 0
-3 # 0
-0 1 0
-## Parcelle 1 : 0 64
-0 -1 0
-0 # 0
-0 0 0
------
-0 0 0
-0 # 0
-0 0 0
-## Parcelle 2 : 0 -64
-0 0 0
-0 # 0
-0 -1 0
------
-0 0 0
-0 # 0
-0 0 0
-## Parcelle 3 : -64 0
-0 0 0
-0 # -1
-0 0 0
------
-0 0 0
-0 # 0
-0 0 0
---------- Simulation de  5 parcelles ---------
-## Parcelle 0 : 0 0
-0 -1 0
--1 # -1
-0 -1 0
------
-0 2 0
-3 # 4
-0 1 0
-## Parcelle 1 : 0 64
-0 -1 0
-0 # 0
-0 0 0
------
-0 0 0
-0 # 0
-0 0 0
-## Parcelle 2 : 0 -64
-0 0 0
-0 # 0
-0 -1 0
------
-0 0 0
-0 # 0
-0 0 0
-## Parcelle 3 : -64 0
-0 0 0
-0 # -1
-0 0 0
------
-0 0 0
-0 # 0
-0 0 0
-## Parcelle 4 : 64 0
-0 0 0
--1 # 0
-0 0 0
------
-0 0 0
-0 # 0
-0 0 0
---------- Simulation de  5 parcelles ---------
-## Parcelle 0 : 0 0
-0 -1 0
--1 # -1
-0 -1 0
------
-0 2 0
-3 # 4
-0 1 0
-## Parcelle 1 : 0 64
-0 -1 0
-0 # 0
-0 0 0
------
-0 0 0
-0 # 0
-0 0 0
-## Parcelle 2 : 0 -64
-0 0 0
-0 # 0
-0 -1 0
------
-0 0 0
-0 # 0
-0 0 0
-## Parcelle 3 : -64 0
-0 0 0
-0 # -1
-0 0 0
------
-0 0 0
-0 # 0
-0 0 0
-## Parcelle 4 : 64 0
-0 0 0
--1 # 0
-0 0 0
------
-0 0 0
-0 # 0
-0 0 0
+Tour 1
+--------- Simulation de  1 parcelles ---------
+Tour 2
+--------- Simulation de  1 parcelles ---------
+Tour 3
+--------- Simulation de  1 parcelles ---------
+Tour 4
+--------- Simulation de  1 parcelles ---------
+Tour 5
+--------- Simulation de  1 parcelles ---------
+Tour 6
+--------- Simulation de  1 parcelles ---------
+Tour 7
+--------- Simulation de  1 parcelles ---------
+Tour 8
+--------- Simulation de  1 parcelles ---------

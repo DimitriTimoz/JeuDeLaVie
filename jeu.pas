@@ -9,7 +9,6 @@ type
         private
             plateau : TPlateau;
             camera : TCamera;
-            paterne : TPaterne;
             vitesse: Int32;
             lastTime: TDateTime;
         public
@@ -50,15 +49,11 @@ implementation
         // Initialisation de la caméra
         self.camera.px := 0;
         self.camera.py := 0;
-        self.camera.hauteur := HAUTEUR_CAM;
-        self.camera.largeur := LARGEUR_CAM;
 
         // Initialisation des paramètres
         self.vitesse := 800;
         self.tour := 0;
         self.enCours := false;
-        
-        menuAction();
     end;
 
     procedure TJeu.afficher();
@@ -104,7 +99,7 @@ implementation
                 end;
                 DEL: plateau.supprimerCellule(camera.px + (LARGEUR_CAM div 2), camera.py + (HAUTEUR_CAM div 2));
                 ENTR: plateau.ajouterCellule(camera.px + (LARGEUR_CAM div 2), camera.py + (HAUTEUR_CAM div 2));
-                ESC : self.menuAction();
+                ESC : exit;
             end;
         until (touche_pressee = ESC);
         self.enCours := true;
@@ -181,7 +176,7 @@ implementation
 
         writeln(LineEnding + LineEnding);
         writeln('Guide d''utilisation :' + LineEnding  
-        + 'Sauvegarde de la partie en cours depuis le menu puis entrer le nom de la sauvegarde (ex partie1)")' + LineEnding
+        + 'Sauvegarde de la partie en cours depuis le menu puis entrer le nom de la sauvegarde (ex partie1)"' + LineEnding
         + 'Chargement d''une partie depuis le menu  puis entrer le nom du de la partie souhaitée' + LineEnding
         + 'Ajout de cellule vivante : touche ENTREE' + LineEnding
         + 'Suppression de cellule vivante : touche RETOUR' + LineEnding
@@ -201,7 +196,7 @@ implementation
         if (1000 - min(1000, vitesse) <= MilliSecondsBetween(Now, self.lastTime)) and self.enCours then
         begin
             self.lastTime := Now;
-
+            log('Tour ' + IntToStr(self.tour));
             // Nouveau tour
             self.tour := self.tour + 1;
             self.plateau.simuler();

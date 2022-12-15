@@ -11,7 +11,6 @@ type
     TZone = array[0..2] of array[0..2] of boolean;
     TCamera = record
         px, py : Int32;
-        hauteur, largeur : Int32;
     end;
     PInt64 = ^Int64;
     PPInt64 =^PInt64;
@@ -22,7 +21,7 @@ type
             n : Int32;
             constructor charger(nom : string);
             destructor Destroy;
-            function obtenir_cellule(i, x, y : Int32) : boolean;
+            function obtenirCellule(i, x, y : Int32) : boolean;
     end;
     TVoisin = object
         public
@@ -223,9 +222,9 @@ implementation
         FreeMem(self.tableau);
     end;
 
-    function TPaterne.obtenir_cellule(i, x, y : Int32) : boolean;
+    function TPaterne.obtenirCellule(i, x, y : Int32) : boolean;
     begin
-        obtenir_cellule := GetBit(self.tableau[i][y], x);
+        obtenirCellule := GetBit(self.tableau[i][y], x);
     end;
 
 end.

@@ -10,8 +10,8 @@ interface
                 lignes : array[0..63] of Int64 (* 64 bits *);
                 constructor init(nx, ny: Int32; n_voisins: TVoisins);
                 constructor aleatoire(nx, ny: Int32; n_voisins: TVoisins);
-                function obtenir_cellule(px, py: Int32): Boolean;
-                procedure definir_cellule(px, py: Int32; valeur: Boolean);
+                function obtenirCellule(px, py: Int32): Boolean;
+                procedure definirCellule(px, py: Int32; valeur: Boolean);
                 procedure nettoyer();
                 procedure afficher(camera: TCamera);
                 function simulerCellule(px, py: Int32): boolean;
@@ -52,12 +52,12 @@ begin
     self.voisins := n_voisins;
 end;
 
-function TParcelle.obtenir_cellule(px, py: Int32): Boolean;
+function TParcelle.obtenirCellule(px, py: Int32): Boolean;
 begin
-    obtenir_cellule := GetBit(lignes[py], px)
+    obtenirCellule := GetBit(lignes[py], px)
 end;
 
-procedure TParcelle.definir_cellule(px, py: Int32; valeur: Boolean);
+procedure TParcelle.definirCellule(px, py: Int32; valeur: Boolean);
 begin
     if valeur then
         SetBit(lignes[py], px)
@@ -145,12 +145,12 @@ begin
             if ((px = i) and (py = j)) or (j < 0) or (j >= TAILLE_PARCELLE) or (i < 0) or (i >= TAILLE_PARCELLE) then
                 continue;
 
-            if obtenir_cellule(i, j) then
+            if obtenirCellule(i, j) then
                 compteur := compteur + 1;
         end;
     end;
     // Règles du jeu de la vie
-    simulerCellule := (compteur = 3) or ((compteur = 2) and obtenir_cellule(px, py));
+    simulerCellule := (compteur = 3) or ((compteur = 2) and obtenirCellule(px, py));
 end;
 
 
