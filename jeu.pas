@@ -22,6 +22,8 @@ type
             procedure afficherMenu();
             procedure menuAction();
             procedure scanPaternes();
+            procedure parcelleAleatoire();
+            procedure changerVitesse();
     end;
 
     CONST UP = #72;
@@ -117,7 +119,7 @@ implementation
     begin
 		i := 0;
 		repeat
-            afficherMenu();
+            self.afficherMenu();
 
             // Affiche le curseur
 			GotoXY(1,i+2);
@@ -125,13 +127,13 @@ implementation
 			write('ʘ');
 			TextBackground(White);
 			TextColor(0);
-			GotoXY(1,10);
+			GotoXY(1, 10);
 
             // Gestion des touches
-			c := readkey;
+			c := readkey();
 			case c of
 				#0: begin
-					c := readkey;
+					c := readkey();
 					case c of
 						UP: i := i - 1;
 						DOWN: i := i + 1;
@@ -156,27 +158,8 @@ implementation
 			2 : self.plateau.charger(); // Charger une simulation
 			3 : self.plateau.sauvegarder(); // Sauvegarder la simulation
             4 : self.scanPaternes(); // Scan le nombre de paternes
-            5 : begin 
-                // Créé une parcelle aléatoire
-                setLength(self.plateau.parcelles, 1);
-                n_voisins.init(0, 0);
-                self.plateau.parcelles[0].aleatoire(0, 0, n_voisins);
-                self.enCours := true;
-            end;
-            6 : begin
-                // Modifier la vitesse
-                ClrScr;
-                repeat
-                    write('Vitesse (entre 1 et 1000): ');
-                    readln(saisie);
-                until estNombre(saisie);
-
-                if (saisie <> '') then
-                begin
-                    self.vitesse := StrToInt(saisie);
-                    self.vitesse := max(1, min(self.vitesse, 1000));
-                end;
-            end;  
+            5 : self.parcelleAleatoire(); 
+            6 : self.changerVitesse();
 			7 : halt;
 		end;
 			
@@ -208,11 +191,12 @@ implementation
         + 'lancer la partie :');
     end;
 
+
     procedure TJeu.miseAJour();
     var 
         touche_pressee : Char;
     begin
-
+        
         // Calcul du temps écoulé depuis la dernière mise à jour pour ne pas bloquer la pile d'exécution
         if (1000 - min(1000, vitesse) <= MilliSecondsBetween(Now, self.lastTime)) and self.enCours then
         begin
@@ -272,4 +256,33 @@ implementation
         writeln('Appuyez sur ENTRER pour continuer...');
         readln();
     end;
+
+    procedure TJeu.parcelleAleatoire();
+    var 
+        n_voisins : TVoisins;
+    begin
+         // Créé une parcelle aléatoire
+        setLength(self.plateau.parcelles, 1);
+        n_voisins.init(0, 0);
+        self.plateau.parcelles[0].aleatoire(0, 0, n_voisins);
+        self.enCours := true;
+    end;
+
+    procedure TJeu.changerVitesse();
+    var 
+        saisie: string;
+    begin
+        // Modifier la vitesse
+        ClrScr;
+        repeat
+            write('Vitesse (entre 1 et 1000) (''ENTRER'' pour continuer) : ');
+            readln(saisie);
+        until estNombre(saisie);
+
+        if (saisie <> '') then
+        begin
+            self.vitesse := StrToInt(saisie);
+            self.vitesse := max(1, min(self.vitesse, 1000));
+        end;
+    end;  
 end.
