@@ -615,7 +615,6 @@ begin
     begin
         parcelles[i].afficher(camera);
     end;
-        
 end;
 
 function simulerZone(zone: TZone): boolean;

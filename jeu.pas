@@ -235,6 +235,9 @@ implementation
         nom : String;
     begin
         ClrScr;
+        writeln('Vous pouvez scanner un paterne pour voir combien de fois il apparait dans le plateau actuel.');
+        writeln('Vous pouvez ajouter des paternes dans le dossier paternes.');
+        writeln('Vous pouvez choisir parmi: ''planeur'', ''infini''');
         nom := '';
         repeat
             if (nom <> '') then
