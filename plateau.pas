@@ -107,6 +107,7 @@ var
     f: Text;
     i, p: Int32;
 begin
+    ClrScr;
     writeln('Sauvegarde du plateau');
     write('Nom du fichier : ');
     readln(nom);
@@ -138,6 +139,7 @@ var
     f: Text;
     i, p, n_parcelles: Int32;
 begin
+    ClrScr;
     repeat
         writeln('Charger un plateau');
         write('Nom du fichier : (''q'' pour quitter): ');
@@ -339,7 +341,17 @@ begin
                 nouvelles_parcelles[length(nouvelles_parcelles) - 1].definir_cellule(0, TAILLE_PARCELLE - 1, true);
             end;                
 
-            // Droite
+            // Droite // Temporaire
+            nettoieZone(zone);
+            if hd then
+            begin
+                zone[0, 0] := self.parcelles[hd_i].obtenir_cellule(0, TAILLE_PARCELLE - 2);
+                zone[1, 0] := self.parcelles[hd_i].obtenir_cellule(0, TAILLE_PARCELLE - 1);
+            end;
+
+            if d then
+                zone[2, 0] := self.parcelles[d_i].obtenir_cellule(0, 0);
+        
       
         end;
 
@@ -595,7 +607,7 @@ procedure TPlateau.afficher(camera: TCamera);
 var
     i: Int32;
 begin
-    (* Affichage du plateau *)
+    // Affichage du plateau 
     for i := 0 to length(parcelles) - 1 do
     begin
         parcelles[i].afficher(camera);

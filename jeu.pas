@@ -196,7 +196,7 @@ implementation
         writeln('- Vitesse de la simulation ( v = ' + IntToStr(self.vitesse) + ' / 1000)');
         writeln('- Quitter le jeu');
 
-        writeln(LineEnding);
+        writeln(LineEnding + LineEnding);
         writeln('Guide d''utilisation :' + LineEnding  
         + 'Sauvegarde de la partie en cours depuis le menu puis entrer le nom de la sauvegarde (ex partie1)")' + LineEnding
         + 'Chargement d''une partie depuis le menu  puis entrer le nom du de la partie souhaitée' + LineEnding
