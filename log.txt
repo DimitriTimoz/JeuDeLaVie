@@ -1,21 +1,21 @@
 Tour 0
---------- Simulation de  0 parcelles ---------
-Tour 1
---------- Simulation de  0 parcelles ---------
-Tour 2
---------- Simulation de  0 parcelles ---------
-Tour 3
---------- Simulation de  0 parcelles ---------
-Tour 4
---------- Simulation de  0 parcelles ---------
-Tour 5
---------- Simulation de  0 parcelles ---------
-Tour 6
 --------- Simulation de  1 parcelles ---------
+Tour 1
+--------- Simulation de  4 parcelles ---------
+Tour 2
+--------- Simulation de  4 parcelles ---------
+Tour 3
+--------- Simulation de  5 parcelles ---------
+Tour 4
+--------- Simulation de  5 parcelles ---------
+Tour 5
+--------- Simulation de  5 parcelles ---------
+Tour 6
+--------- Simulation de  5 parcelles ---------
 Tour 7
---------- Simulation de  4 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 8
---------- Simulation de  4 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 9
 --------- Simulation de  5 parcelles ---------
 Tour 10
@@ -49,216 +49,98 @@ Tour 23
 Tour 24
 --------- Simulation de  5 parcelles ---------
 Tour 25
---------- Simulation de  4 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 26
 --------- Simulation de  5 parcelles ---------
 Tour 27
---------- Simulation de  4 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 28
 --------- Simulation de  5 parcelles ---------
 Tour 29
---------- Simulation de  6 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 30
---------- Simulation de  6 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 31
 --------- Simulation de  5 parcelles ---------
 Tour 32
---------- Simulation de  6 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 33
---------- Simulation de  6 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 34
---------- Simulation de  6 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 35
---------- Simulation de  6 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 36
---------- Simulation de  7 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 37
---------- Simulation de  8 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 38
---------- Simulation de  9 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 39
---------- Simulation de  10 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 40
---------- Simulation de  10 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 41
---------- Simulation de  10 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 42
---------- Simulation de  9 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 43
---------- Simulation de  10 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 44
---------- Simulation de  10 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 45
---------- Simulation de  11 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 46
---------- Simulation de  9 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 47
---------- Simulation de  9 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 48
---------- Simulation de  9 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 49
---------- Simulation de  9 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 50
---------- Simulation de  9 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 51
---------- Simulation de  9 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 52
---------- Simulation de  9 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 53
---------- Simulation de  9 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 54
---------- Simulation de  9 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 55
---------- Simulation de  9 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 56
---------- Simulation de  9 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 57
---------- Simulation de  9 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 58
---------- Simulation de  9 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 59
---------- Simulation de  9 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 60
---------- Simulation de  9 parcelles ---------
+--------- Simulation de  6 parcelles ---------
 Tour 61
---------- Simulation de  9 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 62
---------- Simulation de  9 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 63
---------- Simulation de  9 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 64
---------- Simulation de  8 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 65
---------- Simulation de  8 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 66
---------- Simulation de  8 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 67
---------- Simulation de  8 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 68
---------- Simulation de  8 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 69
---------- Simulation de  8 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 70
---------- Simulation de  8 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 71
---------- Simulation de  8 parcelles ---------
+--------- Simulation de  5 parcelles ---------
 Tour 72
---------- Simulation de  8 parcelles ---------
-Tour 73
---------- Simulation de  8 parcelles ---------
-Tour 74
---------- Simulation de  8 parcelles ---------
-Tour 75
---------- Simulation de  8 parcelles ---------
-Tour 76
---------- Simulation de  8 parcelles ---------
-Tour 77
---------- Simulation de  8 parcelles ---------
-Tour 78
---------- Simulation de  8 parcelles ---------
-Tour 79
---------- Simulation de  8 parcelles ---------
-Tour 80
---------- Simulation de  8 parcelles ---------
-Tour 81
---------- Simulation de  8 parcelles ---------
-Tour 82
---------- Simulation de  8 parcelles ---------
-Tour 83
---------- Simulation de  8 parcelles ---------
-Tour 84
---------- Simulation de  8 parcelles ---------
-Tour 85
---------- Simulation de  8 parcelles ---------
-Tour 86
---------- Simulation de  8 parcelles ---------
-Tour 87
---------- Simulation de  8 parcelles ---------
-Tour 88
---------- Simulation de  8 parcelles ---------
-Tour 89
---------- Simulation de  8 parcelles ---------
-Tour 90
---------- Simulation de  8 parcelles ---------
-Tour 91
---------- Simulation de  8 parcelles ---------
-Tour 92
---------- Simulation de  8 parcelles ---------
-Tour 93
---------- Simulation de  8 parcelles ---------
-Tour 94
---------- Simulation de  8 parcelles ---------
-Tour 95
---------- Simulation de  8 parcelles ---------
-Tour 96
---------- Simulation de  8 parcelles ---------
-Tour 97
---------- Simulation de  8 parcelles ---------
-Tour 98
---------- Simulation de  8 parcelles ---------
-Tour 99
---------- Simulation de  8 parcelles ---------
-Tour 100
---------- Simulation de  8 parcelles ---------
-Tour 101
---------- Simulation de  8 parcelles ---------
-Tour 102
---------- Simulation de  8 parcelles ---------
-Tour 103
---------- Simulation de  8 parcelles ---------
-Tour 104
---------- Simulation de  8 parcelles ---------
-Tour 105
---------- Simulation de  8 parcelles ---------
-Tour 106
---------- Simulation de  8 parcelles ---------
-Tour 107
---------- Simulation de  8 parcelles ---------
-Tour 108
---------- Simulation de  8 parcelles ---------
-Tour 109
---------- Simulation de  8 parcelles ---------
-Tour 110
---------- Simulation de  8 parcelles ---------
-Tour 111
---------- Simulation de  8 parcelles ---------
-Tour 112
---------- Simulation de  8 parcelles ---------
-Tour 113
---------- Simulation de  8 parcelles ---------
-Tour 114
---------- Simulation de  8 parcelles ---------
-Tour 115
---------- Simulation de  8 parcelles ---------
-Tour 116
---------- Simulation de  8 parcelles ---------
-Tour 117
---------- Simulation de  8 parcelles ---------
-Tour 118
---------- Simulation de  8 parcelles ---------
-Tour 119
---------- Simulation de  8 parcelles ---------
-Tour 120
---------- Simulation de  8 parcelles ---------
-Tour 121
---------- Simulation de  8 parcelles ---------
-Tour 122
---------- Simulation de  8 parcelles ---------
-Tour 123
---------- Simulation de  8 parcelles ---------
-Tour 124
---------- Simulation de  8 parcelles ---------
-Tour 125
---------- Simulation de  8 parcelles ---------
-Tour 126
---------- Simulation de  8 parcelles ---------
-Tour 127
---------- Simulation de  8 parcelles ---------
-Tour 128
---------- Simulation de  8 parcelles ---------
-Tour 129
---------- Simulation de  8 parcelles ---------
-Tour 130
---------- Simulation de  8 parcelles ---------
-Tour 131
---------- Simulation de  8 parcelles ---------
+--------- Simulation de  5 parcelles ---------
