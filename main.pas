@@ -4,7 +4,6 @@ uses structures, crt, jeu, logSys;
 
 var 
     partie: TJeu;
-    paterne: TPaterne;
 begin
     clearLog(); // On vide le fichier de log
     

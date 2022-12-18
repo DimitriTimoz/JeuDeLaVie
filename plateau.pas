@@ -357,7 +357,7 @@ begin
         
         end;
 
-        // Bas
+        // Gauche
         if not g then
         begin
             // Haut
@@ -382,35 +382,46 @@ begin
                 zone[0, 0] := self.parcelles[bg_i].obtenirCellule(TAILLE_PARCELLE - 2, 0);
                 zone[1, 0] := self.parcelles[bg_i].obtenirCellule(TAILLE_PARCELLE - 1, 0);
             end;
-            zone[1, 2] := self.parcelles[i].obtenirCellule(0, TAILLE_PARCELLE - 1);            
-        end;
-        
-        
-        if not hg then
-        begin
-            nettoieZone(zone);
-            if h then 
-            begin
-                zone[0, 2] := self.parcelles[h_i].obtenirCellule(0, TAILLE_PARCELLE - 2);
-                zone[1, 2] := self.parcelles[h_i].obtenirCellule(0, TAILLE_PARCELLE - 1);
-            end;
-
-            if g then
-            begin
-                zone[2, 0] := self.parcelles[g_i].obtenirCellule(TAILLE_PARCELLE - 2, 0);
-                zone[2, 1] := self.parcelles[g_i].obtenirCellule(TAILLE_PARCELLE - 1, 0);
-            end;
-
-            zone[2, 2] := self.parcelles[i].obtenirCellule(0, 0);
-
+            zone[1, 2] := self.parcelles[i].obtenirCellule(0, TAILLE_PARCELLE - 1);   
             if simulerZone(zone) then
             begin
-                ajouterNouvelleParcelle(nouvelles_parcelles, self.parcelles[i].x - TAILLE_PARCELLE, self.parcelles[i].y - TAILLE_PARCELLE);
+                ajouterNouvelleParcelle(nouvelles_parcelles, self.parcelles[i].x - TAILLE_PARCELLE, self.parcelles[i].y + TAILLE_PARCELLE);
                 nouvelles_parcelles[length(nouvelles_parcelles) - 1].definirCellule(TAILLE_PARCELLE - 1, TAILLE_PARCELLE - 1, true);
-            end;                
+            end;         
         end;
+        
+        // Bas
+        if not b then
+        begin
+            // Gauche
+            nettoieZone(zone);
+            if bg then
+            begin
+                zone[0, 0] := self.parcelles[bg_i].obtenirCellule(TAILLE_PARCELLE - 1, 0);
+                zone[1, 0] := self.parcelles[bg_i].obtenirCellule(TAILLE_PARCELLE - 1, 1);
+            end;
+            zone[2, 1] := self.parcelles[b_i].obtenirCellule(0, TAILLE_PARCELLE - 1);
+            zone[2, 2] := self.parcelles[b_i].obtenirCellule(1, TAILLE_PARCELLE - 1);
+            if simulerZone(zone) then 
+            begin
+                ajouterNouvelleParcelle(nouvelles_parcelles, self.parcelles[i].x, self.parcelles[i].y + TAILLE_PARCELLE);
+                nouvelles_parcelles[length(nouvelles_parcelles) - 1].definirCellule(0, 0, true);
+            end;
 
-
+            // Droite
+            nettoieZone(zone);
+            if bd then
+            begin
+                zone[0, 0] := self.parcelles[bd_i].obtenirCellule(0, 0);
+                zone[1, 0] := self.parcelles[bd_i].obtenirCellule(0, 1);
+            end;
+            zone[2, 1] := self.parcelles[b_i].obtenirCellule(TAILLE_PARCELLE - 1, TAILLE_PARCELLE - 1);
+            if simulerZone(zone) then
+            begin
+                ajouterNouvelleParcelle(nouvelles_parcelles, self.parcelles[i].x + TAILLE_PARCELLE, self.parcelles[i].y + TAILLE_PARCELLE);
+                nouvelles_parcelles[length(nouvelles_parcelles) - 1].definirCellule(TAILLE_PARCELLE - 1, 0, true);
+            end;
+        end;
     end;
 end;
 
@@ -420,7 +431,7 @@ procedure TPlateau.simuler();
 // le suffixe _i signifie index
 var 
     y, x, i, j, h_i, b_i, g_i, d_i, hg_i, hd_i, bg_i, bd_i: Int32;
-    h, b, g, d, hg, hd, bg, bd, vide, cree1, cree2: Boolean;
+    h, b, g, d, hg, hd, bg, bd, vide: Boolean;
     nouvelles_parcelles: array of TParcelle;
     n_npar: Int32;
     zone: TZone;
@@ -641,7 +652,7 @@ var
     existe: boolean;
 
 label
-    matchPas, XSuivant, YSuivant;
+    XSuivant, YSuivant;
 
 begin
     scanPaternes := 0;

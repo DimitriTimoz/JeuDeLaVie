@@ -37,8 +37,6 @@ type
 implementation
 
     constructor TJeu.init();
-    var
-        voisins: TVoisins;
     begin
         TextBackground(White);
         TextColor(0);
@@ -82,8 +80,7 @@ implementation
 
             // Informations diverses
             GotoXY(1, HAUTEUR_CAM + 2);
-            writeln('x : ', camera.px + (LARGEUR_CAM div 2), ' y : ', camera.py + (HAUTEUR_CAM div 2));
-            writeln('touchepressee : ', ord(touche_pressee));
+            writeln('Modification du plateau');
 
             // Gestion des touches
             touche_pressee := readkey;
@@ -109,8 +106,6 @@ implementation
     var 
         c : Char;
         i : Int32;
-        saisie : String;
-        n_voisins : TVoisins;
     begin
 		i := 0;
 		repeat
